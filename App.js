@@ -32,11 +32,9 @@ export default class App extends Component {
   _loadResourcesAsync = async () => {
     return Promise.all([
       Asset.loadAsync([
-        require('./assets/images/robot-dev.png'),
-        require('./assets/images/robot-prod.png'),
-        require('../assets/images/curiosidades/historia.png'),
-        require('../assets/images/curiosidades/arquitetura.png'),
-        require('../assets/images/curiosidades/arte.png')
+        require('./assets/images/curiosidades/historia.png'),
+        require('./assets/images/curiosidades/arquitetura.png'),
+        require('./assets/images/curiosidades/arte.png')
       ]),
       Font.loadAsync({
         'futura': require('./assets/fonts/FuturaLT.ttf'),
