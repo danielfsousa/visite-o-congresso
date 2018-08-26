@@ -5,8 +5,8 @@ O aplicativo foi desenvolvido durante o [Desafio VisitApp](http://www1.congresso
 
 ## Configurando
 
-1. Instale o React Native e suas depencências: [Siga o tutorial "Building Projects with Native Code"](https://facebook.github.io/react-native/docs/getting-started)
-2. [Instale o cli do Ignite](https://github.com/infinitered/ignite#arrow_down-install)
+1. [Instale o React Native e suas depencênciasS](https://facebook.github.io/react-native/docs/getting-started.html)
+2. [Instale o expo](https://expo.io/learn)
 
 ## Iniciando
 
@@ -17,3 +17,5 @@ O aplicativo foi desenvolvido durante o [Desafio VisitApp](http://www1.congresso
     * `npm run ios`
   * Android
     * `npm run android`
+
+
