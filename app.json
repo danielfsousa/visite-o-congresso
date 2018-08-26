@@ -1,18 +1,27 @@
 {
   "expo": {
     "name": "visite-o-congresso",
-    "description": "A very interesting project.",
+    "description": "Aplicativo desenvolvido durante o Desafio VisitApp do Congresso Nacional ",
     "slug": "visite-o-congresso",
     "privacy": "public",
+    "githubUrl": "https://github.com/danielfsousa/visite-o-congresso",
     "sdkVersion": "29.0.0",
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
+    "primaryColor": "#7752FE",
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#2A2B40"
+    },
     "icon": "./assets/images/icon.png",
     "splash": {
       "image": "./assets/images/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "cover",
+      "backgroundColor": "#2A2B40"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
