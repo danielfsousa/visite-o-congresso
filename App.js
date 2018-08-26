@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Platform, StatusBar, StyleSheet, View } from 'react-native'
 import { AppLoading, Asset, Font, Icon } from 'expo'
+import { isIphoneX } from 'react-native-iphone-x-helper'
 
 import AppNavigator from './navigation/AppNavigator'
 import Colors from './constants/Colors'
@@ -22,7 +23,7 @@ export default class App extends Component {
     } else {
       return (
         <View style={styles.container}>
-          {Platform.OS === 'ios' && <StatusBar barStyle='default' />}
+          {Platform.OS === 'ios' && <StatusBar barStyle='light-content' />}
           <AppNavigator />
         </View>
       )
@@ -61,6 +62,8 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.background
+    backgroundColor: Colors.background,
+    paddingTop: (Platform.OS === 'ios') ? 30 : 0,
+    paddingBottom: (Platform.OS === 'ios' && isIphoneX()) ? 20 : 0
   }
 })
