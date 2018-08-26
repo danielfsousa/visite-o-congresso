@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   label: {
     textShadowColor: 'rgba(0, 0, 0, 0.50)',
     textShadowOffset: { width: 0, height: 3 },
-    textShadowRadius: 40
+    textShadowRadius: 25
   }
 })
 
