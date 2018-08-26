@@ -32,16 +32,20 @@ export default class App extends React.Component {
       Asset.loadAsync([
         require('./assets/images/robot-dev.png'),
         require('./assets/images/robot-prod.png'),
+        require('../assets/images/curiosidades/historia.png'),
+        require('../assets/images/curiosidades/arquitetura.png'),
+        require('../assets/images/curiosidades/arte.png')
       ]),
       Font.loadAsync({
-        // This is the font that we are using for our tab bar
+        'futura': require('./assets/fonts/FuturaLT.ttf'),
+        'futura-light': require('./assets/fonts/FuturaLT-Book.ttf'),
+        'futura-book': require('./assets/fonts/FuturaLT-Book.ttf'),
+        'futura-bold': require('./assets/fonts/FuturaLT-Bold.ttf'),
         ...Icon.Ionicons.font,
-        // We include SpaceMono because we use it in HomeScreen.js. Feel free
-        // to remove this if you are not using it in your app
-        'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
-      }),
-    ]);
-  };
+        ...Icon.Feather.font
+      })
+    ])
+  }
 
   _handleLoadingError = error => {
     // In this case, you might want to report the error to your error
