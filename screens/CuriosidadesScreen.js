@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
 
-import { Colors } from '../constants'
+import { Colors, Images } from '../constants'
 import Header from '../components/Header'
 import Banner from '../components/Banner'
 
@@ -13,17 +13,17 @@ class CuriosidadesScreen extends Component {
   banners = [
     {
       name: 'A História do Congresso Nacional',
-      image: require('../assets/images/curiosidades/historia.png'),
+      image: Images.historia,
       onBannerPress: () => this.props.navigation.navigate('GuiaVirtual')
     },
     {
       name: 'Arquitetura',
-      image: require('../assets/images/curiosidades/arquitetura.png'),
+      image: Images.arquitetura,
       onBannerPress: () => this.props.navigation.navigate('GuiaVirtual')
     },
     {
       name: 'Arte',
-      image: require('../assets/images/curiosidades/arte.png'),
+      image: Images.arte,
       onBannerPress: () => this.props.navigation.navigate('GuiaVirtual')
     }
   ]

@@ -1,4 +1,4 @@
-export default {
+const Fonts = {
   regular: 'futura',
   light: 'futura-light',
   book: 'futura-book',
@@ -6,6 +6,15 @@ export default {
   bigger: 24,
   big: 18,
   medium: 16,
-  small: 12,
-  smaller: 11
+  small: 14,
+  smaller: 12
 }
+
+Fonts.sources = {
+  'futura': require('../assets/fonts/FuturaLT.ttf'),
+  'futura-light': require('../assets/fonts/FuturaLT-Book.ttf'),
+  'futura-book': require('../assets/fonts/FuturaLT-Book.ttf'),
+  'futura-bold': require('../assets/fonts/FuturaLT-Bold.ttf')
+}
+
+export default Fonts

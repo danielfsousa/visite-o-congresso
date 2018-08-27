@@ -12,7 +12,7 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "primaryColor": "#7752FE",
+    "primaryColor": "#2A2B40",
     "androidStatusBar": {
       "barStyle": "light-content",
       "backgroundColor": "#2A2B40"

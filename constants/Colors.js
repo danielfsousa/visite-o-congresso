@@ -1,4 +1,5 @@
 const colors = {
+  transparent: 'transparent',
   purple: '#6F4EE8',
   brightPurple: '#7752FE',
   darkPurple: '#36334A',
@@ -7,19 +8,13 @@ const colors = {
 }
 
 const styles = {
+  transparent: colors.transparent,
   background: '#2A2B40',
   tilesBackground: colors.darkPurple,
   primaryColor: colors.brightPurple,
   text: colors.white,
   tabIconDefault: colors.gray,
-  tabIconSelected: colors.white,
-  tabBar: '#fefefe',
-  errorBackground: 'red',
-  errorText: '#fff',
-  warningBackground: '#EAEB5E',
-  warningText: '#666804',
-  noticeBackground: colors.purple,
-  noticeText: '#fff'
+  tabIconSelected: colors.white
 }
 
 export default { ...colors, ...styles }

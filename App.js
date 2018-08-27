@@ -4,7 +4,7 @@ import { AppLoading, Asset, Font, Icon } from 'expo'
 import { isIphoneX } from 'react-native-iphone-x-helper'
 
 import AppNavigator from './navigation/AppNavigator'
-import Colors from './constants/Colors'
+import { Colors, Images, Fonts } from './constants'
 
 export default class App extends Component {
   state = {
@@ -32,16 +32,9 @@ export default class App extends Component {
 
   _loadResourcesAsync = async () => {
     return Promise.all([
-      Asset.loadAsync([
-        require('./assets/images/curiosidades/historia.png'),
-        require('./assets/images/curiosidades/arquitetura.png'),
-        require('./assets/images/curiosidades/arte.png')
-      ]),
+      Asset.loadAsync(Images.sources),
       Font.loadAsync({
-        'futura': require('./assets/fonts/FuturaLT.ttf'),
-        'futura-light': require('./assets/fonts/FuturaLT-Book.ttf'),
-        'futura-book': require('./assets/fonts/FuturaLT-Book.ttf'),
-        'futura-bold': require('./assets/fonts/FuturaLT-Bold.ttf'),
+        ...Fonts.sources,
         ...Icon.Ionicons.font,
         ...Icon.Feather.font
       })
@@ -63,7 +56,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.background,
-    paddingTop: (Platform.OS === 'ios') ? 30 : 0,
-    paddingBottom: (Platform.OS === 'ios' && isIphoneX()) ? 20 : 0
+    paddingTop: Platform.OS === 'ios' ? 30 : 0,
+    paddingBottom: Platform.OS === 'ios' && isIphoneX() ? 20 : 0
   }
 })
