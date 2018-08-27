@@ -5,7 +5,7 @@ O aplicativo foi desenvolvido durante o [Desafio VisitApp](http://www1.congresso
 
 ## Configurando
 
-1. [Instale o React Native e suas depencênciasS](https://facebook.github.io/react-native/docs/getting-started.html)
+1. [Instale o React Native e suas depencências](https://facebook.github.io/react-native/docs/getting-started.html)
 2. [Instale o expo](https://expo.io/learn)
 
 ## Iniciando

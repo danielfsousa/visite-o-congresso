@@ -9,6 +9,7 @@ import { TabBarIcon } from '../components/Icon'
 import HomeScreen from '../screens/HomeScreen'
 import CuriosidadesScreen from '../screens/CuriosidadesScreen'
 import GuiaVirtualScreen from '../screens/GuiaVirtualScreen'
+import WebBrowserScreen from '../screens/WebBrowserScreen'
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen
@@ -30,15 +31,31 @@ const GuiaVirtualStack = createStackNavigator({
   GuiaVirtual: GuiaVirtualScreen
 })
 
-GuiaVirtualStack.navigationOptions = {
-  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name='compass' />
+const GuiaVirtualWebBrowserStack = createStackNavigator(
+  {
+    Main: GuiaVirtualStack,
+    WebBrowser: WebBrowserScreen
+  },
+  {
+    mode: 'modal',
+    headerMode: 'none'
+  }
+)
+
+GuiaVirtualWebBrowserStack.navigationOptions = ({ navigation }) => {
+  return {
+    tabBarVisible: navigation.state.index === 0,
+    tabBarIcon: ({ focused }) => (
+      <TabBarIcon focused={focused} name='compass' />
+    )
+  }
 }
 
 export default createMaterialTopTabNavigator(
   {
     HomeStack,
     CuriosidadesStack,
-    GuiaVirtualStack
+    GuiaVirtualWebBrowserStack
   },
   {
     tabBarPosition: 'bottom',

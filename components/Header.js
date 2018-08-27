@@ -6,8 +6,8 @@ import { Title } from './StyledText'
 
 // renderBackButton={props.navigation.state.routes.length > 1}
 
-const Header = ({ children }) => (
-  <View style={styles.container}>
+const Header = ({ transparent, children, style }) => (
+  <View style={[styles.container, transparent && styles.transparent, style]}>
     <Title style={styles.title}>{children}</Title>
   </View>
 )
@@ -16,6 +16,10 @@ const styles = StyleSheet.create({
   container: {
     height: Layout.headerHeight,
     backgroundColor: Colors.background
+  },
+
+  transparent: {
+    backgroundColor: Colors.transparent
   },
 
   title: {
