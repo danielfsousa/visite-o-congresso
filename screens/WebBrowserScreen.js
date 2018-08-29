@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { View, Text, StyleSheet, WebView, Alert } from 'react-native'
+import { Ionicons } from '@expo/vector-icons'
 
 import { Colors, Links } from '../constants'
-import StyledButton from '../components/StyledButton'
+// import StyledButton from '../components/StyledButton'
 
 class WebBrowserScreen extends Component {
   static navigationOptions = () => ({ header: null })
@@ -45,12 +46,15 @@ class WebBrowserScreen extends Component {
 
     return (
       <View style={styles.container}>
-        <StyledButton
+        {/* <StyledButton
           onPress={this.handleBackButtonPress}
-          style={styles.backButton}
-        >
-          Voltar
-        </StyledButton>
+          style={styles.backButton}>
+        </StyledButton> */}
+
+        <Ionicons name='md-arrow-back' size={40}
+          color={Colors.white}
+          onPress={this.handleBackButtonPress}
+          style={styles.backButton} />
 
         {isLoading &&
           <View style={styles.loadingContainer}>
@@ -77,7 +81,9 @@ const styles = StyleSheet.create({
   },
 
   backButton: {
-    zIndex: 3
+    zIndex: 3,
+    paddingTop: 20,
+    marginLeft: 20
   },
 
   loadingContainer: {
