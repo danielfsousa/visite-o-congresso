@@ -5,7 +5,7 @@ import { WebBrowser } from 'expo'
 import { Colors, Images, Links } from '../constants'
 import Header from '../components/Header'
 import StyledButton from '../components/StyledButton'
-import {Label} from '../components/StyledText'
+import { Label } from '../components/StyledText'
 
 class GuiaVirtualScreen extends Component {
   static navigationOptions = () => ({
