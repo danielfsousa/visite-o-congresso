@@ -7,6 +7,7 @@ import {
 import Colors from '../constants/Colors'
 import { TabBarIcon } from '../components/Icon'
 import HomeScreen from '../screens/HomeScreen'
+import HomeAltScreen from '../screens/HomeAltScreen'
 import CuriosidadesScreen from '../screens/CuriosidadesScreen'
 import GuiaVirtualScreen from '../screens/GuiaVirtualScreen'
 import WebBrowserScreen from '../screens/WebBrowserScreen'
@@ -16,6 +17,14 @@ const HomeStack = createStackNavigator({
 })
 
 HomeStack.navigationOptions = {
+  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name='home' />
+}
+
+const HomeAltStack = createStackNavigator({
+  HomeAlt: HomeAltScreen
+})
+
+HomeAltStack.navigationOptions = {
   tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name='home' />
 }
 
@@ -54,6 +63,7 @@ GuiaVirtualWebBrowserStack.navigationOptions = ({ navigation }) => {
 export default createMaterialTopTabNavigator(
   {
     HomeStack,
+    HomeAltStack,
     CuriosidadesStack,
     GuiaVirtualWebBrowserStack
   },
