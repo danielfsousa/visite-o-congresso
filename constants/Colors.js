@@ -1,3 +1,5 @@
+const heToRgba = require('hex-rgba')
+
 const colors = {
   transparent: 'transparent',
   purple: '#6F4EE8',
@@ -17,4 +19,4 @@ const styles = {
   tabIconSelected: colors.white
 }
 
-export default { ...colors, ...styles }
+export default { ...colors, ...styles, rgba: heToRgba }
