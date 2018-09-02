@@ -7,6 +7,8 @@ const Title = props => <Text {...props} style={[styles.title, props.style]} />
 
 const Label = props => <Text {...props} style={[styles.label, props.style]} />
 
+const BodyText = props => <Text {...props} style={[styles.bodyText, props.style]} />
+
 const styles = StyleSheet.create({
   title: {
     fontFamily: Fonts.bold,
@@ -20,7 +22,14 @@ const styles = StyleSheet.create({
     fontSize: Fonts.medium,
     color: Colors.text,
     textAlign: 'center'
+  },
+
+  bodyText: {
+    fontFamily: Fonts.regular,
+    fontSize: Fonts.medium,
+    color: Colors.bodyText,
+    textAlign: 'center'
   }
 })
 
-export { Title, Label }
+export { Title, Label, BodyText }
