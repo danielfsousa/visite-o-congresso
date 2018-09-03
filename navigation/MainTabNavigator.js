@@ -11,9 +11,11 @@ import HomeAltScreen from '../screens/HomeAltScreen'
 import CuriosidadesScreen from '../screens/CuriosidadesScreen'
 import GuiaVirtualScreen from '../screens/GuiaVirtualScreen'
 import WebBrowserScreen from '../screens/WebBrowserScreen'
+import EmConstrucaoScreen from '../screens/EmConstrucaoScreen'
 
 const HomeStack = createStackNavigator({
-  Home: HomeScreen
+  Home: HomeScreen,
+  EmBreve: EmConstrucaoScreen
 })
 
 HomeStack.navigationOptions = {
@@ -21,7 +23,8 @@ HomeStack.navigationOptions = {
 }
 
 const HomeAltStack = createStackNavigator({
-  HomeAlt: HomeAltScreen
+  HomeAlt: HomeAltScreen,
+  EmBreve: EmConstrucaoScreen
 })
 
 HomeAltStack.navigationOptions = {

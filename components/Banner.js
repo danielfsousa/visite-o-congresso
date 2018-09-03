@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
   },
 
   background: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: Layout.borderRadius

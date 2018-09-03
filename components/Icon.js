@@ -15,4 +15,8 @@ const TileIcon = ({ name, focused }) => (
   <Icon.Ionicons name={name} size={58} color={Colors.primaryColor} />
 )
 
-export { TabBarIcon, TileIcon }
+const HeaderIcon = () => (
+  <Icon.Ionicons name='md-arrow-back' size={24} color={Colors.white} />
+)
+
+export { TabBarIcon, TileIcon, HeaderIcon }

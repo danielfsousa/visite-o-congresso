@@ -1,4 +1,5 @@
 const Images = {
+  backgroundFade: require('../assets/images/background-fade.png'),
   guiaVirtualBackground: require('../assets/images/guia-virtual/background.png'),
   guiaVirtualIcon: require('../assets/images/guia-virtual/guia-icon.png'),
   historia: require('../assets/images/curiosidades/historia.png'),

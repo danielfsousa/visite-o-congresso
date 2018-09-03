@@ -16,55 +16,55 @@ class HomeScreen extends Component {
       name: 'A História do Congresso Nacional',
       image: Images.historia,
       type: 'banner',
-      onBannerPress: () => this.props.navigation.navigate('GuiaVirtual')
+      onBannerPress: () => this.props.navigation.navigate('AHistoria')
     },
     {
       name: 'Guia do visitante',
       icon: 'md-map',
       type: 'tile',
-      onTilePress: () => this.props.navigation.navigate('Curiosidades')
+      onTilePress: () => this.props.navigation.navigate('EmBreve')
     },
     {
       name: 'Guia do professor',
       icon: 'md-school',
       type: 'tile',
-      onTilePress: () => this.props.navigation.navigate('Curiosidades')
+      onTilePress: () => this.props.navigation.navigate('EmBreve')
     },
     {
       name: 'Arquitetura',
       image: Images.arquitetura,
       type: 'banner',
-      onBannerPress: () => this.props.navigation.navigate('GuiaVirtual')
+      onBannerPress: () => this.props.navigation.navigate('AHistoria')
     },
     {
       name: 'Agendamentos',
       icon: 'md-time',
       type: 'tile',
-      onTilePress: () => this.props.navigation.navigate('Curiosidades')
+      onTilePress: () => this.props.navigation.navigate('EmBreve')
     },
     {
       name: 'Como chegar',
       icon: 'md-pin',
       type: 'tile',
-      onTilePress: () => this.props.navigation.navigate('Curiosidades')
+      onTilePress: () => this.props.navigation.navigate('EmBreve')
     },
     {
       name: 'Arte',
       image: Images.arte,
       type: 'banner',
-      onBannerPress: () => this.props.navigation.navigate('GuiaVirtual')
+      onBannerPress: () => this.props.navigation.navigate('AHistoria')
     },
     {
       name: 'Entre em contato',
       icon: 'md-call',
       type: 'tile',
-      onTilePress: () => this.props.navigation.navigate('Curiosidades')
+      onTilePress: () => this.props.navigation.navigate('EmBreve')
     },
     {
       name: 'Eventos',
       icon: 'md-calendar',
       type: 'tile',
-      onTilePress: () => this.props.navigation.navigate('Curiosidades')
+      onTilePress: () => this.props.navigation.navigate('EmBreve')
     }
   ]
 

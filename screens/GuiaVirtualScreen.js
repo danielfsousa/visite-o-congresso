@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Image, StyleSheet } from 'react-native'
+import { Image, StyleSheet } from 'react-native'
 import { WebBrowser } from 'expo'
 
 import { Colors, Images, Layout, Links } from '../constants'
@@ -9,8 +9,12 @@ import StyledButton from '../components/StyledButton'
 import { BodyText } from '../components/StyledText'
 
 class GuiaVirtualScreen extends Component {
-  static navigationOptions = () => ({
-    header: null
+  static navigationOptions = ({ navigation }) => ({
+    header: (
+      <Header transparent detach onBackButtonClick={() => navigation.goBack()}>
+        Guia Virtual
+      </Header>
+    )
   })
 
   handleButtonPress = async () => WebBrowser.openBrowserAsync(Links.guiaVirtual)
@@ -24,16 +28,13 @@ class GuiaVirtualScreen extends Component {
         style={styles.container}
         overlayStyle={styles.overlay}
       >
-        <Header transparent style={styles.header}>Guia Virtual</Header>
-        <View style={styles.innerContainer}>
-          <Image source={Images.guiaVirtualIcon} style={styles.icon} />
-          <BodyText style={styles.text}>
-            Explore o Congresso Nacional através de um tour virtual com áudios e fotos em 360º
-          </BodyText>
-          <StyledButton type='large' onPress={this.handleButtonPress}>
-            Explorar
-          </StyledButton>
-        </View>
+        <Image source={Images.guiaVirtualIcon} style={styles.icon} />
+        <BodyText style={styles.text}>
+          Explore o Congresso Nacional através de um tour virtual com áudios e fotos em 360º
+        </BodyText>
+        <StyledButton type='large' onPress={this.handleButtonPress}>
+          Explorar
+        </StyledButton>
       </BackgroundImage>
     )
   }
@@ -42,27 +43,18 @@ class GuiaVirtualScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-
-  innerContainer: {
     paddingHorizontal: Layout.padding,
     justifyContent: 'center',
     alignItems: 'center'
   },
 
   overlay: {
-    backgroundColor: Colors.rgba(Colors.background, 65)
-  },
-
-  header: {
-    zIndex: 2,
-    ...StyleSheet.absoluteFillObject
+    backgroundColor: Colors.rgba(Colors.background, 67)
   },
 
   text: {
-    marginBottom: 40
+    marginBottom: 40,
+    textAlign: 'center'
   },
 
   icon: {

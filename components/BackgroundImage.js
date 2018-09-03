@@ -1,21 +1,26 @@
 import React from 'react'
 import { View, ImageBackground, StyleSheet } from 'react-native'
 
+import { Colors } from '../constants'
+
 const BackgroundImage = ({
   style,
   imageStyle,
   overlayStyle,
+  containerStyle,
   source,
   children
 }) => (
-  <View style={[styles.container, style]}>
+  <View style={styles.container}>
     <ImageBackground
       source={source}
-      style={[styles.imageBackground, style]}
+      style={[styles.imageBackground]}
       imageStyle={imageStyle}
     >
       <View style={[styles.overlay, overlayStyle]} />
-      {children}
+      <View style={style}>
+        {children}
+      </View>
     </ImageBackground>
   </View>
 )
@@ -23,6 +28,7 @@ const BackgroundImage = ({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: Colors.background,
     ...StyleSheet.absoluteFillObject
   },
 

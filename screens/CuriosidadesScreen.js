@@ -14,17 +14,17 @@ class CuriosidadesScreen extends Component {
     {
       name: 'A História do Congresso Nacional',
       image: Images.historia,
-      onBannerPress: () => this.props.navigation.navigate('GuiaVirtual')
+      onBannerPress: () => this.props.navigation.navigate('AHistoria')
     },
     {
       name: 'Arquitetura',
       image: Images.arquitetura,
-      onBannerPress: () => this.props.navigation.navigate('GuiaVirtual')
+      onBannerPress: () => this.props.navigation.navigate('AHistoria')
     },
     {
       name: 'Arte',
       image: Images.arte,
-      onBannerPress: () => this.props.navigation.navigate('GuiaVirtual')
+      onBannerPress: () => this.props.navigation.navigate('AHistoria')
     }
   ]
 
