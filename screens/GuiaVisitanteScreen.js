@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import { StyleSheet } from 'react-native'
+import { StyleSheet, ScrollView } from 'react-native'
 
-import { Colors, Images, Layout } from '../constants'
+import { Colors, Images, GuiaVisitante } from '../constants'
 import BackgroundImage from '../components/BackgroundImage'
 import Header from '../components/Header'
+import AccordionView from '../components/AccordionView'
 
-class EmConstrucaoScreen extends Component {
+class GuiaVisitanteScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     header: (
       <Header
@@ -24,8 +25,16 @@ class EmConstrucaoScreen extends Component {
         source={Images.backgroundFade}
         style={styles.container}
         imageStyle={styles.backgroundImage}
-        overlayStyle={styles.overlay}
-      />
+        overlayStyle={styles.overlay}>
+
+        <ScrollView
+          alwaysBounceVertical={false}
+          overScrollMode='never'
+          style={styles.scrollContainer}>
+          {GuiaVisitante.map((props, i) => <AccordionView key={props.title} {...props} index={i} />)}
+        </ScrollView>
+
+      </BackgroundImage>
     )
   }
 }
@@ -33,14 +42,20 @@ class EmConstrucaoScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: Layout.padding,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'stretch'
   },
 
   overlay: {
     backgroundColor: Colors.rgba(Colors.background, 96)
+  },
+
+  scrollContainer: {
+    marginTop: 130
   }
+
 })
 
-export default EmConstrucaoScreen
+export default GuiaVisitanteScreen

@@ -14,12 +14,12 @@ class HomeAltScreen extends Component {
     {
       name: 'Guia do visitante',
       icon: 'md-map',
-      onTilePress: () => this.props.navigation.navigate('EmBreve')
+      onTilePress: () => this.props.navigation.navigate('GuiaVisitante')
     },
     {
       name: 'Guia do professor',
       icon: 'md-school',
-      onTilePress: () => this.props.navigation.navigate('EmBreve')
+      onTilePress: () => this.props.navigation.navigate('GuiaProfessor')
     },
     {
       name: 'Agendamentos',

@@ -12,6 +12,8 @@ import CuriosidadesScreen from '../screens/CuriosidadesScreen'
 import GuiaVirtualScreen from '../screens/GuiaVirtualScreen'
 import WebBrowserScreen from '../screens/WebBrowserScreen'
 import EmConstrucaoScreen from '../screens/EmConstrucaoScreen'
+import GuiaProfessorScreen from '../screens/GuiaProfessorScreen'
+import GuiaVisitanteScreen from '../screens/GuiaVisitanteScreen'
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -24,7 +26,9 @@ HomeStack.navigationOptions = {
 
 const HomeAltStack = createStackNavigator({
   HomeAlt: HomeAltScreen,
-  EmBreve: EmConstrucaoScreen
+  EmBreve: EmConstrucaoScreen,
+  GuiaProfessor: GuiaProfessorScreen,
+  GuiaVisitante: GuiaVisitanteScreen
 })
 
 HomeAltStack.navigationOptions = {
@@ -65,7 +69,6 @@ GuiaVirtualWebBrowserStack.navigationOptions = ({ navigation }) => {
 
 export default createMaterialTopTabNavigator(
   {
-    HomeStack,
     HomeAltStack,
     CuriosidadesStack,
     GuiaVirtualWebBrowserStack

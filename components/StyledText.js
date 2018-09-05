@@ -5,6 +5,8 @@ import { Fonts, Colors } from '../constants'
 
 const Title = props => <Text {...props} style={[styles.title, props.style]} />
 
+const TitleLight = props => <Text {...props} style={[styles.titleLight, props.style]} />
+
 const Label = props => <Text {...props} style={[styles.label, props.style]} />
 
 const BodyText = props => (
@@ -17,6 +19,14 @@ const styles = StyleSheet.create({
     fontSize: Fonts.big,
     color: Colors.text,
     letterSpacing: 1.1
+  },
+
+  titleLight: {
+    fontFamily: Fonts.book,
+    fontSize: Fonts.big,
+    color: Colors.text,
+    letterSpacing: 1.1,
+    textAlign: 'left'
   },
 
   label: {
@@ -33,4 +43,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export { Title, Label, BodyText }
+export { Title, Label, BodyText, TitleLight }
