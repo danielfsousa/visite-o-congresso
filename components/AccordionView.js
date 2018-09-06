@@ -53,11 +53,11 @@ const styles = StyleSheet.create({
   },
 
   backgroundEven: {
-    backgroundColor: Colors.darkPurple
+    backgroundColor: Colors.rgba(Colors.darkPurple, 35)
   },
 
   backgroundOdd: {
-    backgroundColor: Colors.darkerPurple
+    backgroundColor: Colors.rgba(Colors.darkerPurple, 35)
   },
 
   label: {
