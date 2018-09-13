@@ -19,17 +19,17 @@ class HomeAltScreen extends Component {
     {
       name: 'Guia do professor',
       icon: 'md-school',
-      onTilePress: () => this.props.navigation.navigate('GuiaProfessor')
-    },
-    {
-      name: 'Agendamentos',
-      icon: 'md-time',
-      onTilePress: () => this.props.navigation.navigate('EmBreve')
-    },
+      onTilePress: () => this.props.navigation.navigate('GuiaProfessor') },
+
     {
       name: 'Como chegar',
       icon: 'md-pin',
       onTilePress: () => this.props.navigation.navigate('EmBreve')
+    },
+    {
+      name: 'Eventos',
+      icon: 'md-calendar',
+      onTilePress: () => this.props.navigation.navigate('Eventos')
     },
     {
       name: 'Entre em contato',
@@ -37,9 +37,9 @@ class HomeAltScreen extends Component {
       onTilePress: () => this.props.navigation.navigate('EmBreve')
     },
     {
-      name: 'Eventos',
-      icon: 'md-calendar',
-      onTilePress: () => this.props.navigation.navigate('Eventos')
+      name: 'Agendamentos',
+      icon: 'md-time',
+      onTilePress: () => this.props.navigation.navigate('EmBreve')
     }
   ]
 
