@@ -14,6 +14,7 @@ import WebBrowserScreen from '../screens/WebBrowserScreen'
 import EmConstrucaoScreen from '../screens/EmConstrucaoScreen'
 import GuiaProfessorScreen from '../screens/GuiaProfessorScreen'
 import GuiaVisitanteScreen from '../screens/GuiaVisitanteScreen'
+import HistoriaScreen from '../screens/HistoriaScreen'
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -36,7 +37,8 @@ HomeAltStack.navigationOptions = {
 }
 
 const CuriosidadesStack = createStackNavigator({
-  Curiosidades: CuriosidadesScreen
+  Curiosidades: CuriosidadesScreen,
+  Historia: HistoriaScreen
 })
 
 CuriosidadesStack.navigationOptions = {
