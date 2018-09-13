@@ -39,7 +39,7 @@ class HomeAltScreen extends Component {
     {
       name: 'Eventos',
       icon: 'md-calendar',
-      onTilePress: () => this.props.navigation.navigate('EmBreve')
+      onTilePress: () => this.props.navigation.navigate('Eventos')
     }
   ]
 
