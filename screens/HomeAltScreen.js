@@ -24,7 +24,7 @@ class HomeAltScreen extends Component {
     {
       name: 'Como chegar',
       icon: 'md-pin',
-      onTilePress: () => this.props.navigation.navigate('EmBreve')
+      onTilePress: () => this.props.navigation.navigate('ComoChegar')
     },
     {
       name: 'Eventos',

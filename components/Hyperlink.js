@@ -6,8 +6,8 @@ import { Fonts, Colors } from '../constants'
 
 const openHyperlink = async (href) => WebBrowser.openBrowserAsync(href)
 
-const Hyperlink = ({ href, children }) => (
-  <Text onPress={() => openHyperlink(href)} style={styles.hyperlink}>
+const Hyperlink = ({ href, children, style }) => (
+  <Text onPress={() => openHyperlink(href)} style={[styles.hyperlink, style]}>
     {children}
   </Text>
 )
