@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   },
 
   backgroundEven: {
-    backgroundColor: Colors.rgba(Colors.darkPurple, 35)
+    backgroundColor: Colors.rgba(Colors.darkPurple, 60)
   },
 
   backgroundOdd: {
