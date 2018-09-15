@@ -17,6 +17,7 @@ import GuiaVisitanteScreen from '../screens/GuiaVisitanteScreen'
 import HistoriaScreen from '../screens/HistoriaScreen'
 import EventosScreen from '../screens/EventosScreen'
 import ComoChegarScreen from '../screens/ComoChegarScreen'
+import PerguntasFrequentesScreen from '../screens/PerguntasFrequentesScreen'
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -33,7 +34,8 @@ const HomeAltStack = createStackNavigator({
   GuiaProfessor: GuiaProfessorScreen,
   GuiaVisitante: GuiaVisitanteScreen,
   Eventos: EventosScreen,
-  ComoChegar: ComoChegarScreen
+  ComoChegar: ComoChegarScreen,
+  FAQ: PerguntasFrequentesScreen
 })
 
 HomeAltStack.navigationOptions = {

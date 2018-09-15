@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
+import { WebBrowser } from 'expo'
 
-import { Colors, Layout } from '../constants'
+import { Colors, Layout, Links } from '../constants'
 import Header from '../components/Header'
 import Tile from '../components/Tile'
 
@@ -19,8 +20,8 @@ class HomeAltScreen extends Component {
     {
       name: 'Guia do professor',
       icon: 'md-school',
-      onTilePress: () => this.props.navigation.navigate('GuiaProfessor') },
-
+      onTilePress: () => this.props.navigation.navigate('GuiaProfessor')
+    },
     {
       name: 'Como chegar',
       icon: 'md-pin',
@@ -34,12 +35,12 @@ class HomeAltScreen extends Component {
     {
       name: 'Entre em contato',
       icon: 'md-call',
-      onTilePress: () => this.props.navigation.navigate('EmBreve')
+      onTilePress: () => this.props.navigation.navigate('FAQ')
     },
     {
       name: 'Agendamentos',
       icon: 'md-time',
-      onTilePress: () => this.props.navigation.navigate('EmBreve')
+      onTilePress: () => WebBrowser.openBrowserAsync(Links.agendamento)
     }
   ]
 

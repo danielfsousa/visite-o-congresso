@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, ScrollView, View } from 'react-native'
 
-import { Colors, Images, Layout } from '../constants'
+import { Colors, Images, Layout, Links } from '../constants'
 import { Title } from '../components/StyledText'
 import Hyperlink from '../components/Hyperlink'
 import BackgroundImage from '../components/BackgroundImage'
@@ -63,8 +63,8 @@ class ComoChegarScreen extends Component {
 
           <View style={styles.titleContainer}>
             <Title style={styles.title}>Para mais informações como itinerários dos ônibus e mapa, consultar:</Title>
-            <Hyperlink style={styles.link} href='http://www.horarios.dftrans.df.gov.br'>Site DFTrans</Hyperlink>
-            <Hyperlink style={styles.link} href='https://maps.google.com/maps?f=q&source=s_q&hl=pt-BR&geocode=&q=congresso+nacional&aq=&sll=37.0625,-95.677068&sspn=51.089971,93.076172&vpsrc=0&t=h&ie=UTF8&hq=&hnear=&z=17&iwloc=A&cid=411739593941032767'>Mapa</Hyperlink>ß
+            <Hyperlink style={styles.link} href={Links.dfTrans}>Site DFTrans</Hyperlink>
+            <Hyperlink style={styles.link} href={Links.comoChegar}>Mapa</Hyperlink>ß
           </View>
 
           {
