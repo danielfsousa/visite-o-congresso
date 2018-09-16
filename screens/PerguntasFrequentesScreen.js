@@ -73,7 +73,7 @@ class PerguntasFrequentesScreen extends Component {
         detach
         type='big'
         onBackButtonClick={() => navigation.goBack()}>
-        Como chegar
+        Perguntas Frequentes
       </Header>
     )
   })
