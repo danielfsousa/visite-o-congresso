@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
 import { BodyText } from '../components/StyledText'
-import { Colors, Layout } from '../constants'
 import Hyperlink from '../components/Hyperlink'
 import withParallax from './ParallaxScreenFactory'
 
@@ -26,24 +25,8 @@ const ScreenWithParallax = withParallax(
 export default ScreenWithParallax
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'stretch'
-  },
-
-  overlay: {
-    backgroundColor: Colors.rgba(Colors.background, 96)
-  },
-
-  scrollContainer: {
-    marginTop: 130,
-    paddingHorizontal: Layout.padding
-  },
-
   paragraph: {
     marginTop: 13,
     marginBottom: 13
   }
-
 })

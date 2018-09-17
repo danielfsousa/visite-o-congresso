@@ -71,7 +71,8 @@ const styles = StyleSheet.create({
   scrollContainer: {
     flex: 5,
     padding: Layout.padding,
-    paddingBottom: Layout.padding * 3
+    paddingBottom: Layout.padding * 3,
+    zIndex: 20
   },
 
   overlay: {

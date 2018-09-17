@@ -28,9 +28,15 @@ const animateOnScroll = animatedScroll => {
   //   ]
   // })
 
+  const opacity = animatedScroll.interpolate({
+    inputRange: [0, 100],
+    outputRange: [1, 0],
+    extrapolate: 'clamp'
+  })
+
   return {
-    transform: [{ translateY }, { scale }]
-    // color
+    transform: [{ translateY }, { scale }],
+    opacity
   }
 }
 
