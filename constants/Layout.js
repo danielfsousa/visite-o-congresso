@@ -19,7 +19,7 @@ export default {
   borderRadius: 3,
   isSmallDevice: width < 375,
   headerHeight,
-  bigHeaderHeight: '40%',
+  bigHeaderHeight: (40 / 100) * height,
   tabBarHeight,
   getBoxHeight,
   getBoxWidth

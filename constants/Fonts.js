@@ -1,18 +1,19 @@
 const Fonts = {
   regular: 'futura',
-  light: 'futura-light',
+  oblique: 'futura-oblique',
   book: 'futura-book',
   bold: 'futura-bold',
-  bigger: 24,
-  big: 18,
+  huge: 24,
+  bigger: 18,
+  big: 17,
   medium: 16,
-  small: 14,
-  smaller: 12
+  small: 15,
+  smaller: 14
 }
 
 Fonts.sources = {
-  'futura': require('../assets/fonts/FuturaLT.ttf'),
-  'futura-light': require('../assets/fonts/FuturaLT-Book.ttf'),
+  futura: require('../assets/fonts/FuturaLT.ttf'),
+  'futura-oblique': require('../assets/fonts/FuturaLT-Oblique.ttf'),
   'futura-book': require('../assets/fonts/FuturaLT-Book.ttf'),
   'futura-bold': require('../assets/fonts/FuturaLT-Bold.ttf')
 }

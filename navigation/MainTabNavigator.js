@@ -8,16 +8,15 @@ import Colors from '../constants/Colors'
 import { TabBarIcon } from '../components/Icon'
 import HomeScreen from '../screens/HomeScreen'
 import HomeAltScreen from '../screens/HomeAltScreen'
+import GenericFAQScreen from '../screens/GenericFAQScreen'
+import GenericDetailsScreen from '../screens/GenericDetailsScreen'
 import CuriosidadesScreen from '../screens/CuriosidadesScreen'
 import GuiaVirtualScreen from '../screens/GuiaVirtualScreen'
 import WebBrowserScreen from '../screens/WebBrowserScreen'
 import EmConstrucaoScreen from '../screens/EmConstrucaoScreen'
-import GuiaProfessorScreen from '../screens/GuiaProfessorScreen'
-import GuiaVisitanteScreen from '../screens/GuiaVisitanteScreen'
-import HistoriaScreen from '../screens/HistoriaScreen'
+import AHistoriaScreen from '../screens/AHistoriaScreen'
 import EventosScreen from '../screens/EventosScreen'
 import ComoChegarScreen from '../screens/ComoChegarScreen'
-import PerguntasFrequentesScreen from '../screens/PerguntasFrequentesScreen'
 import InterativoScreen from '../screens/InterativoScreen'
 
 const HomeStack = createStackNavigator({
@@ -32,11 +31,10 @@ HomeStack.navigationOptions = {
 const HomeAltStack = createStackNavigator({
   HomeAlt: HomeAltScreen,
   EmBreve: EmConstrucaoScreen,
-  GuiaProfessor: GuiaProfessorScreen,
-  GuiaVisitante: GuiaVisitanteScreen,
+  GenericFAQ: GenericFAQScreen,
+  GenericDetails: GenericDetailsScreen,
   Eventos: EventosScreen,
-  ComoChegar: ComoChegarScreen,
-  FAQ: PerguntasFrequentesScreen
+  ComoChegar: ComoChegarScreen
 })
 
 HomeAltStack.navigationOptions = {
@@ -45,7 +43,7 @@ HomeAltStack.navigationOptions = {
 
 const CuriosidadesStack = createStackNavigator({
   Curiosidades: CuriosidadesScreen,
-  Historia: HistoriaScreen
+  AHistoria: AHistoriaScreen
 })
 
 CuriosidadesStack.navigationOptions = {

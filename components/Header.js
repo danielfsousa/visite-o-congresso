@@ -1,21 +1,51 @@
 import React from 'react'
-import { View, StyleSheet, TouchableOpacity } from 'react-native'
+import { StyleSheet, Animated } from 'react-native'
 
 import { Fonts, Colors, Layout } from '../constants'
-import { HeaderIcon } from './Icon'
 import { Title } from './StyledText'
 
-// renderBackButton={props.navigation.state.routes.length > 1}
+const animateOnScroll = animatedScroll => {
+  if (!animatedScroll) return {}
+
+  const scale = animatedScroll.interpolate({
+    inputRange: [0, 350],
+    outputRange: [1, 0.8]
+  })
+
+  const translateY = animatedScroll.interpolate({
+    inputRange: [0, 100],
+    outputRange: [0, 68]
+  })
+
+  // propriedade 'color' não é suportada pelo animador nativo :(
+  // workaround TODO:: https://stackoverflow.com/questions/44134121/does-react-native-animated-native-driver-support-color-backgroundcolor
+
+  // const color = animatedScroll.interpolate({
+  //   inputRange: [0, 150],
+  //   outputRange: [
+  //     Colors.rgba(Colors.white, 100),
+  //     Colors.rgba(Colors.white, '00')
+  //   ]
+  // })
+
+  return {
+    transform: [{ translateY }, { scale }]
+    // color
+  }
+}
 
 const Header = ({
   type = 'normal',
   detach = false,
   transparent = false,
-  onBackButtonClick,
+  renderBackButton = false,
+  onBackButtonPress,
+  animatedScroll,
+  textStyle,
   children,
   style
 }) => (
-  <View
+  <Animated.View
     style={[
       type === 'big' ? styles.bigContainer : styles.container,
       transparent && styles.transparent,
@@ -23,18 +53,16 @@ const Header = ({
       style
     ]}
   >
-    {type === 'big' &&
-      <TouchableOpacity
-        style={styles.iconContainer}
-        onPress={onBackButtonClick}
-      >
-        <HeaderIcon />
-      </TouchableOpacity>}
-
-    <Title style={type === 'big' ? styles.bigTitle : styles.title}>
+    <Title
+      style={[
+        type === 'big' ? styles.bigTitle : styles.title,
+        textStyle,
+        animateOnScroll(animatedScroll)
+      ]}
+    >
       {children}
     </Title>
-  </View>
+  </Animated.View>
 )
 
 const styles = StyleSheet.create({
@@ -46,13 +74,13 @@ const styles = StyleSheet.create({
   },
 
   container: {
-    zIndex: 100,
+    zIndex: 10,
     height: Layout.headerHeight,
     backgroundColor: Colors.background
   },
 
   bigContainer: {
-    zIndex: 100,
+    zIndex: 10,
     flex: 1,
     height: Layout.bigHeaderHeight,
     backgroundColor: Colors.background,
@@ -60,34 +88,26 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
 
-  iconContainer: {
-    width: 44,
-    height: 44,
-    borderRadius: 44,
-    position: 'absolute',
-    left: Layout.padding,
-    top: Layout.padding,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: Colors.tilesBackground
-  },
-
   transparent: {
     backgroundColor: Colors.transparent
   },
 
   title: {
+    zIndex: 11,
     position: 'relative',
     top: 25,
     paddingLeft: Layout.padding,
-    fontSize: Fonts.bigger
+    fontSize: Fonts.huge
   },
 
   bigTitle: {
-    fontSize: Fonts.bigger
-  },
-
-  backButton: {}
+    zIndex: 11,
+    fontSize: Fonts.huge,
+    position: 'relative',
+    top: 24, // back button height
+    textAlign: 'center',
+    paddingHorizontal: Layout.padding
+  }
 })
 
 export default Header

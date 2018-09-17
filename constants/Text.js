@@ -1,3 +1,62 @@
+const FAQ = [
+  {
+    title: 'Posso visitar o Congresso Nacional?',
+    text: 'Sim. A Câmara dos Deputados e o Senado Federal realizam em conjunto visitas guiadas aos principais espaços das duas instituições. As visitas acontecem todos os dias incluindo sábados, domingos e feriados tendo início às 9h e encerrando às 17h30 com grupos saindo a cada meia hora.  Porém, atenção! Às terças e quartas a visita é fechada. Às quintas somente grupos agendados com antecedência são atendidos. Eventualmente as visitas poderão ser suspensas por motivos de segurança.'
+  },
+  {
+    title: 'Quanto custa o ingresso para a visita ao Congresso Nacional?',
+    text: 'Nada! As visitas institucionais realizadas pelos monitores do Congresso Nacional são gratuitas.'
+  },
+  {
+    title: 'Posso fotografar e filmar durante a visita?',
+    text: 'Pode. O uso de máquinas fotográficas e filmadoras não-profissionais é permitido durante a visita, a não ser nos Plenários, quando há sessão.'
+  },
+  {
+    title: 'Durante a minha visita, posso assistir a uma sessão do Plenário ou das Comissões?',
+    text: 'O percurso da visita institucional ao Congresso inclui uma passagem pelos Plenários. Entretanto, é possível vir ao Palácio exclusivamente para assistir aos trabalhos dos Plenários e das Comissões, que são abertos ao público na maior parte das vezes.'
+  },
+  {
+    title: 'Preciso usar traje social para assistir a uma reunião do Plenário ou das Comissões?',
+    text: 'O Ato Conjunto dos Presidentes da Câmara dos Deputados e do Senado Federal nº 5 de 2014 (está no Diário Oficial do Senado Federal, na página 13) define as regras de vestimenta no acesso ao Congresso. Não é permitida a entrada de visitante trajando shorts, bermudas, calças Capri ou Corsário, camisetas sem manga e chinelos em dias de trabalho parlamentar, sendo o uso dessas vestimentas liberado aos finais de semana e feriados.  Em algumas circunstâncias, como em sessões solenes, ou locais como a Tribuna de Honra do Plenário do Senado ou o Salão Verde da Câmara, é exigido dos homens o uso de terno e gravata. Em caso de dúvida, entre em contato.'
+  },
+  {
+    title: 'Posso dar minha opinião durante os debates e votações?',
+    text: 'Como em todos os parlamentos democráticos, não é permitido se manifestar durante os debates e votações a fim de não comprometer o andamento dos trabalhos.'
+  },
+  {
+    title: 'Em algumas sessões, os Plenários ficam com poucos parlamentares. Onde eles estão nessa hora?',
+    text: 'As sessões não deliberativas costumam ser mais vazias pois a presença dos parlamentares não é obrigatória nessas sessões. Também vale lembrar que o trabalho parlamentar prevê o atendimento nos gabinetes a lideranças e cidadãos; a participação em seminários e audiências públicas para debater temas de interesse nacional; a participação em entrevistas e encontros nacionais e internacionais diversos; a atuação nas comissões permanentes, especiais e temporárias. Os parlamentares também costumam acompanhar lideranças sindicais e empresariais, governadores, prefeitos ou vereadores em visitas aos ministérios em busca de projetos e recursos para as suas regiões. Quando eles não se encontram nos plenários estão em outras atividades parlamentares como as listadas.'
+  },
+  {
+    title: 'Queria acompanhar o trabalho do parlamentar que elegi quando eu visitar o Congresso Nacional. É possível?',
+    text: 'Sua visita não necessariamente coincidirá com o momento em que o parlamentar estiver em Plenário. Lembre-se, o trabalho dele não se resume apenas ao Plenário. No site da Câmara dos Deputados e do Senado Federal, você poderá acessar  informações sobre a atuação do seu deputado e/ou senador, tais como sua presença no Plenário e nas Comissões; como ele votou em cada proposição; a íntegra de seus discursos; os projetos que apresentou, etc.'
+  },
+  {
+    title: 'Outro dia, vi na TV o Plenário da Câmara cheio e muitos parlamentares em pé. Por que isso acontece?',
+    text: 'O Plenário tem capacidade para 396 pessoas sentadas, número menor do que o de deputados (513). Assim, quando há um debate mais acirrado, votação nominal ou até mesmo sessões conjuntas com a presença de deputados e senadores, o recinto acaba ficando muito cheio. Mas isso não prejudica as votações: o sistema eletrônico é rápido, permitindo que os parlamentares votem e logo deem lugar aos colegas.'
+  },
+  {
+    title: 'Há restaurantes e lanchonetes no Congresso? São abertos ao público?',
+    text: 'Em dias úteis há a possibilidade de acesso na Câmara e no Senado aos restaurantes e lanchonetes que são abertos ao público em geral. Porém, para frequentá-los o visitante deverá se identificar na portaria de uma das Casas.'
+  },
+  {
+    title: 'Soube que a Câmara dos Deputados e o Senado Federal promovem seminários, exposições, lançamentos de livros e vários outros eventos. Eles são abertos ao público?',
+    text: 'Sim, desde que o visitante se identifique em uma das portarias da respectiva instituição, e informe o evento e o local de destino.'
+  },
+  {
+    title: 'Quanto tempo dura a visita?',
+    text: 'A visita é planejada para durar aproximadamente 1 hora, mas o tempo pode ser uma pouco mais extenso ou menos extenso a depender de alguns fatores extras como quantidade de perguntas, presença de pessoas com dificuldade de locomoção e até mesmo interação dos visitantes com o percurso, parlamentares e monitores. Em dias de maior movimento, para possibilitar atendimento a todos os interessados, o tempo e percurso poderão ser reduzidos.'
+  },
+  {
+    title: 'O que verei no percurso da visita ao Congresso Nacional?',
+    text: 'Cada dia possui um roteiro diferente. Espaços como o Salão Negro, os Salões Nobres, os Plenários, os Salões Azul e Verde, o Túnel do Tempo, a Chapelaria estão entre os locais contemplados no roteiro completo. Nos feriados e finais de semana, comumente visitam-se os Gabinetes dos Presidentes. Lembre-se que alterações podem ocorrer sem aviso prévio.'
+  },
+  {
+    title: 'Posso realizar a visitação sem acompanhamento do guia?',
+    text: 'O visitante não poderá ficar sozinho no Congresso Nacional, a menos que esteja se dirigindo a algum gabinete, plenário, comissão ou setor específico do Palácio, após devida identificação e checagem por parte da segurança. O trabalho dos monitores é desenvolvido para garantir a segurança e o acesso dos cidadãos conforme as regras estabelecidas em conjunto pelas duas instituições.'
+  }
+]
+
 const GuiaProfessor = [
   {
     title: 'Antes da visita',
@@ -23,8 +82,8 @@ const GuiaProfessor = [
 
 const GuiaVisitante = [
   {
-    title: 'Seja bem-vindo(a) ao Palácio do Congresso Nacional!',
-    text: 'O prédio que abriga a Câmara dos Deputados e o Senado Federal é um marco arquitetônico da Capital da República e está de portas abertas para receber visitantes interessados em conhecer um pouco mais sobre o Poder legislativo brasileiro.\n\nAqui, deputados e senadores, representantes eleitos do povo e dos estados, dedicam-se a discutir e elaborar leis, a fiscalizar e controlar os atos do Poder Executivo, a aprovar o Orçamento da União, entre outras atribuições de fundamental importância para o Brasil.\n\nEsperamos que a visita à Câmara dos Deputados e ao Senado Federal amplie a compreensão sobre a história e o papel dessas duas instituições democráticas.\n\nPara que você aproveite ao máximo a visita ao Congresso Nacional, observe estas orientações:'
+    title: 'Seja bem-vindo(a)',
+    text: 'O prédio que abriga a Câmara dos Deputados e o Senado Federal é um marco arquitetônico da Capital da República e está de portas abertas para receber visitantes interessados em conhecer um pouco mais sobre o Poder legislativo brasileiro.\n\nAqui, deputados e senadores, representantes eleitos do povo e dos estados, dedicam-se a discutir e elaborar leis, a fiscalizar e controlar os atos do Poder Executivo, a aprovar o Orçamento da União, entre outras atribuições de fundamental importância para o Brasil.\n\nEsperamos que a visita à Câmara dos Deputados e ao Senado Federal amplie a compreensão sobre a história e o papel dessas duas instituições democráticas.'
   },
   {
     title: 'Visitas mediadas',
@@ -51,7 +110,7 @@ const GuiaVisitante = [
     text: 'Em dias úteis, é proibida a entrada de pessoas vestindo bermudas, shorts, camisas sem mangas, minissaias e chinelos. Essas restrições não se aplicam a crianças de até 12 anos de idade.\n\nRecomenda-se calça comprida, camisa com manga, vestido ou saia na altura do joelho.\n\nEm algumas circunstâncias, como em sessões solenes, ou locais como a Tribuna de Honra do Plenário do Senado ou o Salão Verde da Câmara, é exigido dos homens o uso de terno e gravata. Em caso de dúvida, entre em contato.'
   },
   {
-    title: 'Apoio à pessoa com deficiência ou dificuldade de locomoção',
+    title: 'Apoio à pessoa com deficiência',
     text: 'O Programa Visite o Congresso possui intérpretes de Libras, material impresso em Braille e estão disponíveis para empréstimo, triciclos motorizados e cadeiras de rodas para pessoas com dificuldade de locomoção. Na portaria, há o sistema de aro magnético (sistema de escuta assistida para pessoas usuárias de aparelho auditivo). E, no Salão Verde, há a maquete tátil do Congresso Nacional, para visitantes com deficiência visual.\n\nPara facilitar a disponibilidade desses recursos, recomenda-se o agendamento prévio.'
   },
   {
@@ -71,7 +130,7 @@ const GuiaVisitante = [
     text: 'O Museu Histórico Itamar Franco funciona no Salão Nobre do Senado Federal e exibe obras de arte, objetos e mobiliário das antigas sedes, época em que o Senado funcionava no Rio de Janeiro. Está aberto nos dias úteis à visitação pública das 9 às 13 horas e das 14 às 17 horas.\n\nO Museu da Câmara dos Deputados organiza diversas exposições de seu vasto acervo, como a dos Presentes Protocolares, no Salão Verde.'
   },
   {
-    title: 'Espaços culturais e exposições temporárias',
+    title: 'Espaços culturais e exposições',
     text: 'A Câmara e o Senado realizam, durante o ano, várias exposições institucionais, históricas, artísticas e fotográficas de caráter temporário.\n\nFique atento à programação divulgada nos portais eletrônicos das duas Casas. Atente para o fato de que alguns espaços só podem ser visitados em dias úteis.'
   },
   {
@@ -79,7 +138,7 @@ const GuiaVisitante = [
     text: 'A Biblioteca Acadêmico Luiz Viana Filho, do Senado Federal, foi uma das primeiras que surgiram à época do Império brasileiro e conta com um acervo especializado em Ciências Sociais. Está aberta aos usuários externos nos dias úteis, das 9 às 14 horas.\n\nA entrada mais próxima é pelo Anexo 2 do Senado, na Via N2.\n\nA Biblioteca Pedro Aleixo integra o Centro de Documentação e Informação da Câmara dos Deputados e possui um acervo com cerca de 200.000 volumes, sendo uma das maiores de Brasília e do País.\n\nUsuários externos podem realizar consultas locais em dias úteis, das 9h às 18h30. A Biblioteca está localizada no Anexo 2 da Câmara dos Deputados.\n\nAs duas bibliotecas dispõem grande parte de seus acervos em versão on-line. Acesse:\nhttp://bd.camara.leg.br/bd\nhttp://www.senado.leg.br/senado/biblioteca'
   },
   {
-    title: 'Aquisição de exemplares da Constituição Federal',
+    title: 'Exemplares da Constituição Federal',
     text: 'O texto da Constituição Federal brasileira está disponível, na íntegra, nas páginas da internet do Senado e da Câmara, inclusive para download em formato pdf.\n\nVersões impressas podem ser adquiridas tanto na Câmara quanto no Senado. Consulte os pontos de venda da Livraria do Senado e das Edições Câmara ou pergunte a localização nos balcões de atendimento ou acesse os respectivos sites.'
   },
   {
@@ -89,11 +148,7 @@ const GuiaVisitante = [
   {
     title: 'Com a palavra, o visitante',
     text: 'Ao final da visita, registre sua opinião sobre o Programa Visite o Congresso nas fichas de avaliação da visita que estão disponíveis no final da visita e nos balcões de atendimento.\n\nElogios, críticas e sugestões são analisadas e respondidas e servem como subsídio para melhorar o programa de visitas do Congresso Nacional.'
-  },
-  {
-    title: 'Faça contato',
-    text: '0800 619619 e 3216-0000 (ligações por celular)\n\nSecretaria de Relações Públicas do Senado Federal:\nvisite@senado.leg.br\n(61) 3303-4410 (finais de semana)\n\nDepartamento de Relações Públicas e Divulgação da Câmara dos Deputados:\nvisitas@camara.leg.br\n(61) 3216-1768 (finais de semana)'
   }
 ]
 
-export { GuiaProfessor, GuiaVisitante }
+export default { FAQ, GuiaProfessor, GuiaVisitante }
