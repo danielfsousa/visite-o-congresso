@@ -18,6 +18,7 @@ import HistoriaScreen from '../screens/HistoriaScreen'
 import EventosScreen from '../screens/EventosScreen'
 import ComoChegarScreen from '../screens/ComoChegarScreen'
 import PerguntasFrequentesScreen from '../screens/PerguntasFrequentesScreen'
+import InterativoScreen from '../screens/InterativoScreen'
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -51,20 +52,25 @@ CuriosidadesStack.navigationOptions = {
   tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name='info' />
 }
 
+const MaterialInterativoStack = createStackNavigator({
+  MaterialInterativo: InterativoScreen
+})
+
+MaterialInterativoStack.navigationOptions = {
+  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name='camera' />
+}
+
 const GuiaVirtualStack = createStackNavigator({
   GuiaVirtual: GuiaVirtualScreen
 })
 
-const GuiaVirtualWebBrowserStack = createStackNavigator(
-  {
-    Main: GuiaVirtualStack,
-    WebBrowser: WebBrowserScreen
-  },
-  {
-    mode: 'modal',
-    headerMode: 'none'
-  }
-)
+const GuiaVirtualWebBrowserStack = createStackNavigator({
+  Main: GuiaVirtualStack,
+  WebBrowser: WebBrowserScreen
+},
+{
+  mode: 'modal', headerMode: 'none'
+})
 
 GuiaVirtualWebBrowserStack.navigationOptions = ({ navigation }) => {
   return {
@@ -79,6 +85,7 @@ export default createMaterialTopTabNavigator(
   {
     HomeAltStack,
     CuriosidadesStack,
+    MaterialInterativoStack,
     GuiaVirtualWebBrowserStack
   },
   {
