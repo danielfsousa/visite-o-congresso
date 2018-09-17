@@ -2,24 +2,35 @@ const heToRgba = require('hex-rgba')
 
 const colors = {
   transparent: 'transparent',
-  purple: '#6F4EE8',
-  brightPurple: '#7752FE',
-  darkPurple: '#36334A',
-  darkerPurple: '#2A2B40',
-  lightPurple: '#DDD9EE',
   white: '#fff',
   gray: '#797D80'
 }
 
-const styles = {
-  transparent: colors.transparent,
-  background: colors.darkerPurple,
-  tilesBackground: colors.darkPurple,
-  primaryColor: colors.brightPurple,
+const genericStyles = {
   text: colors.white,
-  bodyText: colors.lightPurple,
   tabIconDefault: colors.gray,
   tabIconSelected: colors.white
 }
 
-export default { ...colors, ...styles, rgba: heToRgba }
+const themes = {
+  purple: {
+    ...genericStyles,
+    primaryColor: '#7752FE',
+    background: '#2A2B40',
+    tilesBackground: '#36334A',
+    bodyText: '#DDD9EE'
+  },
+  blue: {
+    ...genericStyles,
+    primaryColor: '#4A9AD1',
+    background: '#0A142B',
+    tilesBackground: '#16233D',
+    bodyText: '#D2DCE7'
+  }
+}
+
+export default {
+  rgba: heToRgba,
+  ...colors,
+  ...themes.blue
+}
