@@ -38,12 +38,17 @@ class HomeAltScreen extends Component {
     {
       name: 'Como chegar',
       icon: 'md-pin',
-      onTilePress: () => this.props.navigation.navigate('ComoChegar')
+      onTilePress: () => this.props.navigation.navigate('GenericFAQ', {
+        title: 'Como Chegar',
+        data: Text.ComoChegar
+      })
     },
     {
       name: 'Eventos',
       icon: 'md-calendar',
-      onTilePress: () => this.props.navigation.navigate('Eventos')
+      onTilePress: () => this.props.navigation.navigate('Eventos', {
+        title: 'Eventos'
+      })
     },
     {
       name: 'Entre em contato',

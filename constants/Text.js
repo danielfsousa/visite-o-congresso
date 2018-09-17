@@ -151,4 +151,31 @@ const GuiaVisitante = [
   }
 ]
 
-export default { FAQ, GuiaProfessor, GuiaVisitante }
+const ComoChegar = [
+  {
+    title: 'De ônibus',
+    text: 'As linhas 152, 152.2, 152.3, 162, 161, 108, 108.3 e 108.5  passam pela Esplanada dos Ministérios e pela Praça dos Três Poderes'
+  },
+  {
+    title: 'De micro-ônibus (zebrinha)',
+    text: 'As linhas 07, 08, 11, 16, 24, 25, 31, 32 e 113 passam pela Esplanada dos Ministérios e pela Praça dos Três Poderes'
+  },
+  {
+    title: 'De táxi',
+    text: 'Peça ao taxista para deixá-lo na Chapelaria do Congresso Nacional. Nesse local também há um ponto de táxi caso precise de um após a visita. Na Chapelaria informe que deseja ir ao Salão Negro.\nAtenção: o ponto de táxi não funciona nos finais de semana e nos feriados.'
+  },
+  {
+    title: 'De metrô',
+    text: 'Desça na estação da rodoviária do Plano Piloto (ponto final) e pegue um dos ônibus que passam pela Praça dos Três Poderes: 108, 108.3 e 108.5'
+  },
+  {
+    title: 'De carro',
+    text: 'Como são vários os caminhos possíveis para chegar à Esplanada dos Ministérios, o jeito mais fácil é avaliar as possibilidades por mapas da internet. Quem vier de carro poderá estacionar em vagas ao longo das vias de acesso ao Congresso'
+  },
+  {
+    title: 'A partir do aeroporto',
+    text: 'A linha executiva de ônibus 113, parte  do aeroporto de Brasília  e passa pela Praça dos Três Poderes.'
+  }
+]
+
+export default { FAQ, GuiaProfessor, GuiaVisitante, ComoChegar }
