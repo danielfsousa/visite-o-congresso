@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, StyleSheet } from 'react-native'
+import { View, StyleSheet, ScrollView } from 'react-native'
 
 import { Colors, Images } from '../constants'
 import Header from '../components/Header'
@@ -12,7 +12,12 @@ class CuriosidadesScreen extends Component {
 
   banners = [
     {
-      name: 'A História do Congresso Nacional',
+      name: 'A História da Câmara dos Deputados',
+      image: Images.historia,
+      onBannerPress: () => this.props.navigation.navigate('AHistoria')
+    },
+    {
+      name: 'A História do Senado',
       image: Images.historia,
       onBannerPress: () => this.props.navigation.navigate('AHistoria')
     },
@@ -31,7 +36,9 @@ class CuriosidadesScreen extends Component {
   render () {
     return (
       <View style={styles.conatiner}>
-        {this.banners.map(props => <Banner key={props.name} {...props} />)}
+        <ScrollView>
+          {this.banners.map(props => <Banner key={props.name} {...props} />)}
+        </ScrollView>
       </View>
     )
   }

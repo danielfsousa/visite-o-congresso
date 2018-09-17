@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   },
 
   overlay: {
-    backgroundColor: Colors.rgba(Colors.background, 67)
+    backgroundColor: Colors.rgba(Colors.background, 65)
   },
 
   text: {

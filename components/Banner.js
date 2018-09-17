@@ -20,7 +20,8 @@ const Banner = ({ name, image, onBannerPress }) => (
 
 const styles = StyleSheet.create({
   container: {
-    height: Layout.getBoxHeight({ rows: 3 }),
+    // mostra 5px do proximo banner para indicar que há mais banners
+    height: Layout.getBoxHeight({ rows: 3 }) - 5,
     width: Layout.getBoxWidth({ margins: 2, columns: 1 }),
     justifyContent: 'center',
     alignItems: 'center',
@@ -43,13 +44,13 @@ const styles = StyleSheet.create({
 
   overlay: {
     borderRadius: Layout.borderRadius,
-    backgroundColor: Colors.rgba(Colors.primaryColor, 35)
+    backgroundColor: Colors.rgba(Colors.primaryColor, 30)
   },
 
   label: {
-    textShadowColor: 'rgba(0, 0, 0, 0.50)',
+    textShadowColor: 'rgba(0, 0, 0, 0.70)',
     textShadowOffset: { width: 0, height: 3 },
-    textShadowRadius: 25
+    textShadowRadius: 10
   }
 })
 

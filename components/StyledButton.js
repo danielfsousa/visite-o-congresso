@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
 
   text: {
     fontFamily: Fonts.bold,
-    fontSize: Fonts.small,
+    fontSize: Fonts.smaller,
     color: Colors.text,
     letterSpacing: 1.1
   }
