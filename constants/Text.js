@@ -178,4 +178,8 @@ const ComoChegar = [
   }
 ]
 
-export default { FAQ, GuiaProfessor, GuiaVisitante, ComoChegar }
+const Curiosidades = {
+  Arquitetura: `O Palácio do Congresso Nacional é um dos cartões postais de Brasília e está situado no extremo leste do Eixo Monumental. Ocupa um dos vértices do triângulo que delimita a Praça dos Três Poderes. Nos vértices da base do triângulo estão o Palácio do Planalto e o Supremo Tribunal Federal.\n\nProjetado pelo arquiteto Oscar Niemeyer, o Palácio consiste em um edifício principal, na horizontal, que serve de plataforma para as cúpulas do Senado Federal e da Câmara dos Deputados.\n\nA cúpula menor, voltada para baixo, abriga o Plenário do Senado Federal. A cúpula maior, voltada para cima, abriga o Plenário da Câmara dos Deputados. Atrás do edifício principal e entre as duas cúpulas se encontram duas torres de 28 andares: uma delas pertence à Câmara e a outra ao Senado.\n\nEm 2007, coincidindo com o centésimo aniversário de Oscar Niemeyer, o Instituto do Patrimônio Histórico e Artístico Nacional (IPHAN) decidiu pelo tombamento do edifício do Congresso Nacional`
+}
+
+export default { FAQ, GuiaProfessor, GuiaVisitante, ComoChegar, Curiosidades }

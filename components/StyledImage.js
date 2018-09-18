@@ -1,8 +1,7 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, Image } from 'react-native'
 
 import { Colors, Layout } from '../constants'
-// import BackgroundImage from './BackgroundImage'
 import { SubTitle } from './StyledText'
 
 // const getFloatStyle = float =>
@@ -10,19 +9,10 @@ import { SubTitle } from './StyledText'
 
 const StyledImage = ({ float = 'right', image, caption }) => (
   <View style={{ flex: 1, alignItems: 'flex-end' }}>
-    <View style={styles.view} />
+    <Image style={styles.view} source={image} />
     <SubTitle style={styles.caption}>{caption}</SubTitle>
   </View>
 )
-// <BackgroundImage
-//   source={image}
-//   style={[styles.background, getFloatStyle(float)]}
-//   containerStyle={styles.containerStyle}
-//   imageStyle={[styles.image, getFloatStyle(float)]}
-//   overlayStyle={[styles.overlay, getFloatStyle(float)]}
-// >
-//   <SubTitle style={styles.caption}>{caption}</SubTitle>
-// </BackgroundImage>
 
 const styles = StyleSheet.create({
   view: {
@@ -47,13 +37,13 @@ const styles = StyleSheet.create({
   },
 
   floatLeft: {
-    // left: 0,
+    left: 0,
     borderTopRightRadius: Layout.borderRadius,
     borderBottomRightRadius: Layout.borderRadius
   },
 
   floatRight: {
-    // right: 0,
+    right: 0,
     borderTopLeftRadius: Layout.borderRadius,
     borderBottomLeftRadius: Layout.borderRadius
   },
