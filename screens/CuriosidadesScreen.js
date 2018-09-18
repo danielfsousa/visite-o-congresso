@@ -16,7 +16,7 @@ class CuriosidadesScreen extends Component {
       image: Images.historia,
       onBannerPress: () => this.props.navigation.navigate('AHistoria', {
         caption: 'Câmara\ndos Deputados',
-        text: Text.GuiaVisitante[0].text,
+        text: Text.Curiosidades.HistoriaCamara,
         image: Images.camaraDosDeputados,
         float: 'right'
       })
@@ -26,7 +26,7 @@ class CuriosidadesScreen extends Component {
       image: Images.historia,
       onBannerPress: () => this.props.navigation.navigate('AHistoria', {
         caption: 'Senado Federal',
-        text: Text.GuiaVisitante[0].text,
+        text: Text.Curiosidades.HistoriaSenado,
         image: Images.historia,
         float: 'left'
       })
@@ -45,8 +45,8 @@ class CuriosidadesScreen extends Component {
       name: 'Arte',
       image: Images.arte,
       onBannerPress: () => this.props.navigation.navigate('AHistoria', {
-        caption: 'Arte',
-        text: Text.GuiaVisitante[0].text,
+        caption: 'Arte\nno Congresso',
+        text: Text.Curiosidades.Arte,
         image: Images.arte,
         float: 'left'
       })
