@@ -11,7 +11,7 @@ class EventosScreen extends Component {
         <BodyText>Ao longo do ano diversos eventos são realizados tanto na Câmara dos Deputados como no Senado Federal. Eventos como sessões especiais e solenes; posse presidencial; abertura dos trabalhos legislativos e muitos outros podem ser abertas ao público.</BodyText>
         <BodyText style={styles.paragraph}>As iniciativas objetivam debater assuntos necessários ao aprofundamento dos trabalhos legislativos e de interesse da sociedade, oferecer o espaço democrático da Câmara dos Deputados e do Senado Federal à difusão da cultura brasileira e à reflexão sobre temas concernentes à cidadania e promover o acesso à informação. Para conhecer a agenda de eventos de cada Casa veja aqui:</BodyText>
         <Hyperlink href='http://www2.camara.leg.br/camaranoticias/agenda.html'>Câmara dos Deputados</Hyperlink>
-        <Hyperlink href='http://www.senado.gov.br/noticias/RelacoesPublicas/'>Senado Federal</Hyperlink>.
+        <Hyperlink href='http://www.senado.gov.br/noticias/RelacoesPublicas/'>Senado Federal</Hyperlink>
       </View>
     )
   }
