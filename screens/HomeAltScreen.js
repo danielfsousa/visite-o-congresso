@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
 import { WebBrowser } from 'expo'
+import { Analytics, Event } from 'expo-analytics'
 
 import {
   Colors,
   Layout,
   Links,
-  Text
+  Text,
+  Configuration
 } from '../constants'
 import Header from '../components/Header'
 import Tile from '../components/Tile'
@@ -65,6 +67,12 @@ class HomeAltScreen extends Component {
       onTilePress: () => WebBrowser.openBrowserAsync(Links.agendamento)
     }
   ]
+
+  componentWillMount () {
+    const { category, action } = Configuration.Analytics.events.openScreen
+    const analytics = new Analytics('UA-126108597-1')
+    analytics.event(new Event(category, action, 'Home'))
+  }
 
   render () {
     return (

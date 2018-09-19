@@ -8,7 +8,7 @@ import AppNavigator from './navigation/AppNavigator'
 import { Colors, Images, Fonts, Configuration } from './constants'
 
 Sentry.enableInExpoDevelopment = true
-Sentry.config(Configuration.sentryDNS).install()
+Sentry.config(Configuration.Sentry.sentryDNS).install()
 
 export default class App extends Component {
   state = {

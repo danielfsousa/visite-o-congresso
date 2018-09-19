@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { Image, StyleSheet } from 'react-native'
 import { WebBrowser } from 'expo'
+import { Analytics, Event } from 'expo-analytics'
 
-import { Colors, Images, Layout, Links } from '../constants'
+import { Colors, Images, Layout, Links, Configuration } from '../constants'
 import BackgroundImage from '../components/BackgroundImage'
 import Header from '../components/Header'
 import StyledButton from '../components/StyledButton'
@@ -17,9 +18,13 @@ class GuiaVirtualScreen extends Component {
     )
   })
 
-  handleButtonPress = async () => WebBrowser.openBrowserAsync(Links.guiaVirtual)
+  componentWillMount () {
+    const { category, action } = Configuration.Analytics.events.openScreen
+    const analytics = new Analytics('UA-126108597-1')
+    analytics.event(new Event(category, action, 'Guia Virtual'))
+  }
 
-  // handleButtonPress = () => this.props.navigation.navigate('WebBrowser')
+  handleButtonPress = async () => WebBrowser.openBrowserAsync(Links.guiaVirtual)
 
   render () {
     return (
