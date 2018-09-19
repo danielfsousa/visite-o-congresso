@@ -49,11 +49,7 @@ class HomeAltScreen extends Component {
     {
       name: 'Entre em contato',
       icon: 'md-call',
-      onTilePress: () =>
-        this.props.navigation.navigate('GenericFAQ', {
-          title: 'Perguntas Frequentes',
-          data: Text.FAQ
-        })
+      onTilePress: () => WebBrowser.openBrowserAsync(Links.contato)
     },
     {
       name: 'Agendamentos',
