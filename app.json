@@ -36,6 +36,18 @@
       "adaptiveIcon": {
         "backgroundColor": "#0A142B"
       }
+    },
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "danilo-lemes",
+            "project": "visite-o-congresso",
+            "authToken": "cadcb3d04ebd4e3eadb5672a32f0e79db740fdf4f6294d2d91355ccedb9259fb"
+          }
+        }
+      ]
     }
   }
 }

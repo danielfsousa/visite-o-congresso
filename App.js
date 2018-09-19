@@ -2,9 +2,13 @@ import React, { Component } from 'react'
 import { Platform, StatusBar, StyleSheet, View } from 'react-native'
 import { AppLoading, Asset, Font, Icon } from 'expo'
 import { isIphoneX } from 'react-native-iphone-x-helper'
+import Sentry from 'sentry-expo'
 
 import AppNavigator from './navigation/AppNavigator'
-import { Colors, Images, Fonts } from './constants'
+import { Colors, Images, Fonts, Configuration } from './constants'
+
+Sentry.enableInExpoDevelopment = true
+Sentry.config(Configuration.sentryDNS).install()
 
 export default class App extends Component {
   state = {
