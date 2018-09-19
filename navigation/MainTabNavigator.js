@@ -18,6 +18,8 @@ import AHistoriaScreen from '../screens/AHistoriaScreen'
 import EventosScreen from '../screens/EventosScreen'
 import ComoChegarScreen from '../screens/ComoChegarScreen'
 import InterativoScreen from '../screens/InterativoScreen'
+import QRCodeScreen from '../screens/QRCodeScreen'
+import InterativoDetailScreen from '../screens/InterativoDetailScreen'
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -51,7 +53,9 @@ CuriosidadesStack.navigationOptions = {
 }
 
 const MaterialInterativoStack = createStackNavigator({
-  MaterialInterativo: InterativoScreen
+  MaterialInterativo: InterativoScreen,
+  QRCode: QRCodeScreen,
+  InterativoDetail: InterativoDetailScreen
 })
 
 MaterialInterativoStack.navigationOptions = {

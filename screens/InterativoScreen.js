@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Image, StyleSheet } from 'react-native'
-import { WebBrowser } from 'expo'
+import { Permissions } from 'expo'
 
-import { Colors, Images, Layout, Links } from '../constants'
+import { Colors, Images, Layout } from '../constants'
 import BackgroundImage from '../components/BackgroundImage'
 import Header from '../components/Header'
 import StyledButton from '../components/StyledButton'
@@ -12,12 +12,19 @@ class InterativoScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     header: (
       <Header transparent detach onBackButtonClick={() => navigation.goBack()}>
-        Material Interativo
+        Conteúdo Interativo
       </Header>
     )
   })
 
-  handleButtonPress = async () => WebBrowser.openBrowserAsync(Links.guiaVirtual)
+  requestCameraPermission = async () => {
+    const { status } = await Permissions.askAsync(Permissions.CAMERA)
+    if (status === 'granted') {
+      this.props.navigation.navigate('QRCode')
+    }
+  }
+
+  handleButtonPress = async () => this.requestCameraPermission()
 
   render () {
     return (

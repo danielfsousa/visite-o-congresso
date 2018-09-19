@@ -5,6 +5,7 @@ import Images from './Images'
 import Links from './Links'
 import Animations from './Animations'
 import Text from './Text'
+import ConteudoQRCode from './QRCodes'
 
 export {
   Colors,
@@ -13,5 +14,6 @@ export {
   Images,
   Links,
   Animations,
-  Text
+  Text,
+  ConteudoQRCode
 }
