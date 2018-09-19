@@ -4,6 +4,7 @@ const Sentry = {
 }
 
 const Analytics = {
+  id: 'UA-126108597-1',
   events: {
     openScreen: {
       category: 'Navigation',

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Image, StyleSheet } from 'react-native'
 import { Permissions } from 'expo'
-import { Analytics, Event } from 'expo-analytics'
+import { Analytics, PageHit } from 'expo-analytics'
 
 import { Colors, Images, Layout, Configuration } from '../constants'
 import BackgroundImage from '../components/BackgroundImage'
@@ -19,9 +19,8 @@ class InterativoScreen extends Component {
   })
 
   componentWillMount () {
-    const { category, action } = Configuration.Analytics.events.openScreen
-    const analytics = new Analytics('UA-126108597-1')
-    analytics.event(new Event(category, action, 'Conteúdo Interativo'))
+    const analytics = new Analytics(Configuration.Analytics.id)
+    analytics.hit(new PageHit('Conteúdo Interativo'))
   }
 
   requestCameraPermission = async () => {

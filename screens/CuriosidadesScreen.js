@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, ScrollView } from 'react-native'
-import { Analytics, Event } from 'expo-analytics'
+import { Analytics, PageHit } from 'expo-analytics'
 
 import { Colors, Images, Text, Configuration } from '../constants'
 import Header from '../components/Header'
@@ -55,9 +55,8 @@ class CuriosidadesScreen extends Component {
   ]
 
   componentWillMount () {
-    const { category, action } = Configuration.Analytics.events.openScreen
-    const analytics = new Analytics('UA-126108597-1')
-    analytics.event(new Event(category, action, 'Curiosidades'))
+    const analytics = new Analytics(Configuration.Analytics.id)
+    analytics.hit(new PageHit('Curiosidades'))
   }
 
   render () {

@@ -1,15 +1,9 @@
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
 import { WebBrowser } from 'expo'
-import { Analytics, Event } from 'expo-analytics'
+import { Analytics, PageHit } from 'expo-analytics'
 
-import {
-  Colors,
-  Layout,
-  Links,
-  Text,
-  Configuration
-} from '../constants'
+import { Colors, Layout, Links, Text, Configuration } from '../constants'
 import Header from '../components/Header'
 import Tile from '../components/Tile'
 
@@ -69,9 +63,8 @@ class HomeAltScreen extends Component {
   ]
 
   componentWillMount () {
-    const { category, action } = Configuration.Analytics.events.openScreen
-    const analytics = new Analytics('UA-126108597-1')
-    analytics.event(new Event(category, action, 'Home'))
+    const analytics = new Analytics(Configuration.Analytics.id)
+    analytics.hit(new PageHit('Home'))
   }
 
   render () {

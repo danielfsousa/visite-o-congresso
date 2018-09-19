@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Analytics, Event } from 'expo-analytics'
+import { Analytics, PageHit } from 'expo-analytics'
 
 import { BodyText } from '../components/StyledText'
 import StyledImage from '../components/StyledImage'
@@ -8,9 +8,8 @@ import withParallax from './ParallaxScreenFactory'
 
 class InterativoDetailScreen extends Component {
   componentWillMount () {
-    const { category, action } = Configuration.Analytics.events.openScreen
-    const analytics = new Analytics('UA-126108597-1')
-    analytics.event(new Event(category, action, 'Detalhe Material Interativo'))
+    const analytics = new Analytics(Configuration.Analytics.id)
+    analytics.hit(new PageHit('Detalhe Material Interativo'))
   }
 
   render () {

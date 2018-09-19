@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
+import { Analytics, PageHit } from 'expo-analytics'
 
+import { Configuration } from '../constants'
 import { BodyText } from '../components/StyledText'
 import StyledImage from '../components/StyledImage'
 import withParallax from './ParallaxScreenFactory'
 
 class AHistoriaScreen extends Component {
+  componentWillMount () {
+    const analytics = new Analytics(Configuration.Analytics.id)
+    analytics.hit(new PageHit('A História'))
+  }
+
   render () {
     const { caption, image, text } = this.props.navigation.state.params
     return (
