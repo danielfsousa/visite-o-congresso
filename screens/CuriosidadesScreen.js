@@ -28,7 +28,7 @@ class CuriosidadesScreen extends Component {
       onBannerPress: () => this.props.navigation.navigate('AHistoria', {
         caption: 'Senado Federal',
         text: Text.Curiosidades.HistoriaSenado,
-        image: Images.historia,
+        image: Images.senadoFederal,
         float: 'left'
       })
     },
@@ -36,7 +36,7 @@ class CuriosidadesScreen extends Component {
       name: 'Arquitetura',
       image: Images.arquitetura,
       onBannerPress: () => this.props.navigation.navigate('AHistoria', {
-        caption: 'Arquitetura',
+        caption: 'Arquitetura\nno Congresso',
         text: Text.Curiosidades.Arquitetura,
         image: Images.arquitetura,
         float: 'right'
