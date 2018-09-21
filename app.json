@@ -10,7 +10,7 @@
       "ios",
       "android"
     ],
-    "version": "1.0.2",
+    "version": "1.0.3",
     "orientation": "portrait",
     "primaryColor": "#0A142B",
     "androidStatusBar": {
@@ -31,7 +31,7 @@
     ],
     "ios": {
       "bundleIdentifier": "app.visiteocongresso",
-      "buildNumber": "1.0.2",
+      "buildNumber": "1.0.3",
       "supportsTablet": true,
       "infoPlist": {
         "NSCameraUsageDescription": "Este app usa a câmera para escanear QRCodes referentes ao Conteúdo Interativo."
@@ -39,7 +39,7 @@
     },
     "android": {
       "package": "app.visiteocongresso",
-      "versionCode": 3,
+      "versionCode": 4,
       "adaptiveIcon": {
         "backgroundColor": "#0A142B"
       },
