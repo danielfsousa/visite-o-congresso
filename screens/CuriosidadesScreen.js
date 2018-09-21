@@ -64,7 +64,7 @@ class CuriosidadesScreen extends Component {
       onBannerPress: () => WebBrowser.openBrowserAsync(Links.funcionamentoSenado)
     },
     {
-      name: 'Visitação Integrada Integrada em Brasília',
+      name: 'Visitação Institucional Integrada em Brasília',
       image: Images.viibra,
       onBannerPress: () => WebBrowser.openBrowserAsync(Links.viibra)
     }
