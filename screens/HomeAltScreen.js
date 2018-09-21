@@ -25,11 +25,10 @@ class HomeAltScreen extends Component {
     {
       name: 'Guia do professor',
       icon: 'md-school',
-      onTilePress: () =>
-        this.props.navigation.navigate('GenericFAQ', {
-          title: 'Guia do Professor',
-          data: Text.GuiaProfessor
-        })
+      onTilePress: () => this.props.navigation.navigate('GenericFAQ', {
+        title: 'Guia do Professor',
+        data: Text.GuiaProfessor
+      })
     },
     {
       name: 'Como chegar',

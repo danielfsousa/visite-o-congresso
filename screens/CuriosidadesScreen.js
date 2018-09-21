@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, ScrollView } from 'react-native'
+import { WebBrowser } from 'expo'
 import { Analytics, PageHit } from 'expo-analytics'
 
-import { Colors, Images, Text, Configuration } from '../constants'
+import { Colors, Images, Text, Configuration, Links } from '../constants'
 import Header from '../components/Header'
 import Banner from '../components/Banner'
 
@@ -51,6 +52,21 @@ class CuriosidadesScreen extends Component {
         image: Images.arte,
         float: 'left'
       })
+    },
+    {
+      name: 'Como funciona a Câmara dos Deputados',
+      image: Images.camaraDosDeputados,
+      onBannerPress: () => WebBrowser.openBrowserAsync(Links.funcionamentoCamara)
+    },
+    {
+      name: 'Como funciona o Senado Federal',
+      image: Images.senadoFederal,
+      onBannerPress: () => WebBrowser.openBrowserAsync(Links.funcionamentoSenado)
+    },
+    {
+      name: 'Visitação Integrada Integrada em Brasília',
+      image: Images.viibra,
+      onBannerPress: () => WebBrowser.openBrowserAsync(Links.viibra)
     }
   ]
 

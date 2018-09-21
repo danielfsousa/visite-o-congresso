@@ -45,7 +45,8 @@ HomeAltStack.navigationOptions = {
 
 const CuriosidadesStack = createStackNavigator({
   Curiosidades: CuriosidadesScreen,
-  AHistoria: AHistoriaScreen
+  AHistoria: AHistoriaScreen,
+  GenericFAQ: GenericFAQScreen
 })
 
 CuriosidadesStack.navigationOptions = {
