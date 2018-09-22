@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   hyperlink: {
     textDecorationLine: 'underline',
     fontFamily: Fonts.oblique,
-    color: Colors.primaryColor
+    color: Colors.primary
   }
 })
 

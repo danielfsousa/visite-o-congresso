@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
 
   overlay: {
     borderRadius: Layout.borderRadius,
-    backgroundColor: Colors.rgba(Colors.primaryColor, 30)
+    backgroundColor: Colors.rgba(Colors.primary, 30)
   },
 
   label: {

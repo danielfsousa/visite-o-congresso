@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   overlay: {
     height: 190,
     width: '50%',
-    backgroundColor: Colors.rgba(Colors.primaryColor, 30)
+    backgroundColor: Colors.rgba(Colors.primary, 30)
   }
 })
 

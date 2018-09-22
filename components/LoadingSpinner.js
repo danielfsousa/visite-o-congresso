@@ -9,7 +9,7 @@ const LoadingSpinner = props => (
     {props.text && <Title stle={styles.text}>{props.text}</Title>}
     <ActivityIndicator
       size='large'
-      color={Colors.primaryColor}
+      color={Colors.primary}
       style={styles.indicator}
       {...props}
     />

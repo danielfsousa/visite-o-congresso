@@ -12,7 +12,7 @@ const TabBarIcon = ({ name, focused }) => (
 )
 
 const TileIcon = ({ name, focused }) => (
-  <Icon.Ionicons name={name} size={58} color={Colors.primaryColor} />
+  <Icon.Ionicons name={name} size={58} color={Colors.primary} />
 )
 
 const HeaderIcon = () => (

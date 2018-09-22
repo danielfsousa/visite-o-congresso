@@ -15,14 +15,14 @@ const genericStyles = {
 const themes = {
   purple: {
     ...genericStyles,
-    primaryColor: '#7752FE',
+    primary: '#7752FE',
     background: '#2A2B40',
     tilesBackground: '#36334A',
     bodyText: '#DDD9EE'
   },
   blue: {
     ...genericStyles,
-    primaryColor: '#4A9AD1',
+    primary: '#4A9AD1',
     background: '#0A142B',
     tilesBackground: '#16233D',
     bodyText: '#D2DCE7'

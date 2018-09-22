@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: Layout.padding,
     borderRadius: Layout.borderRadius,
-    backgroundColor: Colors.primaryColor
+    backgroundColor: Colors.primary
   },
 
   normal: {
