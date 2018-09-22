@@ -1,42 +1,48 @@
 import React, { Component } from 'react'
-import { StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import { BarCodeScanner } from 'expo'
 
-import { Colors, Layout, ConteudoQRCode } from '../constants'
-import Header from '../components/Header'
-import withParallax from './ParallaxScreenFactory'
+import { ConteudoQRCode, Colors } from '../constants'
+import BackButton from '../components/BackButton'
+import LoadingSpinner from '../components/LoadingSpinner'
 
 class QRCodeScreen extends Component {
-  static navigationOptions = ({ navigation }) => ({
-    header: (
-      <Header transparent detach onBackButtonClick={() => navigation.goBack()}>
-        Ler QRCode
-      </Header>
-    )
-  })
+  static navigationOptions = () => ({ header: null })
 
-  componentDidMount () {
-    // this.props.navigation.navigate('InterativoDetail', {
-    //   content: ConteudoQRCode['1']
-    // })
+  state = {
+    screenOpened: false
   }
 
   handleBarCodeRead = ({ data }) => {
-    const content = ConteudoQRCode[`${data}`]
+    const content = ConteudoQRCode[data]
     if (content) {
-      this.props.navigation.navigate('InterativoDetail', {
-        content
-      })
+      this.props.navigation.navigate('InterativoDetail', { content })
     }
   }
 
+  componentDidMount () {
+    this.focusListener = this.props.navigation.addListener(
+      'didFocus',
+      () => this.setState(() => ({ screenOpened: true }))
+    )
+  }
+
+  componentWillUnmount () {
+    this.focusListener.remove()
+  }
+
   render () {
+    const { navigation } = this.props
     return (
-      <React.Fragment>
-        <BarCodeScanner
-          onBarCodeRead={this.handleBarCodeRead}
-          style={styles.scanner} />
-      </React.Fragment>
+      <View style={styles.container}>
+        <BackButton onPress={() => navigation.goBack()} />
+        {this.state.screenOpened
+          ? <BarCodeScanner
+            onBarCodeRead={this.handleBarCodeRead}
+            style={StyleSheet.absoluteFill}
+          />
+          : <LoadingSpinner text='Abrindo câmera...' />}
+      </View>
     )
   }
 }
@@ -44,21 +50,10 @@ class QRCodeScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: Layout.padding,
+    backgroundColor: Colors.background,
     justifyContent: 'center',
     alignItems: 'center'
-  },
-
-  overlay: {
-    backgroundColor: Colors.rgba(Colors.background, 67)
-  },
-
-  scanner: {
-    width: 300,
-    height: 300,
-    alignSelf: 'center'
   }
 })
 
-const ScreenWithParallax = withParallax(QRCodeScreen, () => 'Ler QRCode')
-export default ScreenWithParallax
+export default QRCodeScreen
