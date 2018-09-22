@@ -17,19 +17,8 @@ const animateOnScroll = animatedScroll => {
     outputRange: [0, 68]
   })
 
-  // propriedade 'color' não é suportada pelo animador nativo :(
-  // workaround TODO:: https://stackoverflow.com/questions/44134121/does-react-native-animated-native-driver-support-color-backgroundcolor
-
-  // const color = animatedScroll.interpolate({
-  //   inputRange: [0, 150],
-  //   outputRange: [
-  //     Colors.rgba(Colors.white, 100),
-  //     Colors.rgba(Colors.white, '00')
-  //   ]
-  // })
-
   const opacity = animatedScroll.interpolate({
-    inputRange: [0, 100],
+    inputRange: [0, 128],
     outputRange: [1, 0],
     extrapolate: 'clamp'
   })
