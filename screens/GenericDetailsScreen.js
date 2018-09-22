@@ -1,11 +1,17 @@
 import React, { Component } from 'react'
 import { BodyText } from '../components/StyledText'
+import HyperLink from '../components/Hyperlink'
 import withParallax from './ParallaxScreenFactory'
 
 class GenericDetailsScreen extends Component {
   render () {
     const { text } = this.props.navigation.state.params
-    return <BodyText>{text}</BodyText>
+    const textoComLinks = HyperLink.findAndReplace(text)
+    return (
+      <BodyText>
+        {textoComLinks}
+      </BodyText>
+    )
   }
 }
 
