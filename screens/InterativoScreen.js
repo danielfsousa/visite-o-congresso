@@ -1,27 +1,16 @@
 import React, { Component } from 'react'
-import { Image, StyleSheet } from 'react-native'
+import { Image, View, StyleSheet } from 'react-native'
 import { Permissions } from 'expo'
 import { Analytics, PageHit } from 'expo-analytics'
 
-import { Colors, Images, Layout, Configuration } from '../constants'
+import { Colors, Images, Icons, Layout, Configuration } from '../constants'
 import BackgroundImage from '../components/BackgroundImage'
 import Header from '../components/Header'
 import StyledButton from '../components/StyledButton'
 import { BodyText } from '../components/StyledText'
 
 class InterativoScreen extends Component {
-  static navigationOptions = ({ navigation }) => ({
-    header: (
-      <Header transparent detach onBackButtonClick={() => navigation.goBack()}>
-        Conteúdo Interativo
-      </Header>
-    )
-  })
-
-  componentWillMount () {
-    const analytics = new Analytics(Configuration.Analytics.id)
-    analytics.hit(new PageHit('Conteúdo Interativo'))
-  }
+  static navigationOptions = () => ({ header: null })
 
   requestCameraPermission = async () => {
     const { status } = await Permissions.askAsync(Permissions.CAMERA)
@@ -30,21 +19,30 @@ class InterativoScreen extends Component {
     }
   }
 
-  handleButtonPress = async () => this.requestCameraPermission()
+  handleButtonPress = () => this.requestCameraPermission()
+
+  componentWillMount () {
+    const analytics = new Analytics(Configuration.Analytics.id)
+    analytics.hit(new PageHit('Conteúdo Interativo'))
+  }
 
   render () {
     return (
       <BackgroundImage
-        source={Images.guiaVirtualBackground}
-        style={styles.container}
-        overlayStyle={styles.overlay}>
-        <Image source={Images.guiaVirtualIcon} style={styles.icon} />
-        <BodyText style={styles.text}>
-          Interaja com os objetos encontrados no Congresso Nacional através da leitura dos QRCodes posicionados próximos aos objetos.
-        </BodyText>
-        <StyledButton type='large' onPress={this.handleButtonPress}>
-          Ler código
-        </StyledButton>
+        source={Images.background}
+        style={{ flex: 1 }}
+        overlayStyle={styles.overlay}
+      >
+        <Header transparent style={styles.header}>Conteúdo Interativo</Header>
+        <View style={styles.container}>
+          <Image source={Icons.qrCode} style={styles.icon} />
+          <BodyText style={styles.text}>
+            Interaja com os objetos encontrados no Congresso Nacional através da leitura dos QRCodes posicionados próximos a eles
+          </BodyText>
+          <StyledButton type='large' onPress={this.handleButtonPress}>
+            Escanear código
+          </StyledButton>
+        </View>
       </BackgroundImage>
     )
   }
@@ -53,13 +51,17 @@ class InterativoScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: Layout.padding,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingHorizontal: Layout.padding
+  },
+
+  header: {
+    height: Layout.headerHeight - 30
   },
 
   overlay: {
-    backgroundColor: Colors.rgba(Colors.background, 67)
+    backgroundColor: Colors.rgba(Colors.background, 95)
   },
 
   text: {
@@ -68,8 +70,8 @@ const styles = StyleSheet.create({
   },
 
   icon: {
-    width: 76,
-    height: 86,
+    width: 90,
+    height: 90,
     marginBottom: 20
   }
 })

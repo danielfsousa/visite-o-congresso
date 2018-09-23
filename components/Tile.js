@@ -23,7 +23,9 @@ const styles = StyleSheet.create({
     paddingVertical: Layout.padding,
     borderRadius: Layout.borderRadius,
     marginBottom: Layout.padding,
-    backgroundColor: Colors.tilesBackground
+    backgroundColor: Colors.tilesBackground,
+    borderWidth: 1,
+    borderColor: Colors.tilesBorder
   },
 
   iconContainer: {

@@ -5,10 +5,12 @@ import { isIphoneX } from 'react-native-iphone-x-helper'
 import Sentry from 'sentry-expo'
 
 import AppNavigator from './navigation/AppNavigator'
-import { Colors, Images, Fonts, Configuration } from './constants'
+import { Colors, Images, Icons, Fonts, Configuration } from './constants'
 
-Sentry.enableInExpoDevelopment = true
-Sentry.config(Configuration.Sentry.sentryDNS).install()
+if (!__DEV__) {
+  Sentry.enableInExpoDevelopment = true
+  Sentry.config(Configuration.Sentry.sentryDNS).install()
+}
 
 export default class App extends Component {
   state = {
@@ -34,18 +36,18 @@ export default class App extends Component {
     }
   }
 
-  _loadResourcesAsync = async () => {
-    return Promise.all([
-      Asset.loadAsync(Images.sources),
+  _loadResourcesAsync = async () =>
+    Promise.all([
+      Asset.loadAsync([...Images.sources, ...Icons.sources]),
       Font.loadAsync({
         ...Fonts.sources,
         ...Icon.Ionicons.font,
         ...Icon.Feather.font
       })
     ])
-  }
 
   _handleLoadingError = error => {
+    // TODO: adicionar sentry aqui
     // In this case, you might want to report the error to your error
     // reporting service, for example Sentry
     console.warn(error)

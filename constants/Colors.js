@@ -18,6 +18,7 @@ const themes = {
     primary: '#7752FE',
     background: '#2A2B40',
     tilesBackground: '#36334A',
+    tilesBorder: '#36334A',
     bodyText: '#DDD9EE'
   },
   blue: {
@@ -25,6 +26,7 @@ const themes = {
     primary: '#4A9AD1',
     background: '#0A142B',
     tilesBackground: '#16233D',
+    tilesBorder: '#192743',
     bodyText: '#D2DCE7'
   }
 }

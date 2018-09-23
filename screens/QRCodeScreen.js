@@ -21,9 +21,8 @@ class QRCodeScreen extends Component {
   }
 
   componentDidMount () {
-    this.focusListener = this.props.navigation.addListener(
-      'didFocus',
-      () => this.setState(() => ({ screenOpened: true }))
+    this.focusListener = this.props.navigation.addListener('didFocus', () =>
+      this.setState(() => ({ screenOpened: true }))
     )
   }
 
@@ -41,7 +40,7 @@ class QRCodeScreen extends Component {
             onBarCodeRead={this.handleBarCodeRead}
             style={StyleSheet.absoluteFill}
           />
-          : <LoadingSpinner text='Abrindo câmera...' />}
+          : <LoadingSpinner text='Carregando...' />}
       </View>
     )
   }

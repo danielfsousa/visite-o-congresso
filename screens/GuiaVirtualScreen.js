@@ -1,44 +1,48 @@
 import React, { Component } from 'react'
-import { Image, StyleSheet } from 'react-native'
+import { View, Image, StyleSheet } from 'react-native'
 import { WebBrowser } from 'expo'
 import { Analytics, PageHit } from 'expo-analytics'
 
-import { Colors, Images, Layout, Links, Configuration } from '../constants'
 import BackgroundImage from '../components/BackgroundImage'
 import Header from '../components/Header'
 import StyledButton from '../components/StyledButton'
 import { BodyText } from '../components/StyledText'
+import {
+  Colors,
+  Images,
+  Icons,
+  Layout,
+  Links,
+  Configuration
+} from '../constants'
 
 class GuiaVirtualScreen extends Component {
-  static navigationOptions = ({ navigation }) => ({
-    header: (
-      <Header transparent detach onBackButtonClick={() => navigation.goBack()}>
-        Guia Virtual
-      </Header>
-    )
-  })
+  static navigationOptions = () => ({ header: null })
+
+  handleButtonPress = () => WebBrowser.openBrowserAsync(Links.guiaVirtual)
 
   componentWillMount () {
     const analytics = new Analytics(Configuration.Analytics.id)
     analytics.hit(new PageHit('Guia Virtual'))
   }
 
-  handleButtonPress = async () => WebBrowser.openBrowserAsync(Links.guiaVirtual)
-
   render () {
     return (
       <BackgroundImage
-        source={Images.guiaVirtualBackground}
-        style={styles.container}
+        source={Images.background}
+        style={{ flex: 1 }}
         overlayStyle={styles.overlay}
       >
-        <Image source={Images.guiaVirtualIcon} style={styles.icon} />
-        <BodyText style={styles.text}>
-          Explore o Congresso Nacional através de um tour virtual com áudios e fotos em 360º
-        </BodyText>
-        <StyledButton type='large' onPress={this.handleButtonPress}>
-          Explorar
-        </StyledButton>
+        <Header transparent style={styles.header}>Guia Virtual</Header>
+        <View style={styles.container}>
+          <Image source={Icons.guiaVirtual} style={styles.icon} />
+          <BodyText style={styles.text}>
+            Explore o Congresso Nacional através de um tour virtual com informações sobre as principais salas, áudios e fotos em 360º
+          </BodyText>
+          <StyledButton type='large' onPress={this.handleButtonPress}>
+            Explorar
+          </StyledButton>
+        </View>
       </BackgroundImage>
     )
   }
@@ -47,13 +51,17 @@ class GuiaVirtualScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: Layout.padding,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingHorizontal: Layout.padding
+  },
+
+  header: {
+    height: Layout.headerHeight - 30
   },
 
   overlay: {
-    backgroundColor: Colors.rgba(Colors.background, 65)
+    backgroundColor: Colors.rgba(Colors.background, 95)
   },
 
   text: {
@@ -62,8 +70,8 @@ const styles = StyleSheet.create({
   },
 
   icon: {
-    width: 76,
-    height: 86,
+    width: 78.91,
+    height: 90,
     marginBottom: 20
   }
 })

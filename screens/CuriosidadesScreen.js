@@ -14,7 +14,7 @@ class CuriosidadesScreen extends Component {
 
   banners = [
     {
-      name: 'A História da Câmara dos Deputados',
+      name: 'A História da Câmara',
       image: Images.historia,
       onBannerPress: () => this.props.navigation.navigate('AHistoria', {
         caption: 'Câmara\ndos Deputados',
@@ -34,7 +34,17 @@ class CuriosidadesScreen extends Component {
       })
     },
     {
-      name: 'Arquitetura',
+      name: 'Como funciona a Câmara',
+      image: Images.camaraDosDeputados,
+      onBannerPress: () => WebBrowser.openBrowserAsync(Links.funcionamentoCamara)
+    },
+    {
+      name: 'Como funciona o Senado',
+      image: Images.senadoFederal,
+      onBannerPress: () => WebBrowser.openBrowserAsync(Links.funcionamentoSenado)
+    },
+    {
+      name: 'Arquitetura no Congresso',
       image: Images.arquitetura,
       onBannerPress: () => this.props.navigation.navigate('AHistoria', {
         caption: 'Arquitetura\nno Congresso',
@@ -44,7 +54,7 @@ class CuriosidadesScreen extends Component {
       })
     },
     {
-      name: 'Arte',
+      name: 'Arte no Congresso',
       image: Images.arte,
       onBannerPress: () => this.props.navigation.navigate('AHistoria', {
         caption: 'Arte\nno Congresso',
@@ -54,17 +64,7 @@ class CuriosidadesScreen extends Component {
       })
     },
     {
-      name: 'Como funciona a Câmara dos Deputados',
-      image: Images.camaraDosDeputados,
-      onBannerPress: () => WebBrowser.openBrowserAsync(Links.funcionamentoCamara)
-    },
-    {
-      name: 'Como funciona o Senado Federal',
-      image: Images.senadoFederal,
-      onBannerPress: () => WebBrowser.openBrowserAsync(Links.funcionamentoSenado)
-    },
-    {
-      name: 'Visitação Institucional Integrada em Brasília',
+      name: 'Visitação Institucional Integrada',
       image: Images.viibra,
       onBannerPress: () => WebBrowser.openBrowserAsync(Links.viibra)
     }
