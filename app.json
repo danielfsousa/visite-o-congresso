@@ -3,7 +3,7 @@
     "name": "Visite o Congresso",
     "description": "Aplicativo desenvolvido durante o Desafio VisitApp do Congresso Nacional ",
     "slug": "visite-o-congresso",
-    "privacy": "unlisted",
+    "privacy": "public",
     "githubUrl": "https://github.com/danielfsousa/visite-o-congresso",
     "sdkVersion": "29.0.0",
     "platforms": [
