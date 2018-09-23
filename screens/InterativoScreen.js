@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   },
 
   overlay: {
-    backgroundColor: Colors.rgba(Colors.background, 95)
+    backgroundColor: Colors.rgba(Colors.background, 94)
   },
 
   text: {

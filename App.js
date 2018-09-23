@@ -5,7 +5,14 @@ import { isIphoneX } from 'react-native-iphone-x-helper'
 import Sentry from 'sentry-expo'
 
 import AppNavigator from './navigation/AppNavigator'
-import { Colors, Images, Icons, Fonts, Configuration } from './constants'
+import {
+  Colors,
+  Images,
+  Icons,
+  Fonts,
+  Audios,
+  Configuration
+} from './constants'
 
 if (!__DEV__) {
   Sentry.enableInExpoDevelopment = true
@@ -38,7 +45,7 @@ export default class App extends Component {
 
   _loadResourcesAsync = async () =>
     Promise.all([
-      Asset.loadAsync([...Images.sources, ...Icons.sources]),
+      Asset.loadAsync([...Images.sources, ...Icons.sources, ...Audios.sources]),
       Font.loadAsync({
         ...Fonts.sources,
         ...Icon.Ionicons.font,

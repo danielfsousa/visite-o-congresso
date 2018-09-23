@@ -6,7 +6,10 @@ const Images = {
   arte: require('../assets/images/curiosidades/arte.png'),
   camaraDosDeputados: require('../assets/images/curiosidades/camara.png'),
   senadoFederal: require('../assets/images/curiosidades/senado.jpg'),
-  viibra: require('../assets/images/curiosidades/viibra.png')
+  viibra: require('../assets/images/curiosidades/viibra.png'),
+  obraMuro: require('../assets/images/interativo/muro.png'),
+  obraPainel: require('../assets/images/interativo/painel.jpg'),
+  obraMaquete: require('../assets/images/interativo/maquete.png')
 }
 
 Images.sources = Object.values(Images)
