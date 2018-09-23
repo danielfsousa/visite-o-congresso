@@ -1,19 +1,27 @@
 import React from 'react'
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Linking } from 'react-native'
 import { WebBrowser } from 'expo'
 
 import { BodyText } from './StyledText'
 import { Fonts, Colors } from '../constants'
 
 const URL_REGEX = /([-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b[-a-zA-Z0-9@:%_+.~#?&//=]*)/g
-const eUmaURL = texto => URL_REGEX.exec(texto) !== null
-const normalizaProtocolo = link => link.startsWith('http') ? link : `http://${link}`
+const EMAIL_REGEX = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g
+
+const eUmaURL = str => URL_REGEX.exec(str) !== null
+const eUmEmail = str => EMAIL_REGEX.exec(str) !== null
+
+const handlePress = href => () => {
+  if (eUmEmail(href)) {
+    return Linking.openURL(`mailto:${href}`)
+  } else {
+    const normalizado = href.startsWith('http') ? href : `http://${href}`
+    return WebBrowser.openBrowserAsync(normalizado)
+  }
+}
 
 const Hyperlink = ({ href, children, style }) => (
-  <BodyText
-    style={styles.hyperlink}
-    onPress={() => WebBrowser.openBrowserAsync(normalizaProtocolo(href))}
-  >
+  <BodyText style={styles.hyperlink} onPress={handlePress(href)}>
     {children}
   </BodyText>
 )
