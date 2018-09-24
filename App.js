@@ -5,18 +5,12 @@ import { isIphoneX } from 'react-native-iphone-x-helper'
 import Sentry from 'sentry-expo'
 
 import AppNavigator from './navigation/AppNavigator'
-import {
-  Colors,
-  Images,
-  Icons,
-  Fonts,
-  Audios,
-  Configuration
-} from './constants'
+import { Colors, Images, Icons, Fonts, Audios } from './constants'
+import config from './config'
 
 if (!__DEV__) {
   Sentry.enableInExpoDevelopment = true
-  Sentry.config(Configuration.Sentry.sentryDNS).install()
+  Sentry.config(config.sentry.sentryDNS).install()
 }
 
 export default class App extends Component {
