@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.oblique,
     fontSize: Fonts.huge,
     color: Colors.text,
-    height: '150%',
     // letterSpacing: 1.1,
     lineHeight: 34,
     textAlign: 'left'

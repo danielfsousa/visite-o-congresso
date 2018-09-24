@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
+
+import { pageHit } from '../utils/analytics'
 import FAQList from '../components/FAQList'
 import withParallax from './ParallaxScreenFactory'
 
 class GenericFaqScreen extends Component {
   handleFAQItemPress = faqItem =>
     this.props.navigation.navigate('GenericDetails', faqItem)
+
+  componentDidMount () {
+    const { title } = this.props.navigation.state.params
+    pageHit(title)
+  }
 
   render () {
     const { data } = this.props.navigation.state.params

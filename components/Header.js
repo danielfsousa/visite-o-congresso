@@ -51,6 +51,9 @@ const Header = ({
     <Title
       style={[
         type === 'big' ? styles.bigTitle : styles.title,
+        children && children.length < 60
+          ? { fontSize: Fonts.huge, lineHeight: 40 }
+          : { fontSize: Fonts.big, lineHeight: 30 },
         textStyle,
         animateOnScroll(animatedScroll)
       ]}
@@ -91,13 +94,11 @@ const styles = StyleSheet.create({
     zIndex: 11,
     position: 'relative',
     top: 25,
-    paddingLeft: Layout.padding,
-    fontSize: Fonts.huge
+    paddingLeft: Layout.padding
   },
 
   bigTitle: {
     zIndex: 11,
-    fontSize: Fonts.huge,
     position: 'relative',
     top: 24, // back button height
     textAlign: 'center',

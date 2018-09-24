@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, ScrollView } from 'react-native'
 import { WebBrowser } from 'expo'
-import { Analytics, PageHit } from 'expo-analytics'
 
-import { Colors, Images, Text, Configuration, Links } from '../constants'
+import { pageHit } from '../utils/analytics'
+import { Colors, Images, Text, Links } from '../constants'
 import Header from '../components/Header'
 import Banner from '../components/Banner'
 
 class CuriosidadesScreen extends Component {
+  static __name__ = 'Curiosidades'
+
   static navigationOptions = ({ navigation }) => ({
-    header: <Header navigation={navigation}>Curiosidades</Header>
+    header: <Header navigation={navigation}>{CuriosidadesScreen.__name__}</Header>
   })
 
   banners = [
@@ -44,10 +46,10 @@ class CuriosidadesScreen extends Component {
       onBannerPress: () => WebBrowser.openBrowserAsync(Links.funcionamentoSenado)
     },
     {
-      name: 'Arquitetura no Congresso',
+      name: 'Arquitetura do Congresso',
       image: Images.arquiteturaCongresso,
       onBannerPress: () => this.props.navigation.navigate('AHistoria', {
-        caption: 'Arquitetura\nno Congresso',
+        caption: 'Arquitetura\ndo Congresso',
         text: Text.Curiosidades.Arquitetura,
         image: Images.arquiteturaCongresso,
         float: 'right'
@@ -62,17 +64,11 @@ class CuriosidadesScreen extends Component {
         image: Images.arteCongresso,
         float: 'left'
       })
-    },
-    {
-      name: 'Visitação Institucional Integrada',
-      image: Images.viibra,
-      onBannerPress: () => WebBrowser.openBrowserAsync(Links.viibra)
     }
   ]
 
   componentDidMount () {
-    const analytics = new Analytics(Configuration.Analytics.id)
-    analytics.hit(new PageHit('Curiosidades'))
+    pageHit(CuriosidadesScreen.__name__)
   }
 
   render () {

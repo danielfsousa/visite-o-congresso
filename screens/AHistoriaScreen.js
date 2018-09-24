@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
-import { Analytics, PageHit } from 'expo-analytics'
+import { StyleSheet } from 'react-native'
+import { pageHit } from '../utils/analytics'
 
-import { Configuration } from '../constants'
 import { BodyText } from '../components/StyledText'
 import StyledImage from '../components/StyledImage'
 import withParallax from './ParallaxScreenFactory'
 
 class AHistoriaScreen extends Component {
+  static __name__ = 'A Historia'
+
   componentDidMount () {
-    const analytics = new Analytics(Configuration.Analytics.id)
-    analytics.hit(new PageHit('A História'))
+    pageHit(AHistoriaScreen.__name__)
   }
 
   render () {
@@ -17,6 +18,7 @@ class AHistoriaScreen extends Component {
     return (
       <React.Fragment>
         <StyledImage
+          style={styles.image}
           float='right'
           image={image}
           caption={caption}
@@ -29,5 +31,15 @@ class AHistoriaScreen extends Component {
   }
 }
 
-const ScreenWithParallax = withParallax(AHistoriaScreen, () => 'A História')
+const styles = StyleSheet.create({
+  image: {
+    marginBottom: 50
+  }
+})
+
+const ScreenWithParallax = withParallax(
+  AHistoriaScreen,
+  AHistoriaScreen.__name__
+)
+
 export default ScreenWithParallax

@@ -1,29 +1,23 @@
 import React, { Component } from 'react'
 import { View, Image, StyleSheet } from 'react-native'
 import { WebBrowser } from 'expo'
-import { Analytics, PageHit } from 'expo-analytics'
 
+import { pageHit } from '../utils/analytics'
 import BackgroundImage from '../components/BackgroundImage'
 import Header from '../components/Header'
 import StyledButton from '../components/StyledButton'
 import { BodyText } from '../components/StyledText'
-import {
-  Colors,
-  Images,
-  Icons,
-  Layout,
-  Links,
-  Configuration
-} from '../constants'
+import { Colors, Images, Icons, Layout, Links } from '../constants'
 
 class GuiaVirtualScreen extends Component {
+  static __name__ = 'Guia Virtual'
+
   static navigationOptions = () => ({ header: null })
 
   handleButtonPress = () => WebBrowser.openBrowserAsync(Links.guiaVirtual)
 
   componentDidMount () {
-    const analytics = new Analytics(Configuration.Analytics.id)
-    analytics.hit(new PageHit('Guia Virtual'))
+    pageHit(GuiaVirtualScreen.__name__)
   }
 
   render () {
@@ -33,7 +27,9 @@ class GuiaVirtualScreen extends Component {
         style={{ flex: 1 }}
         overlayStyle={styles.overlay}
       >
-        <Header transparent style={styles.header}>Guia Virtual</Header>
+        <Header transparent style={styles.header}>
+          {GuiaVirtualScreen.__name__}
+        </Header>
         <View style={styles.container}>
           <Image source={Icons.guiaVirtual} style={styles.icon} />
           <BodyText style={styles.text}>

@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
 import { Image, View, StyleSheet } from 'react-native'
 import { Permissions } from 'expo'
-import { Analytics, PageHit } from 'expo-analytics'
 
-import { Colors, Images, Icons, Layout, Configuration } from '../constants'
+import { pageHit } from '../utils/analytics'
+import { Colors, Images, Icons, Layout } from '../constants'
 import BackgroundImage from '../components/BackgroundImage'
 import Header from '../components/Header'
 import StyledButton from '../components/StyledButton'
 import { BodyText } from '../components/StyledText'
 
 class InterativoScreen extends Component {
+  static __name__ = 'Conteúdo Interativo'
+
   static navigationOptions = () => ({ header: null })
 
   requestCameraPermission = async () => {
@@ -22,8 +24,7 @@ class InterativoScreen extends Component {
   handleButtonPress = () => this.requestCameraPermission()
 
   componentDidMount () {
-    const analytics = new Analytics(Configuration.Analytics.id)
-    analytics.hit(new PageHit('Conteúdo Interativo'))
+    pageHit(InterativoScreen.__name__)
   }
 
   render () {
@@ -33,7 +34,9 @@ class InterativoScreen extends Component {
         style={{ flex: 1 }}
         overlayStyle={styles.overlay}
       >
-        <Header transparent style={styles.header}>Conteúdo Interativo</Header>
+        <Header transparent style={styles.header}>
+          {InterativoScreen.__name__}
+        </Header>
         <View style={styles.container}>
           <Image source={Icons.qrCode} style={styles.icon} />
           <BodyText style={styles.text}>

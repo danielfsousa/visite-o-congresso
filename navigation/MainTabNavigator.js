@@ -6,37 +6,26 @@ import {
 
 import Colors from '../constants/Colors'
 import { TabBarIcon } from '../components/Icon'
-import HomeScreen from '../screens/HomeScreen'
 import HomeAltScreen from '../screens/HomeAltScreen'
 import GenericFAQScreen from '../screens/GenericFAQScreen'
 import GenericDetailsScreen from '../screens/GenericDetailsScreen'
 import CuriosidadesScreen from '../screens/CuriosidadesScreen'
 import GuiaVirtualScreen from '../screens/GuiaVirtualScreen'
-import WebBrowserScreen from '../screens/WebBrowserScreen'
-import EmConstrucaoScreen from '../screens/EmConstrucaoScreen'
 import AHistoriaScreen from '../screens/AHistoriaScreen'
 import EventosScreen from '../screens/EventosScreen'
 import ComoChegarScreen from '../screens/ComoChegarScreen'
 import InterativoScreen from '../screens/InterativoScreen'
 import QRCodeScreen from '../screens/QRCodeScreen'
 import InterativoDetailScreen from '../screens/InterativoDetailScreen'
-
-const HomeStack = createStackNavigator({
-  Home: HomeScreen,
-  EmBreve: EmConstrucaoScreen
-})
-
-HomeStack.navigationOptions = {
-  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name='home' />
-}
+import ViiBraScreen from '../screens/ViiBraScreen'
 
 const HomeAltStack = createStackNavigator({
   HomeAlt: HomeAltScreen,
-  EmBreve: EmConstrucaoScreen,
   GenericFAQ: GenericFAQScreen,
   GenericDetails: GenericDetailsScreen,
   Eventos: EventosScreen,
-  ComoChegar: ComoChegarScreen
+  ComoChegar: ComoChegarScreen,
+  ViiBra: ViiBraScreen
 })
 
 HomeAltStack.navigationOptions = {
@@ -53,13 +42,13 @@ CuriosidadesStack.navigationOptions = {
   tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name='info' />
 }
 
-const MaterialInterativoStack = createStackNavigator({
-  MaterialInterativo: InterativoScreen,
+const ConteudoInterativoStack = createStackNavigator({
+  ConteudoInterativo: InterativoScreen,
   QRCode: QRCodeScreen,
   InterativoDetail: InterativoDetailScreen
 })
 
-MaterialInterativoStack.navigationOptions = {
+ConteudoInterativoStack.navigationOptions = {
   tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name='camera' />
 }
 
@@ -67,17 +56,8 @@ const GuiaVirtualStack = createStackNavigator({
   GuiaVirtual: GuiaVirtualScreen
 })
 
-const GuiaVirtualWebBrowserStack = createStackNavigator({
-  Main: GuiaVirtualStack,
-  WebBrowser: WebBrowserScreen
-},
-{
-  mode: 'modal', headerMode: 'none'
-})
-
-GuiaVirtualWebBrowserStack.navigationOptions = ({ navigation }) => {
+GuiaVirtualStack.navigationOptions = ({ navigation }) => {
   return {
-    tabBarVisible: navigation.state.index === 0,
     tabBarIcon: ({ focused }) => (
       <TabBarIcon focused={focused} name='compass' />
     )
@@ -88,8 +68,8 @@ export default createMaterialTopTabNavigator(
   {
     HomeAltStack,
     CuriosidadesStack,
-    MaterialInterativoStack,
-    GuiaVirtualWebBrowserStack
+    ConteudoInterativoStack,
+    GuiaVirtualStack
   },
   {
     tabBarPosition: 'bottom',

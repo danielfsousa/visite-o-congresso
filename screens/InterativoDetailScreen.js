@@ -1,25 +1,30 @@
 import React, { Component } from 'react'
-import { Analytics, PageHit } from 'expo-analytics'
 
+import { pageHit } from '../utils/analytics'
 import { BodyText } from '../components/StyledText'
-import StyledImage from '../components/StyledImage'
-import { Configuration } from '../constants'
+import ImageWithAudio from '../components/ImageWithAudio'
 import withParallax from './ParallaxScreenFactory'
 
 class InterativoDetailScreen extends Component {
   componentDidMount () {
-    const analytics = new Analytics(Configuration.Analytics.id)
-    analytics.hit(new PageHit('Detalhe Material Interativo'))
+    const { titulo } = this.props.navigation.state.params
+    pageHit(titulo)
   }
 
   render () {
-    const { titulo, descricao, imagem } = this.props.navigation.state.params.content
+    const {
+      descricao,
+      imagem,
+      audio
+    } = this.props.navigation.state.params.content
     return (
       <React.Fragment>
-        <StyledImage
+        <ImageWithAudio
           float='right'
           image={imagem}
-          caption={titulo}
+          audio={audio}
+          style={{ marginBottom: 50 }}
+          // overlayStyle={{ backgroundColor: Colors.rgba(Colors.primary, 40) }}
         />
         <BodyText>
           {descricao}
@@ -29,5 +34,9 @@ class InterativoDetailScreen extends Component {
   }
 }
 
-const ScreenWithParallax = withParallax(InterativoDetailScreen, () => 'Conteúdo Interativo')
+const ScreenWithParallax = withParallax(
+  InterativoDetailScreen,
+  props => props.navigation.state.params.content.titulo
+)
+
 export default ScreenWithParallax

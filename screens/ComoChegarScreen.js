@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, ScrollView, View } from 'react-native'
 
+import { pageHit } from '../utils/analytics'
 import { Colors, Images, Layout, Links } from '../constants'
 import { Title } from '../components/StyledText'
 import Hyperlink from '../components/Hyperlink'
@@ -9,6 +10,8 @@ import Header from '../components/Header'
 import AccordionView from '../components/AccordionView'
 
 class ComoChegarScreen extends Component {
+  static __name__ = 'Como Chegar'
+
   infos = [
     {
       title: 'De ônibus',
@@ -42,11 +45,16 @@ class ComoChegarScreen extends Component {
         transparent
         detach
         type='big'
-        onBackButtonClick={() => navigation.goBack()}>
+        onBackButtonClick={() => navigation.goBack()}
+      >
         Como chegar
       </Header>
     )
   })
+
+  componentDidMount () {
+    pageHit(ComoChegarScreen.__name__)
+  }
 
   render () {
     return (
@@ -54,22 +62,31 @@ class ComoChegarScreen extends Component {
         source={Images.backgroundFade}
         style={styles.container}
         imageStyle={styles.backgroundImage}
-        overlayStyle={styles.overlay}>
+        overlayStyle={styles.overlay}
+      >
 
         <ScrollView
           alwaysBounceVertical={false}
           overScrollMode='never'
-          style={styles.scrollContainer}>
+          style={styles.scrollContainer}
+        >
 
           <View style={styles.titleContainer}>
-            <Title style={styles.title}>Para mais informações como itinerários dos ônibus e mapa, consultar:</Title>
-            <Hyperlink style={styles.link} href={Links.dfTrans}>Site DFTrans</Hyperlink>
-            <Hyperlink style={styles.link} href={Links.comoChegar}>Mapa</Hyperlink>ß
+            <Title style={styles.title}>
+              Para mais informações como itinerários dos ônibus e mapa, consultar:
+            </Title>
+            <Hyperlink style={styles.link} href={Links.dfTrans}>
+              Site DFTrans
+            </Hyperlink>
+            <Hyperlink style={styles.link} href={Links.comoChegar}>
+              Mapa
+            </Hyperlink>
+            ß
           </View>
 
-          {
-            this.infos.map((props, i) => <AccordionView key={props.title} {...props} index={i} />)
-          }
+          {this.infos.map((props, i) => (
+            <AccordionView key={props.title} {...props} index={i} />
+          ))}
 
         </ScrollView>
 
@@ -107,7 +124,6 @@ const styles = StyleSheet.create({
   scrollContainer: {
     marginTop: 130
   }
-
 })
 
 export default ComoChegarScreen

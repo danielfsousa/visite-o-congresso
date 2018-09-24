@@ -40,7 +40,7 @@ const FAQ = [
     text: 'Em dias úteis há a possibilidade de acesso na Câmara e no Senado aos restaurantes e lanchonetes que são abertos ao público em geral. Porém, para frequentá-los o visitante deverá se identificar na portaria de uma das Casas.'
   },
   {
-    title: 'Soube que a Câmara dos Deputados e o Senado Federal promovem seminários, exposições, lançamentos de livros e vários outros eventos. Eles são abertos ao público?',
+    title: 'Soube que a Câmara e o Senado promovem seminários, exposições, lançamentos de livros e outros eventos. Eles são abertos ao público?',
     text: 'Sim, desde que o visitante se identifique em uma das portarias da respectiva instituição, e informe o evento e o local de destino.'
   },
   {

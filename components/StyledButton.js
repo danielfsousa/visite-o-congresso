@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   },
 
   large: {
-    height: 55,
+    height: 57,
     width: Layout.width - Layout.padding * 2
   },
 

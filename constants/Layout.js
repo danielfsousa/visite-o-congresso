@@ -12,15 +12,30 @@ const getBoxHeight = ({ rows = 3 } = {}) =>
 const getBoxWidth = ({ margins = 2, columns = 1 } = {}) =>
   (width - padding * margins) / columns
 
+// mostra 3px do proximo banner para indicar que há mais banners
+const bannerHeight = getBoxHeight({ rows: 3 }) - 3
+const bannerWidth = getBoxWidth({ margins: 2, columns: 1 })
+
+// mostra 3px do proximo banner para indicar que há mais tiles
+const tileHeight = getBoxHeight({ rows: 3 }) - 3
+const tileWidth = getBoxWidth({ margins: 3, columns: 2 })
+const tileIconSize = 47 / 100 * tileHeight
+
 export default {
   width,
   height,
   padding,
-  borderRadius: 3,
+  borderRadius: 4,
   isSmallDevice: width < 375,
   headerHeight,
-  bigHeaderHeight: (40 / 100) * height,
+  bigHeaderHeight: 40 / 100 * height,
   tabBarHeight,
+  bannerHeight,
+  bannerWidth,
+  tileHeight,
+  tileWidth,
+  tileIconSize,
+  styledImageHeight: 190,
   getBoxHeight,
   getBoxWidth
 }

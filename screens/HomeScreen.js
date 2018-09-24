@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, ScrollView } from 'react-native'
 
+import { pageHit } from '../utils/analytics'
 import { Colors, Layout, Images } from '../constants'
 import Header from '../components/Header'
 import Tile from '../components/Tile'
 import Banner from '../components/Banner'
 
 class HomeScreen extends Component {
+  static __name__ = 'Visite o Congresso'
+
   static navigationOptions = ({ navigation }) => ({
     header: <Header navigation={navigation}>Visite o Congresso</Header>
   })
@@ -67,6 +70,10 @@ class HomeScreen extends Component {
       onTilePress: () => this.props.navigation.navigate('EmBreve')
     }
   ]
+
+  componentDidMount () {
+    pageHit(HomeScreen.__name__)
+  }
 
   render () {
     return (

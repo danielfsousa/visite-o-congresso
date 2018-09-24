@@ -1,30 +1,54 @@
 import React from 'react'
-import { StyleSheet, View, Image } from 'react-native'
+import { StyleSheet, View, ImageBackground } from 'react-native'
 
-import { Colors, Layout } from '../constants'
+import { Layout } from '../constants'
 import { SubTitle } from './StyledText'
 
-// const getFloatStyle = float =>
-//   (float === 'left' ? styles.floatLeft : styles.floatRight)
+const hasLineBreak = text => text && text.includes('\n')
 
-const StyledImage = ({ float = 'right', image, caption }) => (
-  <View style={{ flex: 1, alignItems: 'flex-end' }}>
-    <Image style={styles.view} source={image} />
-    <SubTitle style={styles.caption}>{caption}</SubTitle>
-  </View>
-)
+const floatStyleFactory = float => styleName => [
+  styles[styleName],
+  float === 'left' ? stylesFloatLeft[styleName] : stylesFloatRight[styleName]
+]
+
+const StyledImage = ({
+  float = 'right',
+  image,
+  caption,
+  style,
+  overlayStyle
+}) => {
+  const getStyle = floatStyleFactory(float)
+  return (
+    <View style={[{ flex: 1, alignItems: 'flex-end' }, style]}>
+      <ImageBackground
+        source={image}
+        style={[getStyle('imageContainer')]}
+        imageStyle={getStyle('image')}
+      >
+        <View style={[styles.overlay, overlayStyle]} />
+      </ImageBackground>
+      <SubTitle
+        style={[
+          getStyle('caption'),
+          {
+            top: hasLineBreak(caption)
+              ? Layout.styledImageHeight - 50
+              : Layout.styledImageHeight - 17
+          }
+        ]}
+      >
+        {caption}
+      </SubTitle>
+    </View>
+  )
+}
 
 const styles = StyleSheet.create({
-  view: {
-    backgroundColor: 'blue',
-    height: 190,
-    width: '90%',
-    alignSelf: 'flex-end',
-    position: 'relative',
-    right: -20,
-    marginBottom: 50,
-    borderTopLeftRadius: Layout.borderRadius,
-    borderBottomLeftRadius: Layout.borderRadius
+  imageContainer: {
+    height: Layout.styledImageHeight,
+    width: Layout.width - Layout.padding * 2.2,
+    position: 'relative'
   },
 
   caption: {
@@ -32,43 +56,49 @@ const styles = StyleSheet.create({
     height: '100%',
     zIndex: 2,
     position: 'absolute',
-    left: '9%',
-    bottom: -190 + 53
+    top: Layout.styledImageHeight - 50
   },
 
-  floatLeft: {
-    left: 0,
+  overlay: {
+    flex: 1,
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 10
+  }
+})
+
+const stylesFloatLeft = StyleSheet.create({
+  imageContainer: {
+    alignSelf: 'flex-start',
+    left: -Layout.padding,
     borderTopRightRadius: Layout.borderRadius,
     borderBottomRightRadius: Layout.borderRadius
   },
 
-  floatRight: {
-    right: 0,
+  image: {
+    borderTopRightRadius: Layout.borderRadius,
+    borderBottomRightRadius: Layout.borderRadius
+  },
+
+  caption: {
+    textAlign: 'right'
+  }
+})
+
+const stylesFloatRight = StyleSheet.create({
+  imageContainer: {
+    alignSelf: 'flex-end',
+    right: -Layout.padding,
     borderTopLeftRadius: Layout.borderRadius,
     borderBottomLeftRadius: Layout.borderRadius
   },
 
-  containerStyle: {
-    alignItems: 'flex-end',
-    position: 'absolute',
-    left: 0
-  },
-
-  background: {
-    height: 230,
-    width: '50%',
-    alignItems: 'flex-end'
-  },
-
   image: {
-    height: 190,
-    width: '50%'
+    borderTopLeftRadius: Layout.borderRadius,
+    borderBottomLeftRadius: Layout.borderRadius
   },
 
-  overlay: {
-    height: 190,
-    width: '50%',
-    backgroundColor: Colors.rgba(Colors.primary, 30)
+  caption: {
+    textAlign: 'left'
   }
 })
 

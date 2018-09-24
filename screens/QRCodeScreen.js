@@ -2,11 +2,14 @@ import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
 import { BarCodeScanner } from 'expo'
 
+import { pageHit } from '../utils/analytics'
 import { ConteudoQRCode, Colors } from '../constants'
 import BackButton from '../components/BackButton'
 import LoadingSpinner from '../components/LoadingSpinner'
 
 class QRCodeScreen extends Component {
+  static __name__ = 'Escaneador de QRCode'
+
   static navigationOptions = () => ({ header: null })
 
   state = {
@@ -24,6 +27,8 @@ class QRCodeScreen extends Component {
     this.focusListener = this.props.navigation.addListener('didFocus', () =>
       this.setState(() => ({ screenOpened: true }))
     )
+
+    pageHit(QRCodeScreen.__name__)
   }
 
   componentWillUnmount () {

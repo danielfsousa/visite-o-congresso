@@ -20,9 +20,8 @@ const Banner = ({ name, image, onBannerPress }) => (
 
 const styles = StyleSheet.create({
   container: {
-    // mostra 5px do proximo banner para indicar que há mais banners
-    height: Layout.getBoxHeight({ rows: 3 }) - 5,
-    width: Layout.getBoxWidth({ margins: 2, columns: 1 }),
+    height: Layout.bannerHeight,
+    width: Layout.bannerWidth,
     justifyContent: 'center',
     alignItems: 'center',
     paddingVertical: Layout.padding,

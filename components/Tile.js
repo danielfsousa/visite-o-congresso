@@ -16,8 +16,8 @@ const Tile = ({ icon, name, onTilePress }) => (
 
 const styles = StyleSheet.create({
   container: {
-    height: Layout.getBoxHeight({ rows: 3 }),
-    width: Layout.getBoxWidth({ margins: 3, columns: 2 }),
+    height: Layout.tileHeight,
+    width: Layout.tileWidth,
     justifyContent: 'center',
     alignItems: 'center',
     paddingVertical: Layout.padding,
