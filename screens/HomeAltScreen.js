@@ -57,7 +57,7 @@ class HomeAltScreen extends Component {
     }
   ]
 
-  componentWillMount () {
+  componentDidMount () {
     const analytics = new Analytics(Configuration.Analytics.id)
     analytics.hit(new PageHit('Home'))
   }

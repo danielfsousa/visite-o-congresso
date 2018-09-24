@@ -15,51 +15,51 @@ class CuriosidadesScreen extends Component {
   banners = [
     {
       name: 'A História da Câmara',
-      image: Images.historia,
+      image: Images.historiaCamara,
       onBannerPress: () => this.props.navigation.navigate('AHistoria', {
         caption: 'Câmara\ndos Deputados',
         text: Text.Curiosidades.HistoriaCamara,
-        image: Images.camaraDosDeputados,
+        image: Images.historiaCamara,
         float: 'right'
       })
     },
     {
       name: 'A História do Senado',
-      image: Images.historia,
+      image: Images.historiaSenado,
       onBannerPress: () => this.props.navigation.navigate('AHistoria', {
         caption: 'Senado Federal',
         text: Text.Curiosidades.HistoriaSenado,
-        image: Images.senadoFederal,
+        image: Images.historiaSenado,
         float: 'left'
       })
     },
     {
       name: 'Como funciona a Câmara',
-      image: Images.camaraDosDeputados,
+      image: Images.comoFuncionaCamara,
       onBannerPress: () => WebBrowser.openBrowserAsync(Links.funcionamentoCamara)
     },
     {
       name: 'Como funciona o Senado',
-      image: Images.senadoFederal,
+      image: Images.comoFuncionaSenado,
       onBannerPress: () => WebBrowser.openBrowserAsync(Links.funcionamentoSenado)
     },
     {
       name: 'Arquitetura no Congresso',
-      image: Images.arquitetura,
+      image: Images.arquiteturaCongresso,
       onBannerPress: () => this.props.navigation.navigate('AHistoria', {
         caption: 'Arquitetura\nno Congresso',
         text: Text.Curiosidades.Arquitetura,
-        image: Images.arquitetura,
+        image: Images.arquiteturaCongresso,
         float: 'right'
       })
     },
     {
       name: 'Arte no Congresso',
-      image: Images.arte,
+      image: Images.arteCongresso,
       onBannerPress: () => this.props.navigation.navigate('AHistoria', {
         caption: 'Arte\nno Congresso',
         text: Text.Curiosidades.Arte,
-        image: Images.arte,
+        image: Images.arteCongresso,
         float: 'left'
       })
     },
@@ -70,7 +70,7 @@ class CuriosidadesScreen extends Component {
     }
   ]
 
-  componentWillMount () {
+  componentDidMount () {
     const analytics = new Analytics(Configuration.Analytics.id)
     analytics.hit(new PageHit('Curiosidades'))
   }

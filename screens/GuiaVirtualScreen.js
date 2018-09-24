@@ -21,7 +21,7 @@ class GuiaVirtualScreen extends Component {
 
   handleButtonPress = () => WebBrowser.openBrowserAsync(Links.guiaVirtual)
 
-  componentWillMount () {
+  componentDidMount () {
     const analytics = new Analytics(Configuration.Analytics.id)
     analytics.hit(new PageHit('Guia Virtual'))
   }

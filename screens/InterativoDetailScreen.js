@@ -7,7 +7,7 @@ import { Configuration } from '../constants'
 import withParallax from './ParallaxScreenFactory'
 
 class InterativoDetailScreen extends Component {
-  componentWillMount () {
+  componentDidMount () {
     const analytics = new Analytics(Configuration.Analytics.id)
     analytics.hit(new PageHit('Detalhe Material Interativo'))
   }

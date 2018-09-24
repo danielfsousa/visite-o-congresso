@@ -21,7 +21,7 @@ class InterativoScreen extends Component {
 
   handleButtonPress = () => this.requestCameraPermission()
 
-  componentWillMount () {
+  componentDidMount () {
     const analytics = new Analytics(Configuration.Analytics.id)
     analytics.hit(new PageHit('Conteúdo Interativo'))
   }

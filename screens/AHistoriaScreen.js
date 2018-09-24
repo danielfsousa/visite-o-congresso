@@ -7,7 +7,7 @@ import StyledImage from '../components/StyledImage'
 import withParallax from './ParallaxScreenFactory'
 
 class AHistoriaScreen extends Component {
-  componentWillMount () {
+  componentDidMount () {
     const analytics = new Analytics(Configuration.Analytics.id)
     analytics.hit(new PageHit('A História'))
   }
