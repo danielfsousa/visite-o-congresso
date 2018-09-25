@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Visite o Congresso",
+    "name": "Visite o Parlamento",
     "description": "Aplicativo desenvolvido durante o Desafio VisitApp do Congresso Nacional ",
     "slug": "visite-o-congresso",
     "privacy": "public",
@@ -31,7 +31,7 @@
     ],
     "ios": {
       "bundleIdentifier": "app.visiteocongresso",
-      "buildNumber": "1.0.5",
+      "buildNumber": "1.0.6",
       "supportsTablet": true,
       "infoPlist": {
         "NSCameraUsageDescription": "Este app usa a câmera para escanear QRCodes referentes ao Conteúdo Interativo."
@@ -39,7 +39,7 @@
     },
     "android": {
       "package": "app.visiteocongresso",
-      "versionCode": 6,
+      "versionCode": 7,
       "adaptiveIcon": {
         "backgroundColor": "#0A142B"
       },

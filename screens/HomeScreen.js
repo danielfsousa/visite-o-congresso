@@ -8,10 +8,10 @@ import Tile from '../components/Tile'
 import Banner from '../components/Banner'
 
 class HomeScreen extends Component {
-  static __name__ = 'Visite o Congresso'
+  static __name__ = 'Visite o Parlamento'
 
   static navigationOptions = ({ navigation }) => ({
-    header: <Header navigation={navigation}>Visite o Congresso</Header>
+    header: <Header navigation={navigation}>Visite o Parlamento</Header>
   })
 
   tiles = [
