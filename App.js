@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Platform, StatusBar, StyleSheet, View } from 'react-native'
 import { AppLoading, Asset, Font, Icon } from 'expo'
 import { isIphoneX } from 'react-native-iphone-x-helper'
+import { MenuProvider } from 'react-native-popup-menu'
 import Sentry from 'sentry-expo'
 
 import AppNavigator from './navigation/AppNavigator'
@@ -29,10 +30,12 @@ export default class App extends Component {
       )
     } else {
       return (
-        <View style={styles.container}>
-          {Platform.OS === 'ios' && <StatusBar barStyle='light-content' />}
-          <AppNavigator />
-        </View>
+        <MenuProvider>
+          <View style={styles.container}>
+            {Platform.OS === 'ios' && <StatusBar barStyle='light-content' />}
+            <AppNavigator />
+          </View>
+        </MenuProvider>
       )
     }
   }
