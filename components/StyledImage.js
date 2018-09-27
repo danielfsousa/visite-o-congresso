@@ -48,7 +48,8 @@ const styles = StyleSheet.create({
   imageContainer: {
     height: Layout.styledImageHeight,
     width: Layout.width - Layout.padding * 2.2,
-    position: 'relative'
+    position: 'relative',
+    overflow: 'hidden'
   },
 
   caption: {

@@ -60,11 +60,6 @@ class HomeAltScreen extends Component {
       onTilePress: () => this.props.navigation.navigate('ComoChegar')
     },
     {
-      name: 'Eventos',
-      icon: 'md-calendar',
-      onTilePress: () => WebBrowser.openBrowserAsync(Links.eventosCamara)
-    },
-    {
       name: 'Entre em contato',
       icon: 'md-call',
       onTilePress: () => WebBrowser.openBrowserAsync(Links.contato)
@@ -87,6 +82,11 @@ class HomeAltScreen extends Component {
       name: 'ViiBra',
       icon: 'md-trending-up',
       onTilePress: () => this.props.navigation.navigate('ViiBra')
+    },
+    {
+      name: 'Eventos',
+      icon: 'md-calendar',
+      onTilePress: () => WebBrowser.openBrowserAsync(Links.eventosCamara)
     }
   ]
 
@@ -96,7 +96,7 @@ class HomeAltScreen extends Component {
 
   render () {
     return (
-      <ScrollView>
+      <ScrollView style={styles.scrollContainer}>
         <View style={styles.container}>
           {this.tiles.map(props => <Tile key={props.name} {...props} />)}
         </View>
@@ -128,6 +128,10 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     paddingHorizontal: Layout.padding,
+    backgroundColor: Colors.background
+  },
+
+  scrollContainer: {
     backgroundColor: Colors.background
   }
 })
