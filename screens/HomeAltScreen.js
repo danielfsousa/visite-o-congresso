@@ -29,6 +29,12 @@ class HomeAltScreen extends Component {
     )
   })
 
+  constructor (props) {
+    super(props)
+
+    this.state = { guiaVisitante: Text.GuiaVisitante.pt_BR }
+  }
+
   tiles = [
     {
       name: 'Guia do visitante',
@@ -36,7 +42,7 @@ class HomeAltScreen extends Component {
       onTilePress: () =>
         this.props.navigation.navigate('GenericFAQ', {
           title: 'Guia do Visitante',
-          data: Text.GuiaVisitante
+          data: this.state.guiaVisitante
         })
     },
     {

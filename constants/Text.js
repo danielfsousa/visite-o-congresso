@@ -80,76 +80,152 @@ const GuiaProfessor = [
   }
 ]
 
-const GuiaVisitante = [
-  {
-    title: 'Seja bem-vindo(a)',
-    text: 'O prédio que abriga a Câmara dos Deputados e o Senado Federal é um marco arquitetônico da Capital da República e está de portas abertas para receber visitantes interessados em conhecer um pouco mais sobre o Poder legislativo brasileiro.\n\nAqui, deputados e senadores, representantes eleitos do povo e dos estados, dedicam-se a discutir e elaborar leis, a fiscalizar e controlar os atos do Poder Executivo, a aprovar o Orçamento da União, entre outras atribuições de fundamental importância para o Brasil.\n\nEsperamos que a visita à Câmara dos Deputados e ao Senado Federal amplie a compreensão sobre a história e o papel dessas duas instituições democráticas.'
-  },
-  {
-    title: 'Visitas mediadas',
-    text: 'A visitação ao Congresso Nacional é gratuita e acontece de forma integrada entre o Senado Federal e a Câmara dos Deputados. Mediadores de ambas as Casas se revezam na condução dos grupos.\n\nA duração do percurso da visita é de cerca de 60 minutos. O acesso é gratuito.\n\nA visitação é fechada às terças e quartas-feiras.\n\nÀs quintas-feiras, devido a um maior movimento no Congresso, é obrigatório o agendamento prévio para realização das visitas.\n\nNos finais de semana e feriados, o acesso dos visitantes é feito pela rampa principal, na entrada do Palácio que fica em frente à Esplanada dos Ministérios. O grupo é recepcionado no Salão Negro.\n\nEm dias úteis, o atendimento é transferido para a Chapelaria (Salão Branco, no subsolo). Fique atento às placas de sinalização no início da rampa.\n\nEm dias úteis, o limite máximo por grupo é de 50 pessoas. Nos finais de semana e feriados, 70.'
-  },
-  {
-    title: 'Visitas mediadas não agendadas',
-    text: 'Às segundas e sextas-feiras basta se apresentar aos balcões de atendimento do Programa Visite o Congresso e aguardar o horário da próxima visita. Para visitas às quintas-feiras, o agendamento é obrigatório e deve ser realizado até as 17h do dia anterior.\n\nNos finais de semana e feriados não é necessário agendar. Os grupos são atendidos conforme a ordem de chegada.'
-  },
-  {
-    title: 'Visitas mediadas agendadas',
-    text: 'Em dias úteis, devem agendar com antecedência grupos com mais de 15 pessoas ou que desejem visitas em outros idiomas como o inglês, espanhol, francês e em Libras.\n\nRecomenda-se também o agendamento para pessoas com algum tipo de deficiência ou dificuldade de locomoção.\n\nPara agendar, clique aqui.\n\nO horário marcado deverá ser respeitado, uma vez que as visitas ocorrem a cada meia hora e vários são os grupos agendados sucessivamente.\n\nO atendimento, em caso de chegada antecipada ou atrasos, dependerá do movimento do dia e da disponibilidade de pessoal. Se houver imprevistos, faça contato com a área de Relações Públicas de uma das instituições.'
-  },
-  {
-    title: 'Visitas técnicas especiais',
-    text: 'É possível visitar espaços não contemplados pelo roteiro da visita padrão.\n\nPodem ser agendadas visitas especiais ao Arquivo, à Gráfica, aos veículos de Comunicação e ao Viveiro do Senado Federal e da Câmara dos Deputados.\n\nClique aqui para saber mais sobre as visitas técnicas especiais.\n\nVisitas aos gabinetes e contato com senadores e deputados devem ser solicitados diretamente às assessorias dos respectivos parlamentares.'
-  },
-  {
-    title: 'Horário de atendimento',
-    text: 'O Palácio do Congresso Nacional está aberto à visitação das 8h30 às 17h30, com a saída do primeiro grupo às 9h. Nas segundas, quintas e sextas, as visitas são realizadas em inglês, francês, espanhol e libras, para as quais recomendamos que sejam agendadas. Nos finais de semana e feriados, há visitas em inglês às 10h15 e 16h15, e em Libras às 12h15, sem a necessidade de agendamento.\n\nO acesso é gratuito.'
-  },
-  {
-    title: 'Instruções sobre trajes',
-    text: 'Em dias úteis, é proibida a entrada de pessoas vestindo bermudas, shorts, camisas sem mangas, minissaias e chinelos. Essas restrições não se aplicam a crianças de até 12 anos de idade.\n\nRecomenda-se calça comprida, camisa com manga, vestido ou saia na altura do joelho.\n\nEm algumas circunstâncias, como em sessões solenes, ou locais como a Tribuna de Honra do Plenário do Senado ou o Salão Verde da Câmara, é exigido dos homens o uso de terno e gravata. Em caso de dúvida, entre em contato.'
-  },
-  {
-    title: 'Apoio à pessoa com deficiência',
-    text: 'O Programa Visite o Congresso possui intérpretes de Libras, material impresso em Braille e estão disponíveis para empréstimo, triciclos motorizados e cadeiras de rodas para pessoas com dificuldade de locomoção. Na portaria, há o sistema de aro magnético (sistema de escuta assistida para pessoas usuárias de aparelho auditivo). E, no Salão Verde, há a maquete tátil do Congresso Nacional, para visitantes com deficiência visual.\n\nPara facilitar a disponibilidade desses recursos, recomenda-se o agendamento prévio.'
-  },
-  {
-    title: 'Procedimentos de segurança',
-    text: 'Todos os visitantes, bem como seus pertences, devem passar pelo detector de metais. Armas de qualquer tipo ou objetos como tesouras e alicates devem ser deixadas sob a custódia temporária de uma das Polícias legislativas.'
-  },
-  {
-    title: 'Outras dicas',
-    text: 'Não é permitido consumir alimentos ou bebidas de qualquer tipo durante a visita. Há algumas opções de restaurantes e lanchonetes na Câmara e no Senado em dias úteis. Caso tenha interesse, peça informações aos mediadores ou aos recepcionistas. Porém, nos finais de semana e feriados, os mesmos permanecem fechados.\n\nDesde que o equipamento não seja profissional, é permitido fotografar e filmar em todo o percurso, exceto nos Plenários quando há sessão.\n\nDurante a visita, desligue ou coloque o celular em modo silencioso.\n\nAs obras de arte expostas nos espaços visitados são patrimônio de todos os cidadãos brasileiros. Não toque nas esculturas e não use flash para fotografar as pinturas. Ajude a conservá-las para as futuras gerações.'
-  },
-  {
-    title: 'Como assistir às sessões plenárias',
-    text: 'Cidadãos interessados exclusivamente em assistir às sessões plenárias devem se dirigir às galerias dos Plenários (após identificação em uma das portarias), obedecendo aos seguintes procedimentos:\n\nPassar pelo controle de raios-X;\nDeixar objetos como bolsas, mochilas, câmaras fotográficas, celulares, livros, bonés, entre outros, no guarda-volumes localizado à entrada das galerias;\nObservar as “instruções sobre trajes”;\nNão se manifestar;\nNão se apoiar sobre os parapeitos das galerias.\n\nRecomenda-se consulta aos portais eletrônicos da Câmara e do Senado para confirmar o tipo e o horário da sessão. A entrada nas galerias é condicionada aos aspectos de segurança e à capacidade de lotação.'
-  },
-  {
-    title: 'Memória do Parlamento',
-    text: 'O Museu Histórico Itamar Franco funciona no Salão Nobre do Senado Federal e exibe obras de arte, objetos e mobiliário das antigas sedes, época em que o Senado funcionava no Rio de Janeiro. Está aberto nos dias úteis à visitação pública das 9 às 13 horas e das 14 às 17 horas.\n\nO Museu da Câmara dos Deputados organiza diversas exposições de seu vasto acervo, como a dos Presentes Protocolares, no Salão Verde.'
-  },
-  {
-    title: 'Espaços culturais e exposições',
-    text: 'A Câmara e o Senado realizam, durante o ano, várias exposições institucionais, históricas, artísticas e fotográficas de caráter temporário.\n\nFique atento à programação divulgada nos portais eletrônicos das duas Casas. Atente para o fato de que alguns espaços só podem ser visitados em dias úteis.'
-  },
-  {
-    title: 'Acesso às bibliotecas',
-    text: 'A Biblioteca Acadêmico Luiz Viana Filho, do Senado Federal, foi uma das primeiras que surgiram à época do Império brasileiro e conta com um acervo especializado em Ciências Sociais. Está aberta aos usuários externos nos dias úteis, das 9 às 14 horas.\n\nA entrada mais próxima é pelo Anexo 2 do Senado, na Via N2.\n\nA Biblioteca Pedro Aleixo integra o Centro de Documentação e Informação da Câmara dos Deputados e possui um acervo com cerca de 200.000 volumes, sendo uma das maiores de Brasília e do País.\n\nUsuários externos podem realizar consultas locais em dias úteis, das 9h às 18h30. A Biblioteca está localizada no Anexo 2 da Câmara dos Deputados.\n\nAs duas bibliotecas dispõem grande parte de seus acervos em versão on-line. Acesse:\nhttp://bd.camara.leg.br/bd\nhttp://www.senado.leg.br/senado/biblioteca'
-  },
-  {
-    title: 'Exemplares da Constituição Federal',
-    text: 'O texto da Constituição Federal brasileira está disponível, na íntegra, nas páginas da internet do Senado e da Câmara, inclusive para download em formato pdf.\n\nVersões impressas podem ser adquiridas tanto na Câmara quanto no Senado. Consulte os pontos de venda da Livraria do Senado e das Edições Câmara ou pergunte a localização nos balcões de atendimento ou acesse os respectivos sites.'
-  },
-  {
-    title: 'Locais para estacionamento',
-    text: 'Ônibus de excursão e veículos de passeio podem estacionar na Alameda dos Estados, via da Esplanada dos Ministérios localizada em frente ao Palácio do Congresso Nacional, e que exibe as bandeiras das Unidades da Federação.'
-  },
-  {
-    title: 'Com a palavra, o visitante',
-    text: 'Ao final da visita, registre sua opinião sobre o Programa Visite o Congresso nas fichas de avaliação da visita que estão disponíveis no final da visita e nos balcões de atendimento.\n\nElogios, críticas e sugestões são analisadas e respondidas e servem como subsídio para melhorar o programa de visitas do Congresso Nacional.'
-  }
-]
+const GuiaVisitante = {
+  'pt_BR': [
+    {
+      title: 'Seja bem-vindo(a)',
+      text: 'O prédio que abriga a Câmara dos Deputados e o Senado Federal é um marco arquitetônico da Capital da República e está de portas abertas para receber visitantes interessados em conhecer um pouco mais sobre o Poder legislativo brasileiro.\n\nAqui, deputados e senadores, representantes eleitos do povo e dos estados, dedicam-se a discutir e elaborar leis, a fiscalizar e controlar os atos do Poder Executivo, a aprovar o Orçamento da União, entre outras atribuições de fundamental importância para o Brasil.\n\nEsperamos que a visita à Câmara dos Deputados e ao Senado Federal amplie a compreensão sobre a história e o papel dessas duas instituições democráticas.'
+    },
+    {
+      title: 'Visitas mediadas',
+      text: 'A visitação ao Congresso Nacional é gratuita e acontece de forma integrada entre o Senado Federal e a Câmara dos Deputados. Mediadores de ambas as Casas se revezam na condução dos grupos.\n\nA duração do percurso da visita é de cerca de 60 minutos. O acesso é gratuito.\n\nA visitação é fechada às terças e quartas-feiras.\n\nÀs quintas-feiras, devido a um maior movimento no Congresso, é obrigatório o agendamento prévio para realização das visitas.\n\nNos finais de semana e feriados, o acesso dos visitantes é feito pela rampa principal, na entrada do Palácio que fica em frente à Esplanada dos Ministérios. O grupo é recepcionado no Salão Negro.\n\nEm dias úteis, o atendimento é transferido para a Chapelaria (Salão Branco, no subsolo). Fique atento às placas de sinalização no início da rampa.\n\nEm dias úteis, o limite máximo por grupo é de 50 pessoas. Nos finais de semana e feriados, 70.'
+    },
+    {
+      title: 'Visitas mediadas não agendadas',
+      text: 'Às segundas e sextas-feiras basta se apresentar aos balcões de atendimento do Programa Visite o Congresso e aguardar o horário da próxima visita. Para visitas às quintas-feiras, o agendamento é obrigatório e deve ser realizado até as 17h do dia anterior.\n\nNos finais de semana e feriados não é necessário agendar. Os grupos são atendidos conforme a ordem de chegada.'
+    },
+    {
+      title: 'Visitas mediadas agendadas',
+      text: 'Em dias úteis, devem agendar com antecedência grupos com mais de 15 pessoas ou que desejem visitas em outros idiomas como o inglês, espanhol, francês e em Libras.\n\nRecomenda-se também o agendamento para pessoas com algum tipo de deficiência ou dificuldade de locomoção.\n\nPara agendar, clique aqui.\n\nO horário marcado deverá ser respeitado, uma vez que as visitas ocorrem a cada meia hora e vários são os grupos agendados sucessivamente.\n\nO atendimento, em caso de chegada antecipada ou atrasos, dependerá do movimento do dia e da disponibilidade de pessoal. Se houver imprevistos, faça contato com a área de Relações Públicas de uma das instituições.'
+    },
+    {
+      title: 'Visitas técnicas especiais',
+      text: 'É possível visitar espaços não contemplados pelo roteiro da visita padrão.\n\nPodem ser agendadas visitas especiais ao Arquivo, à Gráfica, aos veículos de Comunicação e ao Viveiro do Senado Federal e da Câmara dos Deputados.\n\nClique aqui para saber mais sobre as visitas técnicas especiais.\n\nVisitas aos gabinetes e contato com senadores e deputados devem ser solicitados diretamente às assessorias dos respectivos parlamentares.'
+    },
+    {
+      title: 'Horário de atendimento',
+      text: 'O Palácio do Congresso Nacional está aberto à visitação das 8h30 às 17h30, com a saída do primeiro grupo às 9h. Nas segundas, quintas e sextas, as visitas são realizadas em inglês, francês, espanhol e libras, para as quais recomendamos que sejam agendadas. Nos finais de semana e feriados, há visitas em inglês às 10h15 e 16h15, e em Libras às 12h15, sem a necessidade de agendamento.\n\nO acesso é gratuito.'
+    },
+    {
+      title: 'Instruções sobre trajes',
+      text: 'Em dias úteis, é proibida a entrada de pessoas vestindo bermudas, shorts, camisas sem mangas, minissaias e chinelos. Essas restrições não se aplicam a crianças de até 12 anos de idade.\n\nRecomenda-se calça comprida, camisa com manga, vestido ou saia na altura do joelho.\n\nEm algumas circunstâncias, como em sessões solenes, ou locais como a Tribuna de Honra do Plenário do Senado ou o Salão Verde da Câmara, é exigido dos homens o uso de terno e gravata. Em caso de dúvida, entre em contato.'
+    },
+    {
+      title: 'Apoio à pessoa com deficiência',
+      text: 'O Programa Visite o Congresso possui intérpretes de Libras, material impresso em Braille e estão disponíveis para empréstimo, triciclos motorizados e cadeiras de rodas para pessoas com dificuldade de locomoção. Na portaria, há o sistema de aro magnético (sistema de escuta assistida para pessoas usuárias de aparelho auditivo). E, no Salão Verde, há a maquete tátil do Congresso Nacional, para visitantes com deficiência visual.\n\nPara facilitar a disponibilidade desses recursos, recomenda-se o agendamento prévio.'
+    },
+    {
+      title: 'Procedimentos de segurança',
+      text: 'Todos os visitantes, bem como seus pertences, devem passar pelo detector de metais. Armas de qualquer tipo ou objetos como tesouras e alicates devem ser deixadas sob a custódia temporária de uma das Polícias legislativas.'
+    },
+    {
+      title: 'Outras dicas',
+      text: 'Não é permitido consumir alimentos ou bebidas de qualquer tipo durante a visita. Há algumas opções de restaurantes e lanchonetes na Câmara e no Senado em dias úteis. Caso tenha interesse, peça informações aos mediadores ou aos recepcionistas. Porém, nos finais de semana e feriados, os mesmos permanecem fechados.\n\nDesde que o equipamento não seja profissional, é permitido fotografar e filmar em todo o percurso, exceto nos Plenários quando há sessão.\n\nDurante a visita, desligue ou coloque o celular em modo silencioso.\n\nAs obras de arte expostas nos espaços visitados são patrimônio de todos os cidadãos brasileiros. Não toque nas esculturas e não use flash para fotografar as pinturas. Ajude a conservá-las para as futuras gerações.'
+    },
+    {
+      title: 'Como assistir às sessões plenárias',
+      text: 'Cidadãos interessados exclusivamente em assistir às sessões plenárias devem se dirigir às galerias dos Plenários (após identificação em uma das portarias), obedecendo aos seguintes procedimentos:\n\nPassar pelo controle de raios-X;\nDeixar objetos como bolsas, mochilas, câmaras fotográficas, celulares, livros, bonés, entre outros, no guarda-volumes localizado à entrada das galerias;\nObservar as “instruções sobre trajes”;\nNão se manifestar;\nNão se apoiar sobre os parapeitos das galerias.\n\nRecomenda-se consulta aos portais eletrônicos da Câmara e do Senado para confirmar o tipo e o horário da sessão. A entrada nas galerias é condicionada aos aspectos de segurança e à capacidade de lotação.'
+    },
+    {
+      title: 'Memória do Parlamento',
+      text: 'O Museu Histórico Itamar Franco funciona no Salão Nobre do Senado Federal e exibe obras de arte, objetos e mobiliário das antigas sedes, época em que o Senado funcionava no Rio de Janeiro. Está aberto nos dias úteis à visitação pública das 9 às 13 horas e das 14 às 17 horas.\n\nO Museu da Câmara dos Deputados organiza diversas exposições de seu vasto acervo, como a dos Presentes Protocolares, no Salão Verde.'
+    },
+    {
+      title: 'Espaços culturais e exposições',
+      text: 'A Câmara e o Senado realizam, durante o ano, várias exposições institucionais, históricas, artísticas e fotográficas de caráter temporário.\n\nFique atento à programação divulgada nos portais eletrônicos das duas Casas. Atente para o fato de que alguns espaços só podem ser visitados em dias úteis.'
+    },
+    {
+      title: 'Acesso às bibliotecas',
+      text: 'A Biblioteca Acadêmico Luiz Viana Filho, do Senado Federal, foi uma das primeiras que surgiram à época do Império brasileiro e conta com um acervo especializado em Ciências Sociais. Está aberta aos usuários externos nos dias úteis, das 9 às 14 horas.\n\nA entrada mais próxima é pelo Anexo 2 do Senado, na Via N2.\n\nA Biblioteca Pedro Aleixo integra o Centro de Documentação e Informação da Câmara dos Deputados e possui um acervo com cerca de 200.000 volumes, sendo uma das maiores de Brasília e do País.\n\nUsuários externos podem realizar consultas locais em dias úteis, das 9h às 18h30. A Biblioteca está localizada no Anexo 2 da Câmara dos Deputados.\n\nAs duas bibliotecas dispõem grande parte de seus acervos em versão on-line. Acesse:\nhttp://bd.camara.leg.br/bd\nhttp://www.senado.leg.br/senado/biblioteca'
+    },
+    {
+      title: 'Exemplares da Constituição Federal',
+      text: 'O texto da Constituição Federal brasileira está disponível, na íntegra, nas páginas da internet do Senado e da Câmara, inclusive para download em formato pdf.\n\nVersões impressas podem ser adquiridas tanto na Câmara quanto no Senado. Consulte os pontos de venda da Livraria do Senado e das Edições Câmara ou pergunte a localização nos balcões de atendimento ou acesse os respectivos sites.'
+    },
+    {
+      title: 'Locais para estacionamento',
+      text: 'Ônibus de excursão e veículos de passeio podem estacionar na Alameda dos Estados, via da Esplanada dos Ministérios localizada em frente ao Palácio do Congresso Nacional, e que exibe as bandeiras das Unidades da Federação.'
+    },
+    {
+      title: 'Com a palavra, o visitante',
+      text: 'Ao final da visita, registre sua opinião sobre o Programa Visite o Congresso nas fichas de avaliação da visita que estão disponíveis no final da visita e nos balcões de atendimento.\n\nElogios, críticas e sugestões são analisadas e respondidas e servem como subsídio para melhorar o programa de visitas do Congresso Nacional.'
+    }
+  ],
+  'en_US': [
+    {
+      text: 'The building that houses the Chamber of Deputies and the Federal Senate is an architectural landmark of the Capital of the Republic and is open to welcome visitors interested in learning more about the Brazilian legislative branch.\nHere, deputies and senators, elected representatives of the people and the states, devote themselves to discussing and making laws, overseeing and controlling the acts of the Executive branch, and approving the Federal Government budget, among other duties of key importance to Brazil.\nWe hope that the tour of the Chamber of Deputies and the Federal Senate expands the understanding of the history and the role of these two democratic institutions.\nIn order that you make the most of the tour of the National Congress, please note the following guidelines:',
+      title: 'Welcome to the National Congress Palace!'
+    },
+    {
+      text: 'The tours of the National Congress are free of charge and offered in partnership between the Federal Senate and the Chamber of Deputies. Mediators from both Houses take turns in guiding groups.\nThe duration of the tour is about 60 minutes.\nOn Tuesdays, Wednesdays and Thursdays the tours of the National Congress are restricted to groups booked in advance.\nOn weekends and holidays, visitor access is through the main ramp, at the entrance of the Palace, facing the Esplanade of Ministries. The group is welcomed at the Black Hall.\nOn business days, the reception is transferred to the \u201cChapelaria\u201d (White Hall, on the lower level). Pay close attention to the signs at the beginning of the ramp.\nOn business days, the maximum limit per group is 50 people. On weekends and holidays, the limit is 70 people.',
+      title: 'Guided tours'
+    },
+    {
+      text: 'On Mondays and Fridays, just present yourself to the service desks of the Visit the Congress Program and wait for the following tour. On Tuesdays, Wednesdays and Thursdays booking is mandatory for groups with any number of people.\nOn weekends and holidays, there is no need to book in advance. Groups are dealt with on a first-come first-served basis.',
+      title: 'Non-booked guided tours'
+    },
+    {
+      text: 'On Tuesdays, Wednesdays and Thursdays, booking is necessary for groups with any number of people, whatever the language.\nOn Mondays and Fridays, groups with more than 15 people, or those who wish tours offered in other languages such as English, Spanish, French and Libras (Brazilian Sign Language), must book in advance.\nAdvance booking is also recommended for people with disabilities or limited mobility.\nClick \n to book.\nThe appointed time must be kept, as tours take place every half hour and several groups are scheduled successively.\nIn the case of early or late arrival, the service will depend on the schedule for the day and staff availability. Should any unforeseen events arise, please contact the Public Relations sector of either House.',
+      title: 'Booked guided tours'
+    },
+    {
+      text: 'According to the convenience of specific sectors of the two Legislative Houses, it is possible to visit areas not included in the standard tour itinerary.\nIn the Senate, special tours may occasionally be booked to the Archives, Printing, and Communication Media Departments, and to the Senate\u2019s plant nursery, for example.\nIn the Chamber of Deputies, likewise, tours to specific areas of the House may be booked.\nVisits to the offices and contact with senators and deputies should be directly requested to the respective parliamentarians\u2019 staff.',
+      title: 'Special tours'
+    },
+    {
+      text: 'Visitor service runs from 9 a.m. to 5:30 p.m. But please be reminded that, on Tuesdays, Wednesdays and Thursdays, only previously booked groups are received and conducted on guided tours.\nExceptionally, due to parliamentary work schedule or maintenance work, the tours may be temporarily suspended.\nWe recommend that you consult the website or even call the contact phone numbers in order to confirm that the visitor service is operating normally.',
+      title: 'Hours of operation'
+    },
+    {
+      text: 'On business days, people are not allowed to enter wearing bermuda shorts, shorts, tank tops, miniskirts and flip-flops. These restrictions do not apply to children under 12 years of age.\nWe recommend pants, long or short sleeve shirts, dresses or knee length skirts.\nIn some circumstances, such as in solemn sessions, or places like the Tribune of Honor of the Senate Plenary, or the Green Hall of the Chamber of Deputies, men are required to wear a suit and tie. If you have any queries, get in contact.\nDisposable pants, made of non woven fabric, are sold at the Chamber little store, in case the visitor is wearing shorts or bermuda shorts. The store is located at the entrance of the White Hall.',
+      title: 'Guidelines on dress code'
+    },
+    {
+      text: 'The Visit the Congress Program offers Libras (Brazilian Sign Language) interpreters, printed material in Braille, tricycles and power wheelchairs.\nIn order to facilitate the availability of these resources, advance booking is recommended.',
+      title: 'Support to people with disabilities or limited mobility'
+    },
+    {
+      text: 'All visitors, and their belongings, must pass through a metal detector. Weapons of any type must be temporarily left with one of the Legislative Police officers.',
+      title: 'Security procedures'
+    },
+    {
+      text: 'Food or beverages of any kind are not allowed during the tour. There are some restaurants and caf\u00e9s in the Chamber of Deputies and in the Senate. If you are interested, ask the guides or receptionists for information. On weekends and holidays, however, the restaurants and caf\u00e9s are closed.\nProvided that the equipment is not professional, photographing and filming throughout the tour is allowed, except in the Plenaries when there are sessions.\nDuring the tour, turn off your cell phone or put it in silent mode.\nThe works of art exhibited in the areas visited are a heritage of all Brazilian citizens. Do not touch the sculptures and do not use flash to photograph the paintings. Help preserving them for future generations.\nFor souvenirs, visit the Chamber little store, at the entrance of the White Hall.',
+      title: 'Additional tips'
+    },
+    {
+      text: 'Those exclusively interested in attending the plenary sessions must report to the galleries of the Plenaries (after identification at one of the building entrances), and follow the procedures below:\nPass through X-ray screening;\nLeave objects such as purses, backpacks, cameras, cell phones, books, caps, among others, in the storage facilities located at the entrance of the galleries;\nFollow the \u201cguidelines on dress code\u201d;\nDo not speak up;\nDo not lean on the railings of the galleries.\nIt is recommended to check the Chamber of Deputies and the Senate websites to confirm the session type and time. Admittance to the galleries is subject to security aspects and to seating capacity.',
+      title: 'How to attend plenary sessions'
+    },
+    {
+      text: 'The Itamar Franco Historical Museum sits in the Noble Hall of the Federal Senate and displays works of art, objects and furniture of former headquarters, when the Senate was located in Rio de Janeiro. The museum opens daily for public visitation from 9 a.m. to 12 p.m. and from 1 p.m. to 5 p.m.\nThe Museum of the Chamber of Deputies holds several exhibitions of its vast collection, such as the Official Gifts exhibition, in the Green Hall.',
+      title: 'Memory of the Parliament'
+    },
+    {
+      text: 'The Chamber of Deputies and the Senate host, throughout the year, several institutional, historical, artistic and photographic exhibitions on a temporary basis.\nPay close attention to the agenda published on the websites of both Houses.',
+      title: 'Cultural spaces and temporary exhibitions'
+    },
+    {
+      text: 'The Academic Luiz Viana Filho Library, of the Federal Senate, was one of the first set up at the time of the Brazilian Empire and holds a collection specialized in Social Sciences. The library is open to external users, on business days, from 9 a.m. to 2 p.m.\nThe nearest entrance is through the 2B block of the Senate, on N2 Street.\nThe Pedro Aleixo Library is part of the Documentation and Information Center of the Chamber of Deputies and has a collection of roughly 200,000 volumes. It is one of the largest libraries in Brasilia and in the country.\nExternal users may carry out research on the premises on business days, from 9 a.m. to 6:30 p.m. The Library is located in Annex 2 of the Chamber of Deputies.\nBoth libraries have a good part of their collections available in the online version. Visit:',
+      title: 'Access to the libraries'
+    },
+    {
+      text: 'The full text of the Brazilian Federal Constitution is available on the websites of the Senate and the Chamber of Deputies, and can be downloaded in \n format.\nPrinted versions can be purchased in both Houses. Orders can be placed \u200b\u200bby Internet. Also check the points of sale of the Senate Bookstore and of the Chamber Editions or ask about their location at the service desks.',
+      title: 'Purchase of copies of the Federal Constitution'
+    },
+    {
+      text: 'Tour buses and passenger vehicles can park along Alameda dos Estados, a street on the Ministries Esplanade, facing the National Congress Palace, where flags of the Units of the Federation are displayed.',
+      title: 'Parking areas'
+    },
+    {
+      text: 'At the end of the tour, please register your opinion about the Visit the Congress Program in the book Word of the Visitor.\nCompliments, criticism and suggestions are analyzed and answered, serving as an aid to improve the program of visits to the National Congress.',
+      title: 'The word of the visitor'
+    },
+    {
+      text: 'Secretariat of Public Relations of the Federal Senate:\n+ 55 (61) 3303-4671 or 1588 or 4410.\n\u00a0\nDepartment of Public Relations and Publicity of the Chamber of Deputies:\n+ 55 (61) 3216-1771 or 1772 or 1768.',
+      title: 'Contact us'
+    }
+  ]
+}
 
 const ComoChegar = [
   {
