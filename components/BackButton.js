@@ -13,7 +13,10 @@ const BackButton = (props) => (
 const styles = StyleSheet.create({
   container: {
     zIndex: 15,
-    // TODO: criar sombra para replicar o 'elevation' do android no iOS
+    shadowColor: 'black',
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.55,
+    shadowRadius: 10,
     elevation: 10,
     width: 44,
     height: 44,

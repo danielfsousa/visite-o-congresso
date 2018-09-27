@@ -47,8 +47,9 @@ class AgendamentosScreen extends Component {
           O Senado Federal e a Câmara dos Deputados disponibilizam diferentes modalidades de visitas técnicas integradas e temáticas especiais.
           Para mais informações visite o&nbsp;
           <HyperLink href={Links.visitasTecnicas}>
-            site oficial do Congresso Nacional:
+            site oficial do Congresso Nacional
           </HyperLink>
+          .
         </BodyText>
         <StyledButton
           type='large'

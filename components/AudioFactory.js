@@ -27,6 +27,7 @@ class AudioFactory extends Component {
   }
 
   handleButtonPress = () => {
+    if (this.state.isLoadingAudio) return
     this.setState(
       ({ isPlayingAudio }) => ({ isPlayingAudio: !isPlayingAudio }),
       this.toogleAudio
@@ -61,7 +62,7 @@ class AudioFactory extends Component {
     )).sound
   }
 
-  componentWillUnmount = () => this.sound.unloadAsync()
+  componentWillUnmount = () => this.sound && this.sound.unloadAsync()
 
   render () {
     const { isLoadingAudio, isPlayingAudio } = this.state
@@ -114,7 +115,9 @@ const styles = StyleSheet.create({
   buttonContainer: {
     ...StyleSheet.absoluteFillObject,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    left: 40,
+    bottom: 40
   },
 
   button: {

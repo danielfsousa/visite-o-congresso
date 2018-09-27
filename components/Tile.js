@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   },
 
   iconContainer: {
-    marginBottom: 10
+    marginBottom: Layout.tileIconMargin
   }
 })
 
