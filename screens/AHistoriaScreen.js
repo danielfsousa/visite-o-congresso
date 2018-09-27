@@ -7,7 +7,7 @@ import StyledImage from '../components/StyledImage'
 import withParallax from './ParallaxScreenFactory'
 
 class AHistoriaScreen extends Component {
-  static __name__ = 'A Historia'
+  static __name__ = 'A História'
 
   componentDidMount () {
     pageHit(AHistoriaScreen.__name__)
