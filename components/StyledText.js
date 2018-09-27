@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, StyleSheet, Animated } from 'react-native'
+import { View, Text, StyleSheet, Animated } from 'react-native'
 
 import { Fonts, Colors } from '../constants'
 
@@ -19,6 +19,13 @@ const SubTitle = props => (
 
 const BodyText = props => (
   <Text {...props} style={[styles.bodyText, props.style]} />
+)
+
+const BulletText = props => (
+  <View style={{ flexDirection: 'row' }}>
+    <BodyText>{'\u2022'}</BodyText>
+    <BodyText {...props} style={[styles.bulletText, props.style]} />
+  </View>
 )
 
 const styles = StyleSheet.create({
@@ -62,7 +69,12 @@ const styles = StyleSheet.create({
     color: Colors.bodyText,
     letterSpacing: 0.5,
     lineHeight: 30
+  },
+
+  bulletText: {
+    flex: 1,
+    paddingLeft: 5
   }
 })
 
-export { Title, Label, BodyText, TitleLight, SubTitle }
+export { Title, Label, BodyText, TitleLight, SubTitle, BulletText }

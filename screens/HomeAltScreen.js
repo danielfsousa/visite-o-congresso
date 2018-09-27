@@ -14,9 +14,10 @@ class HomeAltScreen extends Component {
   static __name__ = 'Visite o Parlamento'
 
   static navigationOptions = ({ navigation }) => ({
-    header: <Header style={styles.header} navigation={navigation}>
-      {HomeAltScreen.__name__}
-      {/* <Menu>
+    header: (
+      <Header style={styles.header} navigation={navigation}>
+        {HomeAltScreen.__name__}
+        {/* <Menu>
         <MenuTrigger children={triggerIcon()} customStyles={triggerStyles} />
         <MenuOptions customStyles={optionsStyles} >
           <MenuOption onSelect={() => {}} text='Save' />
@@ -24,7 +25,8 @@ class HomeAltScreen extends Component {
           <MenuOption onSelect={() => {}} text='Save' />
         </MenuOptions>
       </Menu> */}
-    </Header>
+      </Header>
+    )
   })
 
   tiles = [
@@ -49,19 +51,12 @@ class HomeAltScreen extends Component {
     {
       name: 'Como chegar',
       icon: 'md-pin',
-      onTilePress: () =>
-        this.props.navigation.navigate('GenericFAQ', {
-          title: 'Como Chegar',
-          data: Text.ComoChegar
-        })
+      onTilePress: () => this.props.navigation.navigate('ComoChegar')
     },
     {
       name: 'Eventos',
       icon: 'md-calendar',
-      onTilePress: () =>
-        this.props.navigation.navigate('Eventos', {
-          title: 'Eventos'
-        })
+      onTilePress: () => WebBrowser.openBrowserAsync(Links.eventosCamara)
     },
     {
       name: 'Entre em contato',
@@ -71,7 +66,7 @@ class HomeAltScreen extends Component {
     {
       name: 'Agendamentos',
       icon: 'md-time',
-      onTilePress: () => WebBrowser.openBrowserAsync(Links.agendamento)
+      onTilePress: () => this.props.navigation.navigate('Agendamentos')
     },
     {
       name: 'Dúvidas',

@@ -26,7 +26,7 @@ const StyledImage = ({
         style={[getStyle('imageContainer')]}
         imageStyle={getStyle('image')}
       >
-        <View style={[styles.overlay, overlayStyle]} />
+        <View style={[styles.overlay, getStyle('overlay'), overlayStyle]} />
       </ImageBackground>
       <SubTitle
         style={[
@@ -61,8 +61,7 @@ const styles = StyleSheet.create({
 
   overlay: {
     flex: 1,
-    ...StyleSheet.absoluteFillObject,
-    borderRadius: 10
+    ...StyleSheet.absoluteFillObject
   }
 })
 
@@ -75,6 +74,11 @@ const stylesFloatLeft = StyleSheet.create({
   },
 
   image: {
+    borderTopRightRadius: Layout.borderRadius,
+    borderBottomRightRadius: Layout.borderRadius
+  },
+
+  overlay: {
     borderTopRightRadius: Layout.borderRadius,
     borderBottomRightRadius: Layout.borderRadius
   },
@@ -93,6 +97,11 @@ const stylesFloatRight = StyleSheet.create({
   },
 
   image: {
+    borderTopLeftRadius: Layout.borderRadius,
+    borderBottomLeftRadius: Layout.borderRadius
+  },
+
+  overlay: {
     borderTopLeftRadius: Layout.borderRadius,
     borderBottomLeftRadius: Layout.borderRadius
   },

@@ -14,6 +14,7 @@ import GuiaVirtualScreen from '../screens/GuiaVirtualScreen'
 import AHistoriaScreen from '../screens/AHistoriaScreen'
 import EventosScreen from '../screens/EventosScreen'
 import ComoChegarScreen from '../screens/ComoChegarScreen'
+import AgendamentosScreen from '../screens/AgendamentosScreen'
 import InterativoScreen from '../screens/InterativoScreen'
 import QRCodeScreen from '../screens/QRCodeScreen'
 import InterativoDetailScreen from '../screens/InterativoDetailScreen'
@@ -25,6 +26,7 @@ const HomeAltStack = createStackNavigator({
   GenericDetails: GenericDetailsScreen,
   Eventos: EventosScreen,
   ComoChegar: ComoChegarScreen,
+  Agendamentos: AgendamentosScreen,
   ViiBra: ViiBraScreen
 })
 

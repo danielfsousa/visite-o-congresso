@@ -3,7 +3,8 @@ const heToRgba = require('hex-rgba')
 const colors = {
   transparent: 'transparent',
   white: '#fff',
-  gray: '#797D80'
+  gray: '#797D80',
+  black: '#000'
 }
 
 const genericStyles = {
