@@ -6,6 +6,7 @@ export default {
   visitasTecnicas: 'https://www2.congressonacional.leg.br/visite/visitas-tematicas-pt',
   agendamento: 'https://www2.congressonacional.leg.br/visite/agendamento/buscardata',
   contato: 'https://www2.congressonacional.leg.br/visite/contato',
+  arte: 'https://www2.congressonacional.leg.br/visite/arte',
   eventosCamara: 'https://www.camara.leg.br/eventos-divulgacao/eventosprogramados',
   eventosSenado: 'https://www12.senado.leg.br/institucional/eventos',
   dfTrans: 'http://www.horarios.dftrans.df.gov.br',

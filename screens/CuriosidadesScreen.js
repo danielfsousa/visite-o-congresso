@@ -3,7 +3,7 @@ import { View, StyleSheet, ScrollView } from 'react-native'
 import { WebBrowser } from 'expo'
 
 import { pageHit } from '../utils/analytics'
-import { Colors, Images, Text, Links } from '../constants'
+import { Colors, Images, Links } from '../constants'
 import Header from '../components/Header'
 import Banner from '../components/Banner'
 
@@ -18,27 +18,17 @@ class CuriosidadesScreen extends Component {
     {
       name: 'A História da Câmara',
       image: Images.historiaCamara,
-      onBannerPress: () => this.props.navigation.navigate('AHistoria', {
-        caption: 'Câmara\ndos Deputados',
-        text: Text.Curiosidades.HistoriaCamara,
-        image: Images.historiaCamara,
-        float: 'right'
-      })
+      onBannerPress: () => this.props.navigation.navigate('HistoriaCamara')
     },
     {
       name: 'A História do Senado',
       image: Images.historiaSenado,
-      onBannerPress: () => this.props.navigation.navigate('AHistoria', {
-        caption: 'Senado Federal',
-        text: Text.Curiosidades.HistoriaSenado,
-        image: Images.historiaSenado,
-        float: 'left'
-      })
+      onBannerPress: () => this.props.navigation.navigate('HistoriaSenado')
     },
     {
       name: 'Como funciona a Câmara',
       image: Images.comoFuncionaCamara,
-      onBannerPress: () => WebBrowser.openBrowserAsync(Links.funcionamentoCamara)
+      onBannerPress: () => this.props.navigation.navigate('ComoFuncionaCamara')
     },
     {
       name: 'Como funciona o Senado',
@@ -53,12 +43,7 @@ class CuriosidadesScreen extends Component {
     {
       name: 'Arte no Congresso',
       image: Images.arteCongresso,
-      onBannerPress: () => this.props.navigation.navigate('AHistoria', {
-        caption: 'Arte\nno Congresso',
-        text: Text.Curiosidades.Arte,
-        image: Images.arteCongresso,
-        float: 'left'
-      })
+      onBannerPress: () => this.props.navigation.navigate('Arte')
     }
   ]
 

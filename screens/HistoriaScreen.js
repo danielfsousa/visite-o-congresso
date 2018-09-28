@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
 
 const ScreenWithParallax = withParallax(
   AHistoriaScreen,
-  AHistoriaScreen.__name__
+  props => props.navigation.state.params.title || AHistoriaScreen.__name__
 )
 
 export default ScreenWithParallax

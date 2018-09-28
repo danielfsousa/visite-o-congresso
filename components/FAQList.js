@@ -8,18 +8,19 @@ const background = index =>
   (index % 2 === 0 ? styles.backgroundEven : styles.backgroundOdd)
 
 const FAQList = ({ data, onFAQPress }) =>
-  data.map(({ title, text }, index) => (
+  data.map((faqObj, index) => (
     <TouchableOpacity
-      key={title}
+      key={faqObj.title}
       style={[styles.item, background(index)]}
-      onPress={() => onFAQPress && onFAQPress({ title, text })}
+      onPress={() => onFAQPress && onFAQPress(faqObj)}
     >
-      <TitleLight>{title}</TitleLight>
+      <TitleLight>{faqObj.title}</TitleLight>
     </TouchableOpacity>
   ))
 
 const styles = StyleSheet.create({
   item: {
+    zIndex: 10,
     paddingHorizontal: Layout.padding,
     justifyContent: 'center',
     alignItems: 'flex-start',

@@ -11,8 +11,11 @@ import GenericFAQScreen from '../screens/GenericFAQScreen'
 import GenericDetailsScreen from '../screens/GenericDetailsScreen'
 import CuriosidadesScreen from '../screens/CuriosidadesScreen'
 import GuiaVirtualScreen from '../screens/GuiaVirtualScreen'
-import AHistoriaScreen from '../screens/AHistoriaScreen'
+import HistoriaCamaraScreen from '../screens/HistoriaCamaraScreen'
+import HistoriaSenadoScreen from '../screens/HistoriaSenadoScreen'
 import ArquiteturaScreen from '../screens/ArquiteturaScreen'
+import ArteScreen from '../screens/ArteScreen'
+import ComoFuncionaCamaraScreen from '../screens/ComoFuncionaCamaraScreen'
 import EventosScreen from '../screens/EventosScreen'
 import ComoChegarScreen from '../screens/ComoChegarScreen'
 import AgendamentosScreen from '../screens/AgendamentosScreen'
@@ -38,8 +41,11 @@ HomeStack.navigationOptions = {
 const CuriosidadesStack = createStackNavigator({
   Curiosidades: CuriosidadesScreen,
   GenericFAQ: GenericFAQScreen,
-  AHistoria: AHistoriaScreen,
-  Arquitetura: ArquiteturaScreen
+  HistoriaCamara: HistoriaCamaraScreen,
+  HistoriaSenado: HistoriaSenadoScreen,
+  ComoFuncionaCamara: ComoFuncionaCamaraScreen,
+  Arquitetura: ArquiteturaScreen,
+  Arte: ArteScreen
 })
 
 CuriosidadesStack.navigationOptions = {

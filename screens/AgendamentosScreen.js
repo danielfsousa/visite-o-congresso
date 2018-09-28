@@ -56,7 +56,7 @@ class AgendamentosScreen extends Component {
           onPress={() => WebBrowser.openBrowserAsync(Links.agendamento)}
           style={styles.button}
         >
-          Agende sua visita
+          AGENDE SUA VISITA
         </StyledButton>
       </View>
     )

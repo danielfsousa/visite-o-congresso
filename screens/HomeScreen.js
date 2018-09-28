@@ -36,7 +36,7 @@ class HomeScreen extends Component {
       onTilePress: () =>
         this.props.navigation.navigate('GenericFAQ', {
           title: 'Guia do Visitante',
-          data: Text.GuiaVisitante
+          data: Text.GuiaVisitante.pt_BR
         })
     },
     {
