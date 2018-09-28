@@ -6,12 +6,13 @@ import {
 
 import Colors from '../constants/Colors'
 import { TabBarIcon } from '../components/Icon'
-import HomeAltScreen from '../screens/HomeAltScreen'
+import HomeScreen from '../screens/HomeScreen'
 import GenericFAQScreen from '../screens/GenericFAQScreen'
 import GenericDetailsScreen from '../screens/GenericDetailsScreen'
 import CuriosidadesScreen from '../screens/CuriosidadesScreen'
 import GuiaVirtualScreen from '../screens/GuiaVirtualScreen'
 import AHistoriaScreen from '../screens/AHistoriaScreen'
+import ArquiteturaScreen from '../screens/ArquiteturaScreen'
 import EventosScreen from '../screens/EventosScreen'
 import ComoChegarScreen from '../screens/ComoChegarScreen'
 import AgendamentosScreen from '../screens/AgendamentosScreen'
@@ -20,8 +21,8 @@ import QRCodeScreen from '../screens/QRCodeScreen'
 import InterativoDetailScreen from '../screens/InterativoDetailScreen'
 import ViiBraScreen from '../screens/ViiBraScreen'
 
-const HomeAltStack = createStackNavigator({
-  HomeAlt: HomeAltScreen,
+const HomeStack = createStackNavigator({
+  Home: HomeScreen,
   GenericFAQ: GenericFAQScreen,
   GenericDetails: GenericDetailsScreen,
   Eventos: EventosScreen,
@@ -30,14 +31,15 @@ const HomeAltStack = createStackNavigator({
   ViiBra: ViiBraScreen
 })
 
-HomeAltStack.navigationOptions = {
+HomeStack.navigationOptions = {
   tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name='home' />
 }
 
 const CuriosidadesStack = createStackNavigator({
   Curiosidades: CuriosidadesScreen,
+  GenericFAQ: GenericFAQScreen,
   AHistoria: AHistoriaScreen,
-  GenericFAQ: GenericFAQScreen
+  Arquitetura: ArquiteturaScreen
 })
 
 CuriosidadesStack.navigationOptions = {
@@ -68,7 +70,7 @@ GuiaVirtualStack.navigationOptions = ({ navigation }) => {
 
 export default createMaterialTopTabNavigator(
   {
-    HomeAltStack,
+    HomeStack,
     CuriosidadesStack,
     ConteudoInterativoStack,
     GuiaVirtualStack

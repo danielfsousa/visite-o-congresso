@@ -4,6 +4,7 @@ import { View, StyleSheet, Linking } from 'react-native'
 import { pageHit } from '../utils/analytics'
 import { Images, Links } from '../constants'
 import { BodyText, SubTitle } from '../components/StyledText'
+import StyledButton from '../components/StyledButton'
 
 import StyledImage from '../components/StyledImage'
 import HyperLink from '../components/Hyperlink'
@@ -11,22 +12,6 @@ import withParallax from './ParallaxScreenFactory'
 
 class ComoChegarScreen extends Component {
   static __name__ = 'Como Chegar'
-
-  openMap = () => {
-    console.warn('ueue')
-    const congressoCoordenadasAndroid = 'geo:-15.7997119,-47.8663516'
-    const congressoCoordenadasiOS =
-      'http://maps.apple.com/?ll=-15.7997119,-47.8663516'
-    const congressoCoordenadasURL = 'https://goo.gl/maps/tapDFGBN14H2'
-
-    if (Linking.canOpenURL(congressoCoordenadasAndroid)) {
-      Linking.openURL(congressoCoordenadasAndroid)
-    } else if (Linking.canOpenURL(congressoCoordenadasiOS)) {
-      Linking.openURL(congressoCoordenadasiOS)
-    } else {
-      Linking.openURL(congressoCoordenadasURL)
-    }
-  }
 
   componentDidMount () {
     pageHit(ComoChegarScreen.__name__)
@@ -38,12 +23,34 @@ class ComoChegarScreen extends Component {
         <StyledImage
           float='right'
           image={Images.mapa}
-          // onPress={this.openMap}
-          onImagePress={() => console.warn('ueueu')}
           style={[styles.image, styles.first]}
+          overlayStyle={styles.overlayStyle}
+        >
+          <StyledButton
+            onPress={() => Linking.openURL(Links.location)}
+            style={[styles.button]}>
+              Abrir no mapa
+          </StyledButton>
+        </StyledImage>
+        <SubTitle style={[styles.subtitle, styles.first]}>Endereço</SubTitle>
+        <BodyText>
+          Praça dos Três Poderes, Zona Cívico-Administrativa
+          {'\n'}
+          Brasília - DF
+          {'\n'}
+          CEP - 70165-900
+        </BodyText>
+        <SubTitle style={styles.subtitle}>Localização</SubTitle>
+        <BodyText>
+          O prédio do Congresso Nacional, projeto do arquiteto Oscar Niemeyer, é um dos principais monumentos de Brasília. Ele paira sobre os demais - não há outro mais alto que ele - para simbolizar a supremacia da vontade popular.
+        </BodyText>
+        <StyledImage
+          float='left'
+          image={Images.congresso_2}
+          style={styles.image}
         />
         <BodyText>
-          O prédio do Congresso Nacional, projeto do arquiteto Oscar Niemeyer, é um dos principais monumentos de Brasília. Ele paira sobre os demais - não há outro mais alto que ele - para simbolizar a supremacia da vontade popular. É de fácil acesso a partir de qualquer ponto da cidade e não há quem não o conheça e possa informar o melhor caminho para chegar. Está localizado na Praça dos Três Poderes, junto com o Palácio do Planalto, sede do Executivo, e do Supremo Tribunal Federal, órgão máximo do Judiciário.
+          É de fácil acesso a partir de qualquer ponto da cidade e não há quem não o conheça e possa informar o melhor caminho para chegar. Está localizado na Praça dos Três Poderes, junto com o Palácio do Planalto, sede do Executivo, e do Supremo Tribunal Federal, órgão máximo do Judiciário.
         </BodyText>
         <SubTitle style={styles.subtitle}>De ônibus</SubTitle>
         <BodyText>
@@ -87,6 +94,17 @@ class ComoChegarScreen extends Component {
 const styles = StyleSheet.create({
   image: {
     marginVertical: 50
+  },
+
+  overlayStyle: {
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+
+  button: {
+    width: 200,
+    height: 57,
+    opacity: 0.9
   },
 
   subtitle: {

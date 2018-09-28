@@ -8,8 +8,8 @@ const Button = props => (
     {...props}
     style={[
       styles.container,
-      props.style,
-      props.type === 'large' ? styles.large : styles.normal
+      props.type === 'large' ? styles.large : styles.normal,
+      props.style
     ]}
   >
     <Text style={styles.text}>{props.children.toUpperCase()}</Text>
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   },
 
   normal: {
-    height: 50,
+    height: 55,
     width: 150
   },
 

@@ -48,12 +48,7 @@ class CuriosidadesScreen extends Component {
     {
       name: 'Arquitetura do Congresso',
       image: Images.arquiteturaCongresso,
-      onBannerPress: () => this.props.navigation.navigate('AHistoria', {
-        caption: 'Arquitetura\ndo Congresso',
-        text: Text.Curiosidades.Arquitetura,
-        image: Images.arquiteturaCongresso,
-        float: 'right'
-      })
+      onBannerPress: () => this.props.navigation.navigate('Arquitetura')
     },
     {
       name: 'Arte no Congresso',

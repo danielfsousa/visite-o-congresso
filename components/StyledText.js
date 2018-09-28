@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, Animated } from 'react-native'
+import { View, Text, StyleSheet, Animated, Platform } from 'react-native'
 
 import { Fonts, Colors } from '../constants'
 
@@ -25,6 +25,16 @@ const BulletText = props => (
   <View style={{ flexDirection: 'row' }}>
     <BodyText>{'\u2022'}</BodyText>
     <BodyText {...props} style={[styles.bulletText, props.style]} />
+  </View>
+)
+
+const Quote = props => (
+  <View>
+    <Text style={[styles.quoteMark, styles.quoteLeft]}>“</Text>
+    <BodyText style={styles.quoteText}>
+      {props.children}
+    </BodyText>
+    <Text style={[styles.quoteMark, styles.quoteRight]}>”</Text>
   </View>
 )
 
@@ -74,7 +84,39 @@ const styles = StyleSheet.create({
   bulletText: {
     flex: 1,
     paddingLeft: 5
+  },
+
+  quoteMark: {
+    // textAlign: 'center',
+    fontFamily: Platform.OS === 'ios' ? 'American Typewriter' : 'serif',
+    fontSize: 150,
+    color: '#1E273C',
+    position: 'relative',
+    top: 120,
+    right: 10
+  },
+
+  quoteLeft: {
+
+  },
+
+  quoteRight: {
+
+  },
+
+  quoteText: {
+    textAlign: 'center',
+    fontFamily: Fonts.bold,
+    color: 'white'
   }
 })
 
-export { Title, Label, BodyText, TitleLight, SubTitle, BulletText }
+export {
+  Title,
+  Label,
+  BodyText,
+  TitleLight,
+  SubTitle,
+  BulletText,
+  Quote
+}

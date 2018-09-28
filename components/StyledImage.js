@@ -16,7 +16,8 @@ const StyledImage = ({
   image,
   caption,
   style,
-  overlayStyle
+  overlayStyle,
+  children
 }) => {
   const getStyle = floatStyleFactory(float)
   return (
@@ -26,7 +27,9 @@ const StyledImage = ({
         style={[getStyle('imageContainer')]}
         imageStyle={getStyle('image')}
       >
-        <View style={[styles.overlay, getStyle('overlay'), overlayStyle]} />
+        <View style={[styles.overlay, getStyle('overlay'), overlayStyle]}>
+          {children}
+        </View>
       </ImageBackground>
       <SubTitle
         style={[
@@ -47,7 +50,7 @@ const StyledImage = ({
 const styles = StyleSheet.create({
   imageContainer: {
     height: Layout.styledImageHeight,
-    width: Layout.width - Layout.padding * 2.2,
+    width: Layout.styledImageWidth,
     position: 'relative',
     overflow: 'hidden'
   },

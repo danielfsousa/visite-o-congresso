@@ -25,6 +25,9 @@ const tileWidth = getBoxWidth({ margins: 3, columns: 2 })
 const tileIconSize = 47 / 100 * tileHeight
 const tileIconMargin = tileHeight > 112 ? 10 : 0
 
+const styledImageHeight = 190
+const styledImageWidth = width - padding * 2.2
+
 export default {
   width,
   height,
@@ -40,7 +43,8 @@ export default {
   tileWidth,
   tileIconSize,
   tileIconMargin,
-  styledImageHeight: 190,
+  styledImageHeight,
+  styledImageWidth,
   getBoxHeight,
   getBoxWidth
 }
