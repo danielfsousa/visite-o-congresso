@@ -11,7 +11,7 @@ import Tile from '../components/Tile'
 // const triggerIcon = () => <Icon.Feather name='more-vertical' size={24} color={Colors.tabIconSelected} />
 
 class HomeScreen extends Component {
-  static __name__ = 'Visite o Parlamento'
+  static __name__ = 'Visite o Congresso'
 
   static navigationOptions = ({ navigation }) => ({
     header: (
