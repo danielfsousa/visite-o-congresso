@@ -37,7 +37,7 @@ class ComoFuncionaCamaraScreen extends Component {
           {'\n\n'}
           Nesse contexto, a Câmara dos Deputados, autêntica representante do povo brasileiro, exerce atividades que viabilizam a realização dos anseios da população, mediante discussão e aprovação de propostas referentes às áreas econômicas e sociais, como educação, saúde, transporte, habitação, entre outras, sem descuidar do correto emprego, pelos Poderes da União, dos recursos arrecadados da população com o pagamento de tributos.
           {'\n\n'}
-          Assim, a Câmara dos Deputados compõe-se de representantes de todos os Estados e do Distrito Federal, o que resulta em um Parlamento com diversidade de idéias, revelando-se uma Casa legislativa plural, a serviço da sociedade brasileira.
+          Assim, a Câmara dos Deputados compõe-se de representantes de todos os Estados e do Distrito Federal, o que resulta em um Congresso com diversidade de idéias, revelando-se uma Casa legislativa plural, a serviço da sociedade brasileira.
         </BodyText>
         <StyledImage
           float='left'

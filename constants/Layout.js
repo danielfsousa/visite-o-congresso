@@ -8,7 +8,7 @@ const headerHeight = 90
 const tabBarHeight = 135
 
 const getBoxHeight = ({ rows = 3 } = {}) =>
-  proportion > 2
+  proportion >= 2
     ? ((height - headerHeight - tabBarHeight) / rows) * 0.7
     : (height - headerHeight - tabBarHeight) / rows
 

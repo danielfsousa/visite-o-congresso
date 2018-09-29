@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native'
 
 import { pageHit } from '../utils/analytics'
 import { Images, Colors, Fonts } from '../constants'
-import { BodyText, Quote } from '../components/StyledText'
+import { BodyText } from '../components/StyledText'
 
 import StyledImage from '../components/StyledImage'
 import withParallax from './ParallaxScreenFactory'
@@ -40,9 +40,9 @@ class ArquiteturaScreen extends Component {
           style={styles.image}
           overlayStyle={{ backgroundColor: Colors.rgba(Colors.black, 25) }}
         />
-        <Quote>
+        {/* <Quote>
           Arquitetura não constitui uma simples questão de engenharia, mas uma manifestação do espírito, da imaginação e da poesia
-        </Quote>
+        </Quote> */}
         <BodyText>
           No Palácio do Congresso, por exemplo, a composição se formulou em função desse critério, das conveniências da arquitetura e do urbanismo, dos volumes, dos espaços livres, da oportunidade visual e das perspectivas e, especialmente, da intenção de lhe dar o caráter de monumentalidade, com a simplificação de seus elementos e a adoção de formas puras e geométricas. Daí decorreu todo o projeto do Palácio e o aproveitamento da conformação local, de maneira a criar no nível das avenidas que o ladeiam uma monumental esplanada e sobre ela fixar as cúpulas que deviam hierarquicamente caracterizá-lo.
         </BodyText>
