@@ -7,10 +7,14 @@ const padding = 20
 const headerHeight = 90
 const tabBarHeight = 135
 
-const getBoxHeight = ({ rows = 3 } = {}) =>
-  proportion >= 2
-    ? ((height - headerHeight - tabBarHeight) / rows) * 0.7
-    : (height - headerHeight - tabBarHeight) / rows
+const getBoxHeight = ({ rows = 3 } = {}) => {
+  const calculate = percent =>
+    (height - headerHeight - tabBarHeight) / rows * percent
+
+  if (proportion >= 2) return calculate(0.7)
+  if (proportion >= 1.9) return calculate(0.88)
+  return calculate(1)
+}
 
 const getBoxWidth = ({ margins = 2, columns = 1 } = {}) =>
   (width - padding * margins) / columns
