@@ -6,13 +6,13 @@ const ConteudoQRCode = {
     titulo: 'Painel Di Cavalcanti',
     descricao: `Óleo sobre tela, sem título e sem data. Obra encomendada pelo ex-presidente Juscelino Kubitschek. Seria uma homenagem aos trabalhadores, conhecidos como candangos, vindos das diversas regiões do país, para ajudar na construção da nova capital. A tela, conhecida popularmente como “Alegoria de Brasília”, está presente no Palácio desde a inauguração da capital em 1960.`,
     imagem: Images.obraPainel,
-    audio: Audios.maquete.pt
+    audio: Audios.painel.pt
   },
   '2': {
     titulo: 'Muro Escultórico',
     descricao: 'Criado por Athos Bulcão em madeira coberta com resina envernizada na cor verde escuro.',
     imagem: Images.obraMuro,
-    audio: Audios.muroEscultorico.pt
+    audio: Audios.muro.pt
   },
   '3': {
     titulo: 'Maquete',
