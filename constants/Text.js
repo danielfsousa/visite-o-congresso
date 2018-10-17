@@ -289,4 +289,18 @@ const ComoFuncionaCamara = [
   }
 ]
 
-export default { FAQ, GuiaProfessor, GuiaVisitante, ComoChegar, Curiosidades, ComoFuncionaCamara }
+const Creditos = {
+  pt_BR: [
+    {
+      title: 'Do Conteúdo e Direitos Autorais',
+      link: 'http://www1.congressonacional.leg.br/desafio/docs/Regulamento_DESAFIO_VisitApp.pdf',
+      text: 'Todo o conteúdo mostrado no presente aplicativo é de autoria do Congresso Nacional, Senado Federal, Câmara dos Deputados e Projeto ViiBra. Sendo assim, far-se-á a explícita menção às respectivas Entidades, Órgãos e Projetos.'
+    },
+    {
+      title: 'Apoio',
+      text: 'O aplicativo "Visite o Congresso" foi desenvolvido com o apoio de:\n• Congresso Nacional\n• Senado Federal\n• Câmara dos Deputados\n• Singilegis\n• ALESFE\n• ASCIP'
+    }
+  ]
+}
+
+export default { FAQ, GuiaProfessor, GuiaVisitante, ComoChegar, Curiosidades, ComoFuncionaCamara, Creditos }

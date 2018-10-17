@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import { View, ScrollView, StyleSheet } from 'react-native'
-import { WebBrowser } from 'expo'
-// import { Menu, MenuOptions, MenuOption, MenuTrigger } from 'react-native-popup-menu'
+import { WebBrowser, Icon } from 'expo'
+import { Menu, MenuOptions, MenuOption, MenuTrigger } from 'react-native-popup-menu'
 
 import { pageHit } from '../utils/analytics'
-import { Colors, Layout, Links, Text } from '../constants'
+import { Colors, Layout, Links, Text, Fonts } from '../constants'
 import Header from '../components/Header'
 import Tile from '../components/Tile'
 
-// const triggerIcon = () => <Icon.Feather name='more-vertical' size={24} color={Colors.tabIconSelected} />
+const triggerIcon = () => <Icon.Feather name='more-vertical' size={24} color={Colors.tabIconSelected} />
 
 class HomeScreen extends Component {
   static __name__ = 'Visite o Congresso'
@@ -17,14 +17,15 @@ class HomeScreen extends Component {
     header: (
       <Header style={styles.header} navigation={navigation}>
         {HomeScreen.__name__}
-        {/* <Menu>
-        <MenuTrigger children={triggerIcon()} customStyles={triggerStyles} />
-        <MenuOptions customStyles={optionsStyles} >
-          <MenuOption onSelect={() => {}} text='Save' />
-          <MenuOption onSelect={() => {}} text='Save' />
-          <MenuOption onSelect={() => {}} text='Save' />
-        </MenuOptions>
-      </Menu> */}
+        <Menu>
+          <MenuTrigger children={triggerIcon()} customStyles={triggerStyles} />
+          <MenuOptions customStyles={optionsStyles} >
+            <MenuOption onSelect={() => navigation.navigate('GenericFAQ', {
+              title: 'Créditos',
+              data: Text.Creditos.pt_BR
+            })} text='Créditos' />
+          </MenuOptions>
+        </Menu>
       </Header>
     )
   })
@@ -99,21 +100,21 @@ class HomeScreen extends Component {
   }
 }
 
-// const triggerStyles = {
-//   triggerOuterWrapper: {
-//     marginLeft: 80
-//   }
-// }
+const triggerStyles = {
+  triggerOuterWrapper: {
+    marginLeft: 80
+  }
+}
 
-// const optionsStyles = {
-//   optionText: {
-//     fontFamily: Fonts.book,
-//     fontSize: Fonts.big,
-//     letterSpacing: 0.9,
-//     lineHeight: 26,
-//     textAlign: 'left'
-//   }
-// }
+const optionsStyles = {
+  optionText: {
+    fontFamily: Fonts.book,
+    fontSize: Fonts.big,
+    letterSpacing: 0.9,
+    lineHeight: 26,
+    textAlign: 'left'
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
