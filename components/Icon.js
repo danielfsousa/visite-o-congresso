@@ -19,8 +19,8 @@ const TileIcon = ({ name, focused }) => (
   />
 )
 
-const HeaderIcon = () => (
-  <Icon.Ionicons name='md-arrow-back' size={24} color={Colors.white} />
+const HeaderIcon = props => (
+  <Icon.Ionicons name='md-arrow-back' size={24} color={Colors.white} {...props} />
 )
 
 const AudioIcon = props => (

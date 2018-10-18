@@ -13,5 +13,8 @@ export default {
   comoChegar: 'https://maps.google.com/maps?f=q&source=s_q&hl=pt-BR&geocode=&q=congresso+nacional&aq=&sll=37.0625,-95.677068&sspn=51.089971,93.076172&vpsrc=0&t=h&ie=UTF8&hq=&hnear=&z=17&iwloc=A&cid=411739593941032767',
   funcionamentoSenado: 'https://www12.senado.leg.br/institucional/sobre-atividade',
   funcionamentoCamara: 'http://www2.camara.leg.br/a-camara/conheca',
-  viibra: 'https://www.viibra.gov.br'
+  viibra: 'https://www.viibra.gov.br',
+  paginaOficial: 'https://www2.congressonacional.leg.br/visite',
+  facebook: 'https://www.facebook.com/n/?visitacaocongresso',
+  telefone: 'tel:6133034671'
 }

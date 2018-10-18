@@ -17,6 +17,7 @@ import ArquiteturaScreen from '../screens/ArquiteturaScreen'
 import ArteScreen from '../screens/ArteScreen'
 import ComoFuncionaCamaraScreen from '../screens/ComoFuncionaCamaraScreen'
 import EventosScreen from '../screens/EventosScreen'
+import SobreScreen from '../screens/SobreScreen'
 import ComoChegarScreen from '../screens/ComoChegarScreen'
 import AgendamentosScreen from '../screens/AgendamentosScreen'
 import InterativoScreen from '../screens/InterativoScreen'
@@ -31,7 +32,8 @@ const HomeStack = createStackNavigator({
   Eventos: EventosScreen,
   ComoChegar: ComoChegarScreen,
   Agendamentos: AgendamentosScreen,
-  ViiBra: ViiBraScreen
+  ViiBra: ViiBraScreen,
+  Sobre: SobreScreen
 })
 
 HomeStack.navigationOptions = {

@@ -1,32 +1,60 @@
 import React, { Component } from 'react'
-import { View, ScrollView, StyleSheet } from 'react-native'
-import { WebBrowser, Icon } from 'expo'
-import { Menu, MenuOptions, MenuOption, MenuTrigger } from 'react-native-popup-menu'
+import { View, ScrollView, StyleSheet, TouchableOpacity, Linking } from 'react-native'
+import { WebBrowser } from 'expo'
+import {
+  Menu,
+  MenuOptions,
+  MenuOption,
+  MenuTrigger
+} from 'react-native-popup-menu'
 
+import { HeaderIcon } from '../components/Icon'
 import { pageHit } from '../utils/analytics'
 import { Colors, Layout, Links, Text, Fonts } from '../constants'
 import Header from '../components/Header'
 import Tile from '../components/Tile'
 
-const triggerIcon = () => <Icon.Feather name='more-vertical' size={24} color={Colors.tabIconSelected} />
+const triggerIcon = () => (
+  <View style={styles.menuButton}>
+    <HeaderIcon name='md-more' />
+  </View>
+)
 
 class HomeScreen extends Component {
   static __name__ = 'Visite o Congresso'
 
   static navigationOptions = ({ navigation }) => ({
     header: (
-      <Header style={styles.header} navigation={navigation}>
-        {HomeScreen.__name__}
-        <Menu>
+      <React.Fragment>
+        <Header style={styles.header} navigation={navigation}>
+          {HomeScreen.__name__}
+        </Header>
+        <Menu style={styles.menu}>
           <MenuTrigger children={triggerIcon()} customStyles={triggerStyles} />
-          <MenuOptions customStyles={optionsStyles} >
-            <MenuOption onSelect={() => navigation.navigate('GenericFAQ', {
-              title: 'Créditos',
-              data: Text.Creditos.pt_BR
-            })} text='Créditos' />
+          <MenuOptions customStyles={optionsStyles}>
+            <MenuOption
+              onSelect={() => navigation.navigate('Sobre')}
+              text='Sobre'
+            />
+            <MenuOption
+              onSelect={() => Linking.openURL(`mailto:contato@visiteocongresso.app`)}
+              text='Enviar sugestão'
+            />
+            <MenuOption
+              onSelect={() => WebBrowser.openBrowserAsync(Links.paginaOficial)}
+              text='Página oficial'
+            />
+            <MenuOption
+              onSelect={() => Linking.openURL(Links.facebook)}
+              text='Facebook'
+            />
+            <MenuOption
+              onSelect={() => Linking.openURL(Links.telefone)}
+              text='Ligar'
+            />
           </MenuOptions>
         </Menu>
-      </Header>
+      </React.Fragment>
     )
   })
 
@@ -101,18 +129,23 @@ class HomeScreen extends Component {
 }
 
 const triggerStyles = {
-  triggerOuterWrapper: {
-    marginLeft: 80
+  TriggerTouchableComponent: TouchableOpacity,
+  triggerWrapper: {
+    padding: 5
   }
 }
 
 const optionsStyles = {
+  optionWrapper: {
+    padding: 10
+  },
   optionText: {
     fontFamily: Fonts.book,
-    fontSize: Fonts.big,
+    fontSize: Fonts.medium,
     letterSpacing: 0.9,
     lineHeight: 26,
-    textAlign: 'left'
+    textAlign: 'left',
+    color: Colors.background
   }
 }
 
@@ -128,6 +161,29 @@ const styles = StyleSheet.create({
 
   scrollContainer: {
     backgroundColor: Colors.background
+  },
+
+  menuButton: {
+    zIndex: 15,
+    shadowColor: 'black',
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.55,
+    shadowRadius: 10,
+    elevation: 10,
+    width: 44,
+    height: 44,
+    borderRadius: 44,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: Colors.tilesBackground
+  },
+
+  menu: {
+    zIndex: 10,
+    backgroundColor: Colors.background,
+    position: 'absolute',
+    right: Layout.padding,
+    top: Layout.padding
   }
 })
 
