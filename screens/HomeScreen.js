@@ -13,6 +13,7 @@ import { pageHit } from '../utils/analytics'
 import { Colors, Layout, Links, Text, Fonts } from '../constants'
 import Header from '../components/Header'
 import Tile from '../components/Tile'
+import ConfirmAlert from '../components/ConfirmAlert'
 
 const triggerIcon = () => (
   <View style={styles.menuButton}>
@@ -41,11 +42,11 @@ class HomeScreen extends Component {
               text='Enviar sugestão'
             />
             <MenuOption
-              onSelect={() => WebBrowser.openBrowserAsync(Links.paginaOficial)}
+              onSelect={() => ConfirmAlert(() => WebBrowser.openBrowserAsync(Links.paginaOficial))}
               text='Página oficial'
             />
             <MenuOption
-              onSelect={() => Linking.openURL(Links.facebook)}
+              onSelect={() => ConfirmAlert(() => WebBrowser.openBrowserAsync(Links.facebook))}
               text='Facebook'
             />
             <MenuOption
@@ -85,7 +86,7 @@ class HomeScreen extends Component {
     {
       name: 'Entre em contato',
       icon: 'md-call',
-      onTilePress: () => WebBrowser.openBrowserAsync(Links.contato)
+      onTilePress: () => Linking.openURL(`mailto:contato@visiteocongresso.app`)
     },
     {
       name: 'Agendamentos',
@@ -109,7 +110,7 @@ class HomeScreen extends Component {
     {
       name: 'Eventos',
       icon: 'md-calendar',
-      onTilePress: () => WebBrowser.openBrowserAsync(Links.eventosCamara)
+      onTilePress: () => ConfirmAlert(() => WebBrowser.openBrowserAsync(Links.eventosCamara))
     }
   ]
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { View, StyleSheet } from 'react-native'
-import { WebBrowser } from 'expo'
+import { View, StyleSheet, Linking } from 'react-native'
 
 import { pageHit } from '../utils/analytics'
 import { Links } from '../constants'
@@ -53,7 +52,7 @@ class AgendamentosScreen extends Component {
         </BodyText>
         <StyledButton
           type='large'
-          onPress={() => WebBrowser.openBrowserAsync(Links.agendamento)}
+          onPress={() => Linking.openURL(`mailto:agendamento@visiteocongresso.app`)}
           style={styles.button}
         >
           AGENDE SUA VISITA

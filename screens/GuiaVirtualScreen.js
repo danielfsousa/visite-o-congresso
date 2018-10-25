@@ -8,13 +8,14 @@ import Header from '../components/Header'
 import StyledButton from '../components/StyledButton'
 import { BodyText } from '../components/StyledText'
 import { Colors, Images, Icons, Layout, Links } from '../constants'
+import ConfirmAlert from '../components/ConfirmAlert'
 
 class GuiaVirtualScreen extends Component {
   static __name__ = 'Guia Virtual'
 
   static navigationOptions = () => ({ header: null })
 
-  handleButtonPress = () => WebBrowser.openBrowserAsync(Links.guiaVirtual)
+  handleButtonPress = () => ConfirmAlert(() => WebBrowser.openBrowserAsync(Links.guiaVirtual))
 
   componentDidMount () {
     pageHit(GuiaVirtualScreen.__name__)

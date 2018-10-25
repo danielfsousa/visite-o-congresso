@@ -6,6 +6,7 @@ import { pageHit } from '../utils/analytics'
 import { Images, Colors, Fonts, Links } from '../constants'
 import { BodyText } from '../components/StyledText'
 import StyledButton from '../components/StyledButton'
+import ConfirmAlert from '../components/ConfirmAlert'
 
 import StyledImage from '../components/StyledImage'
 import withParallax from './ParallaxScreenFactory'
@@ -32,7 +33,7 @@ class ArteScreen extends Component {
         </BodyText>
         <StyledButton
           type='large'
-          onPress={() => WebBrowser.openBrowserAsync(Links.arte)}
+          onPress={() => ConfirmAlert(() => WebBrowser.openBrowserAsync(Links.arte))}
           style={styles.button}
         >
           VEJA TODAS AS FOTOS

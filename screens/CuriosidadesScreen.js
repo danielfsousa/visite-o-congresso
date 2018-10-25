@@ -6,6 +6,7 @@ import { pageHit } from '../utils/analytics'
 import { Colors, Images, Links } from '../constants'
 import Header from '../components/Header'
 import Banner from '../components/Banner'
+import ConfirmAlert from '../components/ConfirmAlert'
 
 class CuriosidadesScreen extends Component {
   static __name__ = 'Curiosidades'
@@ -33,7 +34,7 @@ class CuriosidadesScreen extends Component {
     {
       name: 'Como funciona o Senado',
       image: Images.comoFuncionaSenado,
-      onBannerPress: () => WebBrowser.openBrowserAsync(Links.funcionamentoSenado)
+      onBannerPress: () => ConfirmAlert(() => WebBrowser.openBrowserAsync(Links.funcionamentoSenado))
     },
     {
       name: 'Arquitetura do Congresso',

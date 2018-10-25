@@ -9,13 +9,14 @@ import FAQList from '../components/FAQList'
 
 import StyledImage from '../components/StyledImage'
 import withParallax from './ParallaxScreenFactory'
+import ConfirmAlert from '../components/ConfirmAlert'
 
 class ComoFuncionaCamaraScreen extends Component {
   static __name__ = 'Como Funciona a Câmara dos Deputados'
 
   handleFAQItemPress = faqItem =>
     (faqItem.link
-      ? WebBrowser.openBrowserAsync(faqItem.link)
+      ? ConfirmAlert(() => WebBrowser.openBrowserAsync(faqItem.link))
       : this.props.navigation.navigate('GenericDetails', faqItem))
 
   componentDidMount () {
