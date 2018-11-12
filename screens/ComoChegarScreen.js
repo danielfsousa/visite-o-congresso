@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, StyleSheet, Linking } from 'react-native'
+import { View, StyleSheet, Linking, Platform } from 'react-native'
 
 import { pageHit } from '../utils/analytics'
 import { Images, Links } from '../constants'
@@ -12,6 +12,16 @@ import withParallax from './ParallaxScreenFactory'
 
 class ComoChegarScreen extends Component {
   static __name__ = 'Como Chegar'
+
+  handleMapPress = async () => {
+    if (Platform.OS === 'ios') {
+      return Linking.openURL(Links.locationIOS)
+    } else if (await Linking.canOpenURL(Links.locationAndroid)) {
+      return Linking.openURL(Links.locationAndroid)
+    }
+
+    Linking.openURL(Links.locationURL)
+  }
 
   componentDidMount () {
     pageHit(ComoChegarScreen.__name__)
@@ -27,7 +37,7 @@ class ComoChegarScreen extends Component {
           overlayStyle={styles.overlayStyle}
         >
           <StyledButton
-            onPress={() => Linking.openURL(Links.location)}
+            onPress={this.handleMapPress}
             style={[styles.button]}>
               Abrir no mapa
           </StyledButton>

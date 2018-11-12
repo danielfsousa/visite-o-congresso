@@ -1,7 +1,7 @@
-import { Platform } from 'react-native'
-
 export default {
-  location: Platform.OS === 'ios' ? 'http://maps.apple.com/?ll=-15.7997119,-47.8663516' : 'geo:-15.7997119,-47.8663516',
+  locationIOS: 'http://maps.apple.com/?ll=-15.7997119,-47.8663516',
+  locationAndroid: 'geo:-15.7997119,-47.8663516?q=Congresso+Nacional',
+  locationURL: 'https://goo.gl/maps/yLDqKNqtZ1C2',
   guiaVirtual: 'http://www.camara.leg.br/internet/camara360/pt-br/index.html',
   visitasTecnicas: 'https://www2.congressonacional.leg.br/visite/visitas-tematicas-pt',
   agendamento: 'https://www2.congressonacional.leg.br/visite/agendamento/buscardata',
