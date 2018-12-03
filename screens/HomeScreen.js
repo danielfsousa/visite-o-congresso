@@ -14,6 +14,7 @@ import { Colors, Layout, Links, Text, Fonts } from '../constants'
 import Header from '../components/Header'
 import Tile from '../components/Tile'
 import ConfirmAlert from '../components/ConfirmAlert'
+import i18n from '../utils/i18n'
 
 const triggerIcon = () => (
   <View style={styles.menuButton}>
@@ -28,30 +29,34 @@ class HomeScreen extends Component {
     header: (
       <React.Fragment>
         <Header style={styles.header} navigation={navigation}>
-          {HomeScreen.__name__}
+          {i18n.translate(Text.Home.titulo)}
         </Header>
         <Menu style={styles.menu}>
           <MenuTrigger children={triggerIcon()} customStyles={triggerStyles} />
           <MenuOptions customStyles={optionsStyles}>
             <MenuOption
               onSelect={() => navigation.navigate('Sobre')}
-              text='Sobre'
+              text={i18n.translate(Text.Menu.sobre)}
             />
             <MenuOption
               onSelect={() => Linking.openURL(`mailto:contato@visiteocongresso.app`)}
-              text='Enviar sugestão'
+              text={i18n.translate(Text.Menu.enviarSugestao)}
             />
             <MenuOption
               onSelect={() => ConfirmAlert(() => WebBrowser.openBrowserAsync(Links.paginaOficial))}
-              text='Página oficial'
+              text={i18n.translate(Text.Menu.paginaOficial)}
             />
             <MenuOption
               onSelect={() => ConfirmAlert(() => WebBrowser.openBrowserAsync(Links.facebook))}
-              text='Facebook'
+              text={i18n.translate(Text.Menu.facebook)}
             />
             <MenuOption
               onSelect={() => Linking.openURL(Links.telefone)}
-              text='Ligar'
+              text={i18n.translate(Text.Menu.ligar)}
+            />
+            <MenuOption
+              onSelect={i18n.switchLanguage}
+              text={i18n.translate(Text.Menu.alterarIdioma)}
             />
           </MenuOptions>
         </Menu>
@@ -59,42 +64,42 @@ class HomeScreen extends Component {
     )
   })
 
-  tiles = [
+  tiles = () => [
     {
-      name: 'Guia do visitante',
+      name: i18n.translate(Text.Tiles.guiaDoVisitante),
       icon: 'md-map',
       onTilePress: () =>
         this.props.navigation.navigate('GenericFAQ', {
-          title: 'Guia do Visitante',
-          data: Text.GuiaVisitante.pt_BR
+          title: i18n.translate(Text.Tiles.guiaDoVisitante),
+          data: i18n.translate(Text.GuiaVisitante)
         })
     },
     {
-      name: 'Guia do professor',
+      name: i18n.translate(Text.Tiles.guiaDoProfessor),
       icon: 'md-school',
       onTilePress: () =>
         this.props.navigation.navigate('GenericFAQ', {
-          title: 'Guia do Professor',
+          title: i18n.translate(Text.Tiles.guiaDoProfessor),
           data: Text.GuiaProfessor
         })
     },
     {
-      name: 'Como chegar',
+      name: i18n.translate(Text.Tiles.comoChegar),
       icon: 'md-pin',
       onTilePress: () => this.props.navigation.navigate('ComoChegar')
     },
     {
-      name: 'Entre em contato',
+      name: i18n.translate(Text.Tiles.entreEmContato),
       icon: 'md-call',
       onTilePress: () => Linking.openURL(`mailto:contato@visiteocongresso.app`)
     },
     {
-      name: 'Agendamentos',
+      name: i18n.translate(Text.Tiles.agendamentos),
       icon: 'md-time',
       onTilePress: () => this.props.navigation.navigate('Agendamentos')
     },
     {
-      name: 'Dúvidas',
+      name: i18n.translate(Text.Tiles.duvidas),
       icon: 'md-help',
       onTilePress: () =>
         this.props.navigation.navigate('GenericFAQ', {
@@ -103,12 +108,12 @@ class HomeScreen extends Component {
         })
     },
     {
-      name: 'ViiBra',
+      name: i18n.translate(Text.Tiles.viibra),
       icon: 'md-trending-up',
       onTilePress: () => this.props.navigation.navigate('ViiBra')
     },
     {
-      name: 'Eventos',
+      name: i18n.translate(Text.Tiles.eventos),
       icon: 'md-calendar',
       onTilePress: () => ConfirmAlert(() => WebBrowser.openBrowserAsync(Links.eventosCamara))
     }
@@ -122,7 +127,7 @@ class HomeScreen extends Component {
     return (
       <ScrollView style={styles.scrollContainer}>
         <View style={styles.container}>
-          {this.tiles.map(props => <Tile key={props.name} {...props} />)}
+          {this.tiles().map(props => <Tile key={props.name} {...props} />)}
         </View>
       </ScrollView>
     )

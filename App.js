@@ -8,6 +8,7 @@ import Sentry from 'sentry-expo'
 import AppNavigator from './navigation/AppNavigator'
 import { Colors, Images, Icons, Fonts, Audios } from './constants'
 import config from './config'
+import i18n from './utils/i18n'
 
 if (!__DEV__) {
   Sentry.enableInExpoDevelopment = true
@@ -16,8 +17,26 @@ if (!__DEV__) {
 
 export default class App extends Component {
   state = {
-    isLoadingComplete: false
+    isLoadingComplete: false,
+    language: 'pt'
   }
+
+  // switchLanguage = () => {
+  //   console.warn('entrou')
+  //   this.setState(({ language }) => {
+  //     console.warn('entrou lang', language)
+  //     if (language === 'pt') {
+  //       return { language: 'en' }
+  //     } else {
+  //       return { language: 'pt' }
+  //     }
+  //   })
+  // }
+
+  // translate = (obj) => {
+  //   console.warn('translate')
+  //   return obj[this.state.language] || obj
+  // }
 
   render () {
     if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
@@ -42,6 +61,7 @@ export default class App extends Component {
 
   _loadResourcesAsync = async () =>
     Promise.all([
+      i18n.init(this.switchLanguage, this.translate),
       Asset.loadAsync([...Images.sources, ...Icons.sources, ...Audios.sources]),
       Font.loadAsync({
         ...Fonts.sources,
@@ -51,7 +71,6 @@ export default class App extends Component {
     ])
 
   _handleLoadingError = error => {
-    // TODO: adicionar sentry aqui
     // In this case, you might want to report the error to your error
     // reporting service, for example Sentry
     console.warn(error)

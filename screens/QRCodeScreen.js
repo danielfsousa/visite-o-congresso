@@ -3,9 +3,10 @@ import { View, StyleSheet } from 'react-native'
 import { BarCodeScanner } from 'expo'
 
 import { pageHit } from '../utils/analytics'
-import { ConteudoQRCode, Colors } from '../constants'
+import { ConteudoQRCode, Colors, Text } from '../constants'
 import BackButton from '../components/BackButton'
 import LoadingSpinner from '../components/LoadingSpinner'
+import i18n from '../utils/i18n'
 
 class QRCodeScreen extends Component {
   static __name__ = 'Escaneador de QRCode'
@@ -45,7 +46,7 @@ class QRCodeScreen extends Component {
             onBarCodeRead={this.handleBarCodeRead}
             style={StyleSheet.absoluteFill}
           />
-          : <LoadingSpinner text='Carregando...' />}
+          : <LoadingSpinner text={i18n.translate(Text.ConteudoInterativo.carregando)} />}
       </View>
     )
   }

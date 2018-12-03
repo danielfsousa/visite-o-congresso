@@ -3,11 +3,12 @@ import { Image, View, StyleSheet } from 'react-native'
 import { Permissions } from 'expo'
 
 import { pageHit } from '../utils/analytics'
-import { Colors, Images, Icons, Layout } from '../constants'
+import { Colors, Images, Icons, Layout, Text } from '../constants'
 import BackgroundImage from '../components/BackgroundImage'
 import Header from '../components/Header'
 import StyledButton from '../components/StyledButton'
 import { BodyText } from '../components/StyledText'
+import i18n from '../utils/i18n'
 
 class InterativoScreen extends Component {
   static __name__ = 'Conteúdo Interativo'
@@ -35,15 +36,15 @@ class InterativoScreen extends Component {
         overlayStyle={styles.overlay}
       >
         <Header transparent style={styles.header}>
-          {InterativoScreen.__name__}
+          {i18n.translate(Text.ConteudoInterativo.titulo)}
         </Header>
         <View style={styles.container}>
           <Image source={Icons.qrCode} style={styles.icon} />
           <BodyText style={styles.text}>
-            Interaja com os objetos encontrados no Congresso Nacional através da leitura dos QRCodes posicionados próximos a eles
+            {i18n.translate(Text.ConteudoInterativo.descricao)}
           </BodyText>
           <StyledButton type='large' onPress={this.handleButtonPress}>
-            Escanear código
+            {i18n.translate(Text.ConteudoInterativo.acao)}
           </StyledButton>
         </View>
       </BackgroundImage>

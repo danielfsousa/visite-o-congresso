@@ -7,8 +7,9 @@ import BackgroundImage from '../components/BackgroundImage'
 import Header from '../components/Header'
 import StyledButton from '../components/StyledButton'
 import { BodyText } from '../components/StyledText'
-import { Colors, Images, Icons, Layout, Links } from '../constants'
+import { Colors, Images, Icons, Layout, Links, Text } from '../constants'
 import ConfirmAlert from '../components/ConfirmAlert'
+import i18n from '../utils/i18n'
 
 class GuiaVirtualScreen extends Component {
   static __name__ = 'Guia Virtual'
@@ -29,15 +30,15 @@ class GuiaVirtualScreen extends Component {
         overlayStyle={styles.overlay}
       >
         <Header transparent style={styles.header}>
-          {GuiaVirtualScreen.__name__}
+          {i18n.translate(Text.GuiaVirtual.titulo)}
         </Header>
         <View style={styles.container}>
           <Image source={Icons.guiaVirtual} style={styles.icon} />
           <BodyText style={styles.text}>
-            Explore o Congresso Nacional através de um tour virtual com informações sobre as principais salas, áudios e fotos em 360º
+            {i18n.translate(Text.GuiaVirtual.descricao)}
           </BodyText>
           <StyledButton type='large' onPress={this.handleButtonPress}>
-            Explorar
+            {i18n.translate(Text.GuiaVirtual.acao)}
           </StyledButton>
         </View>
       </BackgroundImage>

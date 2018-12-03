@@ -1,3 +1,72 @@
+const Home = {
+  titulo: {
+    pt: 'Visite o Congresso',
+    en: 'Visit the Congress'
+  }
+}
+
+const Tiles = {
+  guiaDoVisitante: {
+    pt: 'Guia do visitante',
+    en: "Visitor's Guide"
+  },
+  guiaDoProfessor: {
+    pt: 'Guia do Professor',
+    en: "Professor's Guide"
+  },
+  comoChegar: {
+    pt: 'Como Chegar',
+    en: 'How to Arrive'
+  },
+  entreEmContato: {
+    pt: 'Entre em Contato',
+    en: 'Contact'
+  },
+  agendamentos: {
+    pt: 'Agendamentos',
+    en: 'Booking'
+  },
+  duvidas: {
+    pt: 'Dúvidas',
+    en: 'FAQ'
+  },
+  viibra: {
+    pt: 'Viibra',
+    en: 'Viibra'
+  },
+  eventos: {
+    pt: 'Eventos',
+    en: 'Events'
+  }
+}
+
+const Menu = {
+  sobre: {
+    pt: 'Sobre',
+    en: 'About'
+  },
+  enviarSugestao: {
+    pt: 'Enviar Sugestão',
+    en: 'Send Feedback'
+  },
+  paginaOficial: {
+    pt: 'Página Oficial',
+    en: 'Official Webpage'
+  },
+  facebook: {
+    pt: 'Facebook',
+    en: 'Facebook'
+  },
+  ligar: {
+    pt: 'Ligar',
+    en: 'Call'
+  },
+  alterarIdioma: {
+    pt: 'English',
+    en: 'Português'
+  }
+}
+
 const FAQ = [
   {
     title: 'Posso visitar o Congresso Nacional?',
@@ -81,7 +150,7 @@ const GuiaProfessor = [
 ]
 
 const GuiaVisitante = {
-  'pt_BR': [
+  pt: [
     {
       title: 'Seja bem-vindo(a)',
       text: 'O prédio que abriga a Câmara dos Deputados e o Senado Federal é um marco arquitetônico da Capital da República e está de portas abertas para receber visitantes interessados em conhecer um pouco mais sobre o Poder legislativo brasileiro.\n\nAqui, deputados e senadores, representantes eleitos do povo e dos estados, dedicam-se a discutir e elaborar leis, a fiscalizar e controlar os atos do Poder Executivo, a aprovar o Orçamento da União, entre outras atribuições de fundamental importância para o Brasil.\n\nEsperamos que a visita à Câmara dos Deputados e ao Senado Federal amplie a compreensão sobre a história e o papel dessas duas instituições democráticas.'
@@ -151,37 +220,37 @@ const GuiaVisitante = {
       text: 'Ao final da visita, registre sua opinião sobre o Programa Visite o Congresso nas fichas de avaliação da visita que estão disponíveis no final da visita e nos balcões de atendimento.\n\nElogios, críticas e sugestões são analisadas e respondidas e servem como subsídio para melhorar o programa de visitas do Congresso Nacional.'
     }
   ],
-  'en_US': [
+  en: [
     {
-      text: 'The building that houses the Chamber of Deputies and the Federal Senate is an architectural landmark of the Capital of the Republic and is open to welcome visitors interested in learning more about the Brazilian legislative branch.\nHere, deputies and senators, elected representatives of the people and the states, devote themselves to discussing and making laws, overseeing and controlling the acts of the Executive branch, and approving the Federal Government budget, among other duties of key importance to Brazil.\nWe hope that the tour of the Chamber of Deputies and the Federal Senate expands the understanding of the history and the role of these two democratic institutions.\nIn order that you make the most of the tour of the National Congress, please note the following guidelines:',
+      text: 'The building that houses the Chamber of Deputies and the Federal Senate is an architectural landmark of the Capital of the Republic and is open to welcome visitors interested in learning more about the Brazilian legislative branch.\n\nHere, deputies and senators, elected representatives of the people and the states, devote themselves to discussing and making laws, overseeing and controlling the acts of the Executive branch, and approving the Federal Government budget, among other duties of key importance to Brazil.\n\nWe hope that the tour of the Chamber of Deputies and the Federal Senate expands the understanding of the history and the role of these two democratic institutions.\n\nIn order that you make the most of the tour of the National Congress, please note the following guidelines:',
       title: 'Welcome to the National Congress Palace!'
     },
     {
-      text: 'The tours of the National Congress are free of charge and offered in partnership between the Federal Senate and the Chamber of Deputies. Mediators from both Houses take turns in guiding groups.\nThe duration of the tour is about 60 minutes.\nOn Tuesdays, Wednesdays and Thursdays the tours of the National Congress are restricted to groups booked in advance.\nOn weekends and holidays, visitor access is through the main ramp, at the entrance of the Palace, facing the Esplanade of Ministries. The group is welcomed at the Black Hall.\nOn business days, the reception is transferred to the \u201cChapelaria\u201d (White Hall, on the lower level). Pay close attention to the signs at the beginning of the ramp.\nOn business days, the maximum limit per group is 50 people. On weekends and holidays, the limit is 70 people.',
+      text: 'The tours of the National Congress are free of charge and offered in partnership between the Federal Senate and the Chamber of Deputies. Mediators from both Houses take turns in guiding groups.\n\nThe duration of the tour is about 60 minutes.\n\nOn Tuesdays, Wednesdays and Thursdays the tours of the National Congress are restricted to groups booked in advance.\n\nOn weekends and holidays, visitor access is through the main ramp, at the entrance of the Palace, facing the Esplanade of Ministries. The group is welcomed at the Black Hall.\n\nOn business days, the reception is transferred to the \u201cChapelaria\u201d (White Hall, on the lower level). Pay close attention to the signs at the beginning of the ramp.\n\nOn business days, the maximum limit per group is 50 people. On weekends and holidays, the limit is 70 people.',
       title: 'Guided tours'
     },
     {
-      text: 'On Mondays and Fridays, just present yourself to the service desks of the Visit the Congress Program and wait for the following tour. On Tuesdays, Wednesdays and Thursdays booking is mandatory for groups with any number of people.\nOn weekends and holidays, there is no need to book in advance. Groups are dealt with on a first-come first-served basis.',
+      text: 'On Mondays and Fridays, just present yourself to the service desks of the Visit the Congress Program and wait for the following tour. On Tuesdays, Wednesdays and Thursdays booking is mandatory for groups with any number of people.\n\nOn weekends and holidays, there is no need to book in advance. Groups are dealt with on a first-come first-served basis.',
       title: 'Non-booked guided tours'
     },
     {
-      text: 'On Tuesdays, Wednesdays and Thursdays, booking is necessary for groups with any number of people, whatever the language.\nOn Mondays and Fridays, groups with more than 15 people, or those who wish tours offered in other languages such as English, Spanish, French and Libras (Brazilian Sign Language), must book in advance.\nAdvance booking is also recommended for people with disabilities or limited mobility.\nClick \n to book.\nThe appointed time must be kept, as tours take place every half hour and several groups are scheduled successively.\nIn the case of early or late arrival, the service will depend on the schedule for the day and staff availability. Should any unforeseen events arise, please contact the Public Relations sector of either House.',
+      text: 'On Tuesdays, Wednesdays and Thursdays, booking is necessary for groups with any number of people, whatever the language.\n\nOn Mondays and Fridays, groups with more than 15 people, or those who wish tours offered in other languages such as English, Spanish, French and Libras (Brazilian Sign Language), must book in advance.\n\nAdvance booking is also recommended for people with disabilities or limited mobility.\n\nClick \n\n to book.\n\nThe appointed time must be kept, as tours take place every half hour and several groups are scheduled successively.\n\nIn the case of early or late arrival, the service will depend on the schedule for the day and staff availability. Should any unforeseen events arise, please contact the Public Relations sector of either House.',
       title: 'Booked guided tours'
     },
     {
-      text: 'According to the convenience of specific sectors of the two Legislative Houses, it is possible to visit areas not included in the standard tour itinerary.\nIn the Senate, special tours may occasionally be booked to the Archives, Printing, and Communication Media Departments, and to the Senate\u2019s plant nursery, for example.\nIn the Chamber of Deputies, likewise, tours to specific areas of the House may be booked.\nVisits to the offices and contact with senators and deputies should be directly requested to the respective parliamentarians\u2019 staff.',
+      text: 'According to the convenience of specific sectors of the two Legislative Houses, it is possible to visit areas not included in the standard tour itinerary.\n\nIn the Senate, special tours may occasionally be booked to the Archives, Printing, and Communication Media Departments, and to the Senate\u2019s plant nursery, for example.\n\nIn the Chamber of Deputies, likewise, tours to specific areas of the House may be booked.\n\nVisits to the offices and contact with senators and deputies should be directly requested to the respective parliamentarians\u2019 staff.',
       title: 'Special tours'
     },
     {
-      text: 'Visitor service runs from 9 a.m. to 5:30 p.m. But please be reminded that, on Tuesdays, Wednesdays and Thursdays, only previously booked groups are received and conducted on guided tours.\nExceptionally, due to parliamentary work schedule or maintenance work, the tours may be temporarily suspended.\nWe recommend that you consult the website or even call the contact phone numbers in order to confirm that the visitor service is operating normally.',
+      text: 'Visitor service runs from 9 a.m. to 5:30 p.m. But please be reminded that, on Tuesdays, Wednesdays and Thursdays, only previously booked groups are received and conducted on guided tours.\n\nExceptionally, due to parliamentary work schedule or maintenance work, the tours may be temporarily suspended.\n\nWe recommend that you consult the website or even call the contact phone numbers in order to confirm that the visitor service is operating normally.',
       title: 'Hours of operation'
     },
     {
-      text: 'On business days, people are not allowed to enter wearing bermuda shorts, shorts, tank tops, miniskirts and flip-flops. These restrictions do not apply to children under 12 years of age.\nWe recommend pants, long or short sleeve shirts, dresses or knee length skirts.\nIn some circumstances, such as in solemn sessions, or places like the Tribune of Honor of the Senate Plenary, or the Green Hall of the Chamber of Deputies, men are required to wear a suit and tie. If you have any queries, get in contact.\nDisposable pants, made of non woven fabric, are sold at the Chamber little store, in case the visitor is wearing shorts or bermuda shorts. The store is located at the entrance of the White Hall.',
+      text: 'On business days, people are not allowed to enter wearing bermuda shorts, shorts, tank tops, miniskirts and flip-flops. These restrictions do not apply to children under 12 years of age.\n\nWe recommend pants, long or short sleeve shirts, dresses or knee length skirts.\n\nIn some circumstances, such as in solemn sessions, or places like the Tribune of Honor of the Senate Plenary, or the Green Hall of the Chamber of Deputies, men are required to wear a suit and tie. If you have any queries, get in contact.\n\nDisposable pants, made of non woven fabric, are sold at the Chamber little store, in case the visitor is wearing shorts or bermuda shorts. The store is located at the entrance of the White Hall.',
       title: 'Guidelines on dress code'
     },
     {
-      text: 'The Visit the Congress Program offers Libras (Brazilian Sign Language) interpreters, printed material in Braille, tricycles and power wheelchairs.\nIn order to facilitate the availability of these resources, advance booking is recommended.',
+      text: 'The Visit the Congress Program offers Libras (Brazilian Sign Language) interpreters, printed material in Braille, tricycles and power wheelchairs.\n\nIn order to facilitate the availability of these resources, advance booking is recommended.',
       title: 'Support to people with disabilities or limited mobility'
     },
     {
@@ -189,27 +258,27 @@ const GuiaVisitante = {
       title: 'Security procedures'
     },
     {
-      text: 'Food or beverages of any kind are not allowed during the tour. There are some restaurants and caf\u00e9s in the Chamber of Deputies and in the Senate. If you are interested, ask the guides or receptionists for information. On weekends and holidays, however, the restaurants and caf\u00e9s are closed.\nProvided that the equipment is not professional, photographing and filming throughout the tour is allowed, except in the Plenaries when there are sessions.\nDuring the tour, turn off your cell phone or put it in silent mode.\nThe works of art exhibited in the areas visited are a heritage of all Brazilian citizens. Do not touch the sculptures and do not use flash to photograph the paintings. Help preserving them for future generations.\nFor souvenirs, visit the Chamber little store, at the entrance of the White Hall.',
+      text: 'Food or beverages of any kind are not allowed during the tour. There are some restaurants and caf\u00e9s in the Chamber of Deputies and in the Senate. If you are interested, ask the guides or receptionists for information. On weekends and holidays, however, the restaurants and caf\u00e9s are closed.\n\nProvided that the equipment is not professional, photographing and filming throughout the tour is allowed, except in the Plenaries when there are sessions.\n\nDuring the tour, turn off your cell phone or put it in silent mode.\n\nThe works of art exhibited in the areas visited are a heritage of all Brazilian citizens. Do not touch the sculptures and do not use flash to photograph the paintings. Help preserving them for future generations.\n\nFor souvenirs, visit the Chamber little store, at the entrance of the White Hall.',
       title: 'Additional tips'
     },
     {
-      text: 'Those exclusively interested in attending the plenary sessions must report to the galleries of the Plenaries (after identification at one of the building entrances), and follow the procedures below:\nPass through X-ray screening;\nLeave objects such as purses, backpacks, cameras, cell phones, books, caps, among others, in the storage facilities located at the entrance of the galleries;\nFollow the \u201cguidelines on dress code\u201d;\nDo not speak up;\nDo not lean on the railings of the galleries.\nIt is recommended to check the Chamber of Deputies and the Senate websites to confirm the session type and time. Admittance to the galleries is subject to security aspects and to seating capacity.',
+      text: 'Those exclusively interested in attending the plenary sessions must report to the galleries of the Plenaries (after identification at one of the building entrances), and follow the procedures below:\n\nPass through X-ray screening;\n\nLeave objects such as purses, backpacks, cameras, cell phones, books, caps, among others, in the storage facilities located at the entrance of the galleries;\n\nFollow the \u201cguidelines on dress code\u201d;\n\nDo not speak up;\n\nDo not lean on the railings of the galleries.\n\nIt is recommended to check the Chamber of Deputies and the Senate websites to confirm the session type and time. Admittance to the galleries is subject to security aspects and to seating capacity.',
       title: 'How to attend plenary sessions'
     },
     {
-      text: 'The Itamar Franco Historical Museum sits in the Noble Hall of the Federal Senate and displays works of art, objects and furniture of former headquarters, when the Senate was located in Rio de Janeiro. The museum opens daily for public visitation from 9 a.m. to 12 p.m. and from 1 p.m. to 5 p.m.\nThe Museum of the Chamber of Deputies holds several exhibitions of its vast collection, such as the Official Gifts exhibition, in the Green Hall.',
+      text: 'The Itamar Franco Historical Museum sits in the Noble Hall of the Federal Senate and displays works of art, objects and furniture of former headquarters, when the Senate was located in Rio de Janeiro. The museum opens daily for public visitation from 9 a.m. to 12 p.m. and from 1 p.m. to 5 p.m.\n\nThe Museum of the Chamber of Deputies holds several exhibitions of its vast collection, such as the Official Gifts exhibition, in the Green Hall.',
       title: 'Memory of the Parliament'
     },
     {
-      text: 'The Chamber of Deputies and the Senate host, throughout the year, several institutional, historical, artistic and photographic exhibitions on a temporary basis.\nPay close attention to the agenda published on the websites of both Houses.',
+      text: 'The Chamber of Deputies and the Senate host, throughout the year, several institutional, historical, artistic and photographic exhibitions on a temporary basis.\n\nPay close attention to the agenda published on the websites of both Houses.',
       title: 'Cultural spaces and temporary exhibitions'
     },
     {
-      text: 'The Academic Luiz Viana Filho Library, of the Federal Senate, was one of the first set up at the time of the Brazilian Empire and holds a collection specialized in Social Sciences. The library is open to external users, on business days, from 9 a.m. to 2 p.m.\nThe nearest entrance is through the 2B block of the Senate, on N2 Street.\nThe Pedro Aleixo Library is part of the Documentation and Information Center of the Chamber of Deputies and has a collection of roughly 200,000 volumes. It is one of the largest libraries in Brasilia and in the country.\nExternal users may carry out research on the premises on business days, from 9 a.m. to 6:30 p.m. The Library is located in Annex 2 of the Chamber of Deputies.\nBoth libraries have a good part of their collections available in the online version. Visit:',
+      text: 'The Academic Luiz Viana Filho Library, of the Federal Senate, was one of the first set up at the time of the Brazilian Empire and holds a collection specialized in Social Sciences. The library is open to external users, on business days, from 9 a.m. to 2 p.m.\n\nThe nearest entrance is through the 2B block of the Senate, on N2 Street.\n\nThe Pedro Aleixo Library is part of the Documentation and Information Center of the Chamber of Deputies and has a collection of roughly 200,000 volumes. It is one of the largest libraries in Brasilia and in the country.\n\nExternal users may carry out research on the premises on business days, from 9 a.m. to 6:30 p.m. The Library is located in Annex 2 of the Chamber of Deputies.\n\nBoth libraries have a good part of their collections available in the online version. Visit:',
       title: 'Access to the libraries'
     },
     {
-      text: 'The full text of the Brazilian Federal Constitution is available on the websites of the Senate and the Chamber of Deputies, and can be downloaded in \n format.\nPrinted versions can be purchased in both Houses. Orders can be placed \u200b\u200bby Internet. Also check the points of sale of the Senate Bookstore and of the Chamber Editions or ask about their location at the service desks.',
+      text: 'The full text of the Brazilian Federal Constitution is available on the websites of the Senate and the Chamber of Deputies, and can be downloaded in \n\n format.\n\nPrinted versions can be purchased in both Houses. Orders can be placed \u200b\u200bby Internet. Also check the points of sale of the Senate Bookstore and of the Chamber Editions or ask about their location at the service desks.',
       title: 'Purchase of copies of the Federal Constitution'
     },
     {
@@ -217,11 +286,11 @@ const GuiaVisitante = {
       title: 'Parking areas'
     },
     {
-      text: 'At the end of the tour, please register your opinion about the Visit the Congress Program in the book Word of the Visitor.\nCompliments, criticism and suggestions are analyzed and answered, serving as an aid to improve the program of visits to the National Congress.',
+      text: 'At the end of the tour, please register your opinion about the Visit the Congress Program in the book Word of the Visitor.\n\nCompliments, criticism and suggestions are analyzed and answered, serving as an aid to improve the program of visits to the National Congress.',
       title: 'The word of the visitor'
     },
     {
-      text: 'Secretariat of Public Relations of the Federal Senate:\n+ 55 (61) 3303-4671 or 1588 or 4410.\n\u00a0\nDepartment of Public Relations and Publicity of the Chamber of Deputies:\n+ 55 (61) 3216-1771 or 1772 or 1768.',
+      text: 'Secretariat of Public Relations of the Federal Senate:\n\n+ 55 (61) 3303-4671 or 1588 or 4410.\n\n\u00a0\n\nDepartment of Public Relations and Publicity of the Chamber of Deputies:\n\n+ 55 (61) 3216-1771 or 1772 or 1768.',
       title: 'Contact us'
     }
   ]
@@ -255,10 +324,64 @@ const ComoChegar = [
 ]
 
 const Curiosidades = {
-  Arquitetura: `O Palácio do Congresso Nacional é um dos cartões postais de Brasília e está situado no extremo leste do Eixo Monumental. Ocupa um dos vértices do triângulo que delimita a Praça dos Três Poderes. Nos vértices da base do triângulo estão o Palácio do Planalto e o Supremo Tribunal Federal.\n\nProjetado pelo arquiteto Oscar Niemeyer, o Palácio consiste em um edifício principal, na horizontal, que serve de plataforma para as cúpulas do Senado Federal e da Câmara dos Deputados.\n\nA cúpula menor, voltada para baixo, abriga o Plenário do Senado Federal. A cúpula maior, voltada para cima, abriga o Plenário da Câmara dos Deputados. Atrás do edifício principal e entre as duas cúpulas se encontram duas torres de 28 andares: uma delas pertence à Câmara e a outra ao Senado.\n\nEm 2007, coincidindo com o centésimo aniversário de Oscar Niemeyer, o Instituto do Patrimônio Histórico e Artístico Nacional (IPHAN) decidiu pelo tombamento do edifício do Congresso Nacional`,
-  Arte: 'A Câmara dos Deputados e o Senado Federal possuem obras de arte, mobiliário, peças decorativas trazidas de suas antigas sedes, presentes doados por autoridades em visita oficial, condecorações e moedas comemorativas, entre outros. Fazem parte desse acervo, obras de artistas ilustres como Athos Bulcão, Marianne Peretti, Alfredo Ceschiatti, Di Cavalcanti e Burle Marx.',
-  HistoriaSenado: `O Poder Legislativo brasileiro é exercido pelo Congresso Nacional, que se compõe da Câmara dos Deputados e do Senado Federal. Para saber um pouco da história desta segunda Casa, é preciso remontar à nossa Independência, passando pela instauração da República e por suas sucessivas reformulações até chegarmos aos dias de hoje.\n\nMesmo antes de tornar-se República, o Brasil já contava com uma Câmara dos Senadores, instituição que foi mantida pela primeira Constituição republicana, com a designação de Senado Federal. Sua existência configura a marca da Federação, em que se busca o equilíbrio entre suas unidades constituidoras.\n\nComposto pelos representantes dos estados e do Distrito Federal, escolhidos pelo princípio majoritário, distingue-se da Câmara dos Deputados, cujos membros são eleitos pelo sistema proporcional. Enquanto o número de deputados pode variar, segundo a população estadual, cada uma das unidades da Federação elege, de maneira igualitária, o número fixo de três senadores.\n\nO nome remonta ao latim – Senatus –, Casa composta pelos anciões, chefes do patriciado, cujo papel era central no Império Romano. A importância dessa instituição na Antiguidade pode ser constatada pela sigla dos estandartes das legiões romanas, SQPR, cuja versão em português seria algo equivalente “O Senado e o Povo de Roma”, ou seja, o Senatus era o centro do poder formal. Na tradição republicana moderna, a ideia de que seja composto pelos mais experientes se mantém, pois, para se eleger senador, é necessário que o cidadão tenha completado 35 anos.\n\nAtualmente, o Senado Federal é composto por 81 senadores, enviados pelos 26 estados e pelo Distrito Federal, para mandatos de oito anos. Entretanto, a renovação dos membros desta Casa guarda consonância com a duração das legislaturas, que é de quatro anos. Assim sendo, a cada pleito, são escolhidos ora um terço, ora dois terços de sua composição, em eleições coincidentes com as de presidente da República, governador, deputado federal, estadual e distrital.\n\nAs atribuições, composições e características do Senado estão dispostas nas constituições brasileiras e no Regimento Interno do Senado Federal e no Regimento Comum.\n\nRui Barbosa é considerado o patrono do Senado e o Plenário da Casa o homenageia exibindo seu busto. As razões para isso devem-se ao destaque daquele parlamentar, por sua notoriedade e dedicação à vida pública, ao grande prestígio internacional e à relatoria do Código Civil Brasileiro.`,
-  HistoriaCamara: `A História do Brasil mostra a todos nós a importância da participação da Câmara dos Deputados nos grandes momentos do Congresso brasileiro – durante o Império e depois da Proclamação da República, nos temas em discussão, nos contenciosos mais importantes da vida brasileira e na formulação de uma legislação democrática e cidadã – momentos estes registrados em mais de 3,5 milhões de páginas dos Anais Parlamentares. Aliás, a História Parlamentar do Brasil, no Império e na República, resgata o extremo valor da representação popular.\n\nA história da Câmara dos Deputados começa a ser escrita na Província do Rio de Janeiro em 17 de abril de 1823, quando da abertura da Primeira Sessão Preparatória da Assembléia Geral, Constituinte e Legislativa do Império do Brasil. Mas tudo tem início no momento em que o imperador dos franceses, Napoleão Bonaparte, declara a deposição da Dinastia de Bragança (ou Bragantina) e ordena a invasão do território português. Essas medidas impõem a transferência da Família Real e da Corte lusitana para o Reino Americano. Sob pressão do exército francês, a 27 de novembro o embarque da Família Real para o Brasil tem de ser feito às pressas e em confusão.\n\nTemendo afundar-se no atraso ao qual estavam submetidas as colônias, o Príncipe Regente D. João, logo ao chegar no Brasil (Salvador, Bahia) a 22 de janeiro de 1808, toma uma série de medidas administrativas e políticas que são colocadas imediatamente em execução. Entre essas, abre os portos ao comércio com as nações amigas, o que se efetua pela Carta Régia de 28 de janeiro. Logo depois cria novas repartições públicas em território brasileiro, como o Banco do Brasil e a Imprensa Régia.\n\nA invasão do território português pelas tropas francesas sob o comando do general Junot não apenas altera a realidade da colônia, que em 16 de dezembro de 1815 se vê elevada à categoria de Reino Unido junto a Portugal e Algarves, mas também afeta profundamente a própria metrópole, com a introdução dos ideais iluministas da Revolução Francesa de 14 de julho de 1789. Quando, enfim, as tropas de Napoleão abandonam Portugal, os súditos de D. João VI, influenciados pelos princípios revolucionários, insurgem-se contra os privilégios absolutistas e deflagram a Revolução Constitucionalista do Porto, no dia 24 de agosto de 1820, em que se exige a volta do rei e a convocação das Cortes Gerais, Extraordinárias e Constituintes da Nação Portuguesa.\n\nA Revolução do Porto foi um movimento com idéias nitidamente liberais que arrastou adeptos entusiásticos em todas as partes do império lusitano no período pós-invasão napoleônica. Exige-se a elaboração de uma Constituição, "cuja falta é a origem de todos os nossos males", e convocam-se as primeiras eleições de Portugal, Brasil e Algarves para as "Cortes Gerais Extraordinárias e Constituintes da Nação Portuguesa", em Lisboa. Os revolucionários proclamam a soberania da Nação sobre o rei e intimam D. João VI a retornar imediatamente a Portugal.\n\nEm 7 de março de 1821, no Rio de Janeiro, o rei D. João VI expede decreto que "manda proceder a nomeação dos deputados às Cortes portuguesas, dando instruções a respeito". Em 23 de março é comunicada a retirada de Sua Majestade para Portugal e fica determinado, também, que "sem perda de tempo, se façam as eleições dos deputados para representarem o Reino do Brasil nas Cortes Gerais Extraordinárias e Constituintes da Nação Portuguesa, convocadas em Lisboa".\n\nO Príncipe Regente D. Pedro de Alcântara assume o governo em situação político-financeira bastante difícil. Seu pai, o rei D. João VI, antes do seu retorno a Portugal, saca tudo que tinha no Banco do Brasil, que ele mesmo criara e para o qual havia dado, em depósito, as jóias da Coroa, visando a estimular a credibilidade dos correntistas nativos, e leva, então, consigo todos os seus bens. Acompanham o rei D. João VI no seu regresso um contingente considerável de súditos, entre os quais comerciantes e capitalistas. Este fato prejudica o comércio brasileiro, pois a saída súbita de tais pessoas implica a retirada de capitais não só do movimento comercial, como também do Banco do Brasil, que com estes saques e mais os que o rei realizara, fica sem lastro e é forçado a suspender pagamentos.\n\nAs Cortes Gerais, Extraordinárias e Constituintes da Nação Portuguesa são instaladas tão-somente com os deputados de Portugal e que se achavam em Lisboa, excluídos os representantes ainda ausentes ou não-eleitos dos domínios ultramarinos da América, África e Ásia. No dia 26 de janeiro de 1821 teve lugar a solene instalação do Congresso Constituinte, que só encerraria os seus trabalhos legislativos no dia 4 de novembro de 1822.\n\nAs eleições dos primeiros deputados do Brasil se dão com atraso e obedecem ao decreto e às instruções expedidas em 7 de março de 1821. Todas as províncias brasileiras existentes à época – então Reino Americano Unido à Monarquia Portuguesa – fazem a escolha de seus representantes para as Cortes Gerais, Extraordinárias, e Constituintes da Nação Portuguesa. São eleitos 97 deputados (inclusive suplentes), procuradores e delegados, mas somente 51 parlamentares comparecem às Cortes Constituintes.\n\nOs primeiros deputados do Brasil a desembarcarem em Lisboa são os da Província de Pernambuco, que prestam juramento e tomam assento "em Cortes" no dia 29 de agosto de 1821, sete meses após instalados os trabalhos constituintes. O primeiro deles a usar da palavra foi o Monsenhor Francisco Moniz Tavares, na sessão de 30 de agosto, seguido de Manuel Zeferino dos Santos e Pedro de Araújo Lima, na sessão de 31 do mesmo mês. Em 10 de setembro tomam posse os representantes da Província do Rio de Janeiro e, em seguida, foram comparecendo e tomando assento os representantes das outras províncias. A representação de Minas Gerais, a mais numerosa bancada, permanece no Brasil, aguardando um melhor momento político. A bancada de Mato Grosso e a bancada de São Pedro do Rio Grande do Sul deixam também de comparecer às Cortes, em Lisboa.\n\nInicia-se o primeiro capítulo de uma das mais belas páginas parlamentares na construção da democracia brasileira. A partir daí começam a chegar e a tomar posse os demais constituintes das outras províncias do Brasil. O que deveria ser um entrave aos propósitos brasileiros, devido à difícil travessia do Atlântico; às incertezas da terra desconhecida; aos conflitos de interesses, materiais e políticos, entre Brasil e Portugal; e a uma assembléia com ampla maioria portuguesa com propósitos recolonizadores, serve de estímulo aos representantes das províncias. A tudo isso soma-se a defesa veemente e altiva dos interesses do Reino Americano, com arrebatados pronunciamentos que tocam, por vezes, o extremo da audácia. Destaca-se nestes embates, sobranceira, a figura do constituinte Antônio Carlos Ribeiro de Andrada Machado e Silva (SP). Este, na sessão do dia 22 de maio de 1822, diante do pronunciamento insolente das galerias e assediado de apartes querendo abafar sua voz, que defendia os mais legítimos direitos de sua Pátria, afirma impavidamente, em tom solene que faz emudecer, desde logo, a gritaria: Silêncio! Aqui desta tribuna até os reis têm que me ouvir.\n\nCom o regresso do rei D. João VI às terras lusitanas e com as atitudes e medidas recolonizadoras visadas pela maioria portuguesa nas Cortes Gerais, Extraordinárias e Constituintes reunidas em Lisboa, as relações políticas entre Brasil e Portugal se deterioram rapidamente. Em decorrência da irritação das Cortes com os atos do Príncipe Regente D. Pedro de Alcântara, este recebe ordens para regressar à Europa, às quais responde com o "Fico", em 9 de janeiro de 1822. Com isso, a separação do Brasil de Portugal está informalmente realizada. No dia 16 de janeiro, José Bonifácio de Andrada e Silva encabeça um novo ministério formado por brasileiros. Assume a chefia política do movimento para a consolidação da regência de D. Pedro de Alcântara, opondo-se às medidas recolonizadoras das Cortes de Lisboa. No dia 3 de junho é expedido decreto que manda convocar uma “Assembléia Geral, Constituinte e Legislativa” composta de deputados das províncias do Brasil, e já no dia 19 é expedida Decisão de Governo que estabelece as instruções sobre o processo eleitoral. Reinando com autonomia, em 3 de agosto de 1822, o Príncipe Regente D. Pedro de Alcântara manda publicar decreto contendo as instruções para as eleições de deputados à Assembléia Geral, Constituinte e Legislativa do Reino do Brasil, convocada para o ano seguinte.\n\nDeclarada a Independência do Brasil, no dia 7 de setembro de 1822, e sob forte influência da guerra da independência dos Estados Unidos, da Revolução Francesa e da Revolução Constitucionalista da Espanha, e das guerras de libertação na América espanhola, são convocadas eleições para a Assembléia Geral, Constituinte e Legislativa do Império do Brasil, que se reúne pela primeira vez, em sessão preparatória, no dia 17 de abril de 1823.\n\nA História da Câmara dos Deputados corresponde aos grandes momentos da História do Brasil em que se ampliam os direitos de cidadania e a construção da democracia.`
+  titulo: {
+    pt: 'Curiosidades',
+    en: 'Curiosities'
+  },
+  historiaCamara: {
+    titulo: {
+      pt: 'A história da Câmara',
+      en: 'The history of the Chamber'
+    },
+    conteudo: {
+    }
+  },
+  historiaSenado: {
+    titulo: {
+      pt: 'A história do Senado',
+      en: 'The history of the Seneate'
+    },
+    conteudo: {
+    }
+  },
+  comoFuncionaCamara: {
+    titulo: {
+      pt: 'Como funciona a Câmara',
+      en: 'How the Chamber works'
+    },
+    conteudo: {
+    }
+  },
+  comoFuncionaSenado: {
+    titulo: {
+      pt: 'Como funciona o Senado',
+      en: 'How the Senate works'
+    },
+    conteudo: {
+    }
+  },
+  arquiteturaCongresso: {
+    titulo: {
+      pt: 'Arquitetura do Congresso',
+      en: 'Architecture of the Congress'
+    },
+    conteudo: {
+    }
+  },
+  arteCongresso: {
+    titulo: {
+      pt: 'Arte no Congresso',
+      en: 'Art in the Congress'
+    },
+    conteudo: {
+    }
+  },
+  __TODO__: {
+    Arquitetura: `O Palácio do Congresso Nacional é um dos cartões postais de Brasília e está situado no extremo leste do Eixo Monumental. Ocupa um dos vértices do triângulo que delimita a Praça dos Três Poderes. Nos vértices da base do triângulo estão o Palácio do Planalto e o Supremo Tribunal Federal.\n\nProjetado pelo arquiteto Oscar Niemeyer, o Palácio consiste em um edifício principal, na horizontal, que serve de plataforma para as cúpulas do Senado Federal e da Câmara dos Deputados.\n\nA cúpula menor, voltada para baixo, abriga o Plenário do Senado Federal. A cúpula maior, voltada para cima, abriga o Plenário da Câmara dos Deputados. Atrás do edifício principal e entre as duas cúpulas se encontram duas torres de 28 andares: uma delas pertence à Câmara e a outra ao Senado.\n\nEm 2007, coincidindo com o centésimo aniversário de Oscar Niemeyer, o Instituto do Patrimônio Histórico e Artístico Nacional (IPHAN) decidiu pelo tombamento do edifício do Congresso Nacional`,
+    Arte: 'A Câmara dos Deputados e o Senado Federal possuem obras de arte, mobiliário, peças decorativas trazidas de suas antigas sedes, presentes doados por autoridades em visita oficial, condecorações e moedas comemorativas, entre outros. Fazem parte desse acervo, obras de artistas ilustres como Athos Bulcão, Marianne Peretti, Alfredo Ceschiatti, Di Cavalcanti e Burle Marx.',
+    HistoriaSenado: `O Poder Legislativo brasileiro é exercido pelo Congresso Nacional, que se compõe da Câmara dos Deputados e do Senado Federal. Para saber um pouco da história desta segunda Casa, é preciso remontar à nossa Independência, passando pela instauração da República e por suas sucessivas reformulações até chegarmos aos dias de hoje.\n\nMesmo antes de tornar-se República, o Brasil já contava com uma Câmara dos Senadores, instituição que foi mantida pela primeira Constituição republicana, com a designação de Senado Federal. Sua existência configura a marca da Federação, em que se busca o equilíbrio entre suas unidades constituidoras.\n\nComposto pelos representantes dos estados e do Distrito Federal, escolhidos pelo princípio majoritário, distingue-se da Câmara dos Deputados, cujos membros são eleitos pelo sistema proporcional. Enquanto o número de deputados pode variar, segundo a população estadual, cada uma das unidades da Federação elege, de maneira igualitária, o número fixo de três senadores.\n\nO nome remonta ao latim – Senatus –, Casa composta pelos anciões, chefes do patriciado, cujo papel era central no Império Romano. A importância dessa instituição na Antiguidade pode ser constatada pela sigla dos estandartes das legiões romanas, SQPR, cuja versão em português seria algo equivalente “O Senado e o Povo de Roma”, ou seja, o Senatus era o centro do poder formal. Na tradição republicana moderna, a ideia de que seja composto pelos mais experientes se mantém, pois, para se eleger senador, é necessário que o cidadão tenha completado 35 anos.\n\nAtualmente, o Senado Federal é composto por 81 senadores, enviados pelos 26 estados e pelo Distrito Federal, para mandatos de oito anos. Entretanto, a renovação dos membros desta Casa guarda consonância com a duração das legislaturas, que é de quatro anos. Assim sendo, a cada pleito, são escolhidos ora um terço, ora dois terços de sua composição, em eleições coincidentes com as de presidente da República, governador, deputado federal, estadual e distrital.\n\nAs atribuições, composições e características do Senado estão dispostas nas constituições brasileiras e no Regimento Interno do Senado Federal e no Regimento Comum.\n\nRui Barbosa é considerado o patrono do Senado e o Plenário da Casa o homenageia exibindo seu busto. As razões para isso devem-se ao destaque daquele parlamentar, por sua notoriedade e dedicação à vida pública, ao grande prestígio internacional e à relatoria do Código Civil Brasileiro.`,
+    HistoriaCamara: `A História do Brasil mostra a todos nós a importância da participação da Câmara dos Deputados nos grandes momentos do Congresso brasileiro – durante o Império e depois da Proclamação da República, nos temas em discussão, nos contenciosos mais importantes da vida brasileira e na formulação de uma legislação democrática e cidadã – momentos estes registrados em mais de 3,5 milhões de páginas dos Anais Parlamentares. Aliás, a História Parlamentar do Brasil, no Império e na República, resgata o extremo valor da representação popular.\n\nA história da Câmara dos Deputados começa a ser escrita na Província do Rio de Janeiro em 17 de abril de 1823, quando da abertura da Primeira Sessão Preparatória da Assembléia Geral, Constituinte e Legislativa do Império do Brasil. Mas tudo tem início no momento em que o imperador dos franceses, Napoleão Bonaparte, declara a deposição da Dinastia de Bragança (ou Bragantina) e ordena a invasão do território português. Essas medidas impõem a transferência da Família Real e da Corte lusitana para o Reino Americano. Sob pressão do exército francês, a 27 de novembro o embarque da Família Real para o Brasil tem de ser feito às pressas e em confusão.\n\nTemendo afundar-se no atraso ao qual estavam submetidas as colônias, o Príncipe Regente D. João, logo ao chegar no Brasil (Salvador, Bahia) a 22 de janeiro de 1808, toma uma série de medidas administrativas e políticas que são colocadas imediatamente em execução. Entre essas, abre os portos ao comércio com as nações amigas, o que se efetua pela Carta Régia de 28 de janeiro. Logo depois cria novas repartições públicas em território brasileiro, como o Banco do Brasil e a Imprensa Régia.\n\nA invasão do território português pelas tropas francesas sob o comando do general Junot não apenas altera a realidade da colônia, que em 16 de dezembro de 1815 se vê elevada à categoria de Reino Unido junto a Portugal e Algarves, mas também afeta profundamente a própria metrópole, com a introdução dos ideais iluministas da Revolução Francesa de 14 de julho de 1789. Quando, enfim, as tropas de Napoleão abandonam Portugal, os súditos de D. João VI, influenciados pelos princípios revolucionários, insurgem-se contra os privilégios absolutistas e deflagram a Revolução Constitucionalista do Porto, no dia 24 de agosto de 1820, em que se exige a volta do rei e a convocação das Cortes Gerais, Extraordinárias e Constituintes da Nação Portuguesa.\n\nA Revolução do Porto foi um movimento com idéias nitidamente liberais que arrastou adeptos entusiásticos em todas as partes do império lusitano no período pós-invasão napoleônica. Exige-se a elaboração de uma Constituição, "cuja falta é a origem de todos os nossos males", e convocam-se as primeiras eleições de Portugal, Brasil e Algarves para as "Cortes Gerais Extraordinárias e Constituintes da Nação Portuguesa", em Lisboa. Os revolucionários proclamam a soberania da Nação sobre o rei e intimam D. João VI a retornar imediatamente a Portugal.\n\nEm 7 de março de 1821, no Rio de Janeiro, o rei D. João VI expede decreto que "manda proceder a nomeação dos deputados às Cortes portuguesas, dando instruções a respeito". Em 23 de março é comunicada a retirada de Sua Majestade para Portugal e fica determinado, também, que "sem perda de tempo, se façam as eleições dos deputados para representarem o Reino do Brasil nas Cortes Gerais Extraordinárias e Constituintes da Nação Portuguesa, convocadas em Lisboa".\n\nO Príncipe Regente D. Pedro de Alcântara assume o governo em situação político-financeira bastante difícil. Seu pai, o rei D. João VI, antes do seu retorno a Portugal, saca tudo que tinha no Banco do Brasil, que ele mesmo criara e para o qual havia dado, em depósito, as jóias da Coroa, visando a estimular a credibilidade dos correntistas nativos, e leva, então, consigo todos os seus bens. Acompanham o rei D. João VI no seu regresso um contingente considerável de súditos, entre os quais comerciantes e capitalistas. Este fato prejudica o comércio brasileiro, pois a saída súbita de tais pessoas implica a retirada de capitais não só do movimento comercial, como também do Banco do Brasil, que com estes saques e mais os que o rei realizara, fica sem lastro e é forçado a suspender pagamentos.\n\nAs Cortes Gerais, Extraordinárias e Constituintes da Nação Portuguesa são instaladas tão-somente com os deputados de Portugal e que se achavam em Lisboa, excluídos os representantes ainda ausentes ou não-eleitos dos domínios ultramarinos da América, África e Ásia. No dia 26 de janeiro de 1821 teve lugar a solene instalação do Congresso Constituinte, que só encerraria os seus trabalhos legislativos no dia 4 de novembro de 1822.\n\nAs eleições dos primeiros deputados do Brasil se dão com atraso e obedecem ao decreto e às instruções expedidas em 7 de março de 1821. Todas as províncias brasileiras existentes à época – então Reino Americano Unido à Monarquia Portuguesa – fazem a escolha de seus representantes para as Cortes Gerais, Extraordinárias, e Constituintes da Nação Portuguesa. São eleitos 97 deputados (inclusive suplentes), procuradores e delegados, mas somente 51 parlamentares comparecem às Cortes Constituintes.\n\nOs primeiros deputados do Brasil a desembarcarem em Lisboa são os da Província de Pernambuco, que prestam juramento e tomam assento "em Cortes" no dia 29 de agosto de 1821, sete meses após instalados os trabalhos constituintes. O primeiro deles a usar da palavra foi o Monsenhor Francisco Moniz Tavares, na sessão de 30 de agosto, seguido de Manuel Zeferino dos Santos e Pedro de Araújo Lima, na sessão de 31 do mesmo mês. Em 10 de setembro tomam posse os representantes da Província do Rio de Janeiro e, em seguida, foram comparecendo e tomando assento os representantes das outras províncias. A representação de Minas Gerais, a mais numerosa bancada, permanece no Brasil, aguardando um melhor momento político. A bancada de Mato Grosso e a bancada de São Pedro do Rio Grande do Sul deixam também de comparecer às Cortes, em Lisboa.\n\nInicia-se o primeiro capítulo de uma das mais belas páginas parlamentares na construção da democracia brasileira. A partir daí começam a chegar e a tomar posse os demais constituintes das outras províncias do Brasil. O que deveria ser um entrave aos propósitos brasileiros, devido à difícil travessia do Atlântico; às incertezas da terra desconhecida; aos conflitos de interesses, materiais e políticos, entre Brasil e Portugal; e a uma assembléia com ampla maioria portuguesa com propósitos recolonizadores, serve de estímulo aos representantes das províncias. A tudo isso soma-se a defesa veemente e altiva dos interesses do Reino Americano, com arrebatados pronunciamentos que tocam, por vezes, o extremo da audácia. Destaca-se nestes embates, sobranceira, a figura do constituinte Antônio Carlos Ribeiro de Andrada Machado e Silva (SP). Este, na sessão do dia 22 de maio de 1822, diante do pronunciamento insolente das galerias e assediado de apartes querendo abafar sua voz, que defendia os mais legítimos direitos de sua Pátria, afirma impavidamente, em tom solene que faz emudecer, desde logo, a gritaria: Silêncio! Aqui desta tribuna até os reis têm que me ouvir.\n\nCom o regresso do rei D. João VI às terras lusitanas e com as atitudes e medidas recolonizadoras visadas pela maioria portuguesa nas Cortes Gerais, Extraordinárias e Constituintes reunidas em Lisboa, as relações políticas entre Brasil e Portugal se deterioram rapidamente. Em decorrência da irritação das Cortes com os atos do Príncipe Regente D. Pedro de Alcântara, este recebe ordens para regressar à Europa, às quais responde com o "Fico", em 9 de janeiro de 1822. Com isso, a separação do Brasil de Portugal está informalmente realizada. No dia 16 de janeiro, José Bonifácio de Andrada e Silva encabeça um novo ministério formado por brasileiros. Assume a chefia política do movimento para a consolidação da regência de D. Pedro de Alcântara, opondo-se às medidas recolonizadoras das Cortes de Lisboa. No dia 3 de junho é expedido decreto que manda convocar uma “Assembléia Geral, Constituinte e Legislativa” composta de deputados das províncias do Brasil, e já no dia 19 é expedida Decisão de Governo que estabelece as instruções sobre o processo eleitoral. Reinando com autonomia, em 3 de agosto de 1822, o Príncipe Regente D. Pedro de Alcântara manda publicar decreto contendo as instruções para as eleições de deputados à Assembléia Geral, Constituinte e Legislativa do Reino do Brasil, convocada para o ano seguinte.\n\nDeclarada a Independência do Brasil, no dia 7 de setembro de 1822, e sob forte influência da guerra da independência dos Estados Unidos, da Revolução Francesa e da Revolução Constitucionalista da Espanha, e das guerras de libertação na América espanhola, são convocadas eleições para a Assembléia Geral, Constituinte e Legislativa do Império do Brasil, que se reúne pela primeira vez, em sessão preparatória, no dia 17 de abril de 1823.\n\nA História da Câmara dos Deputados corresponde aos grandes momentos da História do Brasil em que se ampliam os direitos de cidadania e a construção da democracia.`
+  }
 }
 
 const ComoFuncionaCamara = [
@@ -303,4 +426,51 @@ const Creditos = {
   ]
 }
 
-export default { FAQ, GuiaProfessor, GuiaVisitante, ComoChegar, Curiosidades, ComoFuncionaCamara, Creditos }
+const ConteudoInterativo = {
+  titulo: {
+    pt: 'Conteúdo Interativo',
+    en: 'Interactive Content'
+  },
+  descricao: {
+    pt: 'Interaja com os objetos encontrados no Congresso Nacional através da leitura dos QR Codes posicionados próximos a eles',
+    en: 'Interact with the objects found in the National Congress by scanning the QR Codes positioned next to them'
+  },
+  acao: {
+    pt: 'ESCANEAR CÓDIGO',
+    en: 'SCAN QR CODE'
+  },
+  carregando: {
+    pt: 'Carregando...',
+    en: 'Loading...'
+  }
+}
+
+const GuiaVirtual = {
+  titulo: {
+    pt: 'Guia Virtual',
+    en: 'Virtual Guide'
+  },
+  descricao: {
+    pt: 'Explore o Congresso Nacional através de um tour virtual com informações sobre as principais salas, áudios e fotos em 360º',
+    en: 'Explore the National Congress through a virtual tour with informations about the main rooms, audios and photos in 360º'
+  },
+  acao: {
+    pt: 'EXPLORAR',
+    en: 'EXPLORE'
+  }
+}
+
+export default {
+  Home,
+  Tiles,
+  Menu,
+  FAQ,
+  GuiaProfessor,
+  GuiaVisitante,
+  ComoChegar,
+  Curiosidades,
+  ConteudoInterativo,
+  GuiaVirtual,
+  ComoFuncionaCamara,
+  Creditos
+}

@@ -3,46 +3,51 @@ import { View, StyleSheet, ScrollView } from 'react-native'
 import { WebBrowser } from 'expo'
 
 import { pageHit } from '../utils/analytics'
-import { Colors, Images, Links } from '../constants'
+import { Colors, Images, Links, Text } from '../constants'
 import Header from '../components/Header'
 import Banner from '../components/Banner'
 import ConfirmAlert from '../components/ConfirmAlert'
+import i18n from '../utils/i18n'
 
 class CuriosidadesScreen extends Component {
   static __name__ = 'Curiosidades'
 
   static navigationOptions = ({ navigation }) => ({
-    header: <Header navigation={navigation}>{CuriosidadesScreen.__name__}</Header>
+    header: (
+      <Header navigation={navigation}>
+        {i18n.translate(Text.Curiosidades.titulo)}
+      </Header>
+    )
   })
 
   banners = [
     {
-      name: 'A História da Câmara',
+      name: i18n.translate(Text.Curiosidades.historiaCamara.titulo),
       image: Images.historiaCamara,
       onBannerPress: () => this.props.navigation.navigate('HistoriaCamara')
     },
     {
-      name: 'A História do Senado',
+      name: i18n.translate(Text.Curiosidades.historiaSenado.titulo),
       image: Images.historiaSenado,
       onBannerPress: () => this.props.navigation.navigate('HistoriaSenado')
     },
     {
-      name: 'Como funciona a Câmara',
+      name: i18n.translate(Text.Curiosidades.comoFuncionaCamara.titulo),
       image: Images.comoFuncionaCamara,
       onBannerPress: () => this.props.navigation.navigate('ComoFuncionaCamara')
     },
     {
-      name: 'Como funciona o Senado',
+      name: i18n.translate(Text.Curiosidades.comoFuncionaSenado.titulo),
       image: Images.comoFuncionaSenado,
       onBannerPress: () => ConfirmAlert(() => WebBrowser.openBrowserAsync(Links.funcionamentoSenado))
     },
     {
-      name: 'Arquitetura do Congresso',
+      name: i18n.translate(Text.Curiosidades.arquiteturaCongresso.titulo),
       image: Images.arquiteturaCongresso,
       onBannerPress: () => this.props.navigation.navigate('Arquitetura')
     },
     {
-      name: 'Arte no Congresso',
+      name: i18n.translate(Text.Curiosidades.arteCongresso.titulo),
       image: Images.arteCongresso,
       onBannerPress: () => this.props.navigation.navigate('Arte')
     }
