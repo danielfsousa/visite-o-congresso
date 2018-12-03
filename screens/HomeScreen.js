@@ -9,7 +9,7 @@ import {
 } from 'react-native-popup-menu'
 
 import { HeaderIcon } from '../components/Icon'
-import { pageHit } from '../utils/analytics'
+import { screenHit } from '../utils/analytics'
 import { Colors, Layout, Links, Text, Fonts } from '../constants'
 import Header from '../components/Header'
 import Tile from '../components/Tile'
@@ -120,7 +120,7 @@ class HomeScreen extends Component {
   ]
 
   componentDidMount () {
-    pageHit(HomeScreen.__name__)
+    screenHit(HomeScreen.__name__)
   }
 
   render () {

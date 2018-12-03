@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
 
-import { pageHit } from '../utils/analytics'
+import { screenHit } from '../utils/analytics'
 import { Images, Colors, Fonts } from '../constants'
 import { BodyText } from '../components/StyledText'
 
@@ -12,7 +12,7 @@ class HistoriaSenadoScreen extends Component {
   static __name__ = 'A História do Senado Federal'
 
   componentDidMount () {
-    pageHit(HistoriaSenadoScreen.__name__)
+    screenHit(HistoriaSenadoScreen.__name__)
   }
 
   render () {

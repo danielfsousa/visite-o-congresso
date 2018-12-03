@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, Linking, Platform } from 'react-native'
 
-import { pageHit } from '../utils/analytics'
+import { screenHit } from '../utils/analytics'
 import { Images, Links } from '../constants'
 import { BodyText, SubTitle } from '../components/StyledText'
 import StyledButton from '../components/StyledButton'
@@ -24,7 +24,7 @@ class ComoChegarScreen extends Component {
   }
 
   componentDidMount () {
-    pageHit(ComoChegarScreen.__name__)
+    screenHit(ComoChegarScreen.__name__)
   }
 
   render () {

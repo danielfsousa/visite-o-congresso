@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
 
-import { pageHit } from '../utils/analytics'
+import { screenHit } from '../utils/analytics'
 import { Images, Colors, Links } from '../constants'
 import { BodyText, SubTitle } from '../components/StyledText'
 
@@ -13,7 +13,7 @@ class ViiBraScreen extends Component {
   static __name__ = 'ViiBra'
 
   componentDidMount () {
-    pageHit(ViiBraScreen.__name__)
+    screenHit(ViiBraScreen.__name__)
   }
 
   render () {

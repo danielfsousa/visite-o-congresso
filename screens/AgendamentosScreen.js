@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, Linking } from 'react-native'
 
-import { pageHit } from '../utils/analytics'
+import { screenHit } from '../utils/analytics'
 import { Links } from '../constants'
 import { BodyText, SubTitle, BulletText } from '../components/StyledText'
 
@@ -13,7 +13,7 @@ class AgendamentosScreen extends Component {
   static __name__ = 'Agendamentos'
 
   componentDidMount () {
-    pageHit(AgendamentosScreen.__name__)
+    screenHit(AgendamentosScreen.__name__)
   }
 
   render () {

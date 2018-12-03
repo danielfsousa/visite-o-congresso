@@ -1,8 +1,8 @@
-import { Analytics, PageHit } from 'expo-analytics'
+import { Analytics, ScreenHit } from 'expo-analytics'
 import config from '../config'
 
 const analytics = new Analytics(config.analytics.id)
-const pageHit = nome => !__DEV__ && analytics.hit(new PageHit(nome))
+const screenHit = nome => !__DEV__ && analytics.hit(new ScreenHit(nome))
 
 export default analytics
-export { pageHit }
+export { screenHit }

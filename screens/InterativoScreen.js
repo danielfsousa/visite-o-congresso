@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Image, View, StyleSheet } from 'react-native'
 import { Permissions } from 'expo'
 
-import { pageHit } from '../utils/analytics'
+import { screenHit } from '../utils/analytics'
 import { Colors, Images, Icons, Layout, Text } from '../constants'
 import BackgroundImage from '../components/BackgroundImage'
 import Header from '../components/Header'
@@ -25,7 +25,7 @@ class InterativoScreen extends Component {
   handleButtonPress = () => this.requestCameraPermission()
 
   componentDidMount () {
-    pageHit(InterativoScreen.__name__)
+    screenHit(InterativoScreen.__name__)
   }
 
   render () {

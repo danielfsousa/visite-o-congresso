@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { pageHit } from '../utils/analytics'
+import { screenHit } from '../utils/analytics'
 import FAQList from '../components/FAQList'
 import withParallax from './ParallaxScreenFactory'
 
@@ -10,7 +10,7 @@ class GenericFaqScreen extends Component {
 
   componentDidMount () {
     const { title } = this.props.navigation.state.params
-    pageHit(title)
+    screenHit(title)
   }
 
   render () {

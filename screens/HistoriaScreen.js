@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet } from 'react-native'
-import { pageHit } from '../utils/analytics'
+import { screenHit } from '../utils/analytics'
 
 import { BodyText } from '../components/StyledText'
 import StyledImage from '../components/StyledImage'
@@ -10,7 +10,7 @@ class AHistoriaScreen extends Component {
   static __name__ = 'A História'
 
   componentDidMount () {
-    pageHit(AHistoriaScreen.__name__)
+    screenHit(AHistoriaScreen.__name__)
   }
 
   render () {

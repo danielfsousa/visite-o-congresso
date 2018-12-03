@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
 
-import { pageHit } from '../utils/analytics'
+import { screenHit } from '../utils/analytics'
 import { SubTitle, BodyText, BulletText } from '../components/StyledText'
 import Hyperlink from '../components/Hyperlink'
 
@@ -11,7 +11,7 @@ class SobreScreen extends Component {
   static __name__ = 'Sobre'
 
   componentDidMount () {
-    pageHit(SobreScreen.__name__)
+    screenHit(SobreScreen.__name__)
   }
 
   render () {

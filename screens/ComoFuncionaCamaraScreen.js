@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
 import { WebBrowser } from 'expo'
 
-import { pageHit } from '../utils/analytics'
+import { screenHit } from '../utils/analytics'
 import { Images, Colors, Fonts, Text, Layout } from '../constants'
 import { BodyText, SubTitle } from '../components/StyledText'
 import FAQList from '../components/FAQList'
@@ -20,7 +20,7 @@ class ComoFuncionaCamaraScreen extends Component {
       : this.props.navigation.navigate('GenericDetails', faqItem))
 
   componentDidMount () {
-    pageHit(ComoFuncionaCamaraScreen.__name__)
+    screenHit(ComoFuncionaCamaraScreen.__name__)
   }
 
   render () {

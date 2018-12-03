@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { pageHit } from '../utils/analytics'
+import { screenHit } from '../utils/analytics'
 import { BodyText } from '../components/StyledText'
 import HyperLink from '../components/Hyperlink'
 import withParallax from './ParallaxScreenFactory'
@@ -8,7 +8,7 @@ import withParallax from './ParallaxScreenFactory'
 class GenericDetailsScreen extends Component {
   componentDidMount () {
     const { title } = this.props.navigation.state.params
-    pageHit(title)
+    screenHit(title)
   }
 
   render () {

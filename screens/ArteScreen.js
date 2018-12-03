@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
 import { WebBrowser } from 'expo'
 
-import { pageHit } from '../utils/analytics'
+import { screenHit } from '../utils/analytics'
 import { Images, Colors, Fonts, Links } from '../constants'
 import { BodyText } from '../components/StyledText'
 import StyledButton from '../components/StyledButton'
@@ -15,7 +15,7 @@ class ArteScreen extends Component {
   static __name__ = 'Arte no Congresso Nacional'
 
   componentDidMount () {
-    pageHit(ArteScreen.__name__)
+    screenHit(ArteScreen.__name__)
   }
 
   render () {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { pageHit } from '../utils/analytics'
+import { screenHit } from '../utils/analytics'
 import { BodyText } from '../components/StyledText'
 import ImageWithAudio from '../components/ImageWithAudio'
 import withParallax from './ParallaxScreenFactory'
@@ -8,7 +8,7 @@ import withParallax from './ParallaxScreenFactory'
 class InterativoDetailScreen extends Component {
   componentDidMount () {
     const { titulo } = this.props.navigation.state.params
-    pageHit(titulo)
+    screenHit(titulo)
   }
 
   render () {

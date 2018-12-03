@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
 import { BarCodeScanner } from 'expo'
 
-import { pageHit } from '../utils/analytics'
+import { screenHit } from '../utils/analytics'
 import { ConteudoQRCode, Colors, Text } from '../constants'
 import BackButton from '../components/BackButton'
 import LoadingSpinner from '../components/LoadingSpinner'
@@ -29,7 +29,7 @@ class QRCodeScreen extends Component {
       this.setState(() => ({ screenOpened: true }))
     )
 
-    pageHit(QRCodeScreen.__name__)
+    screenHit(QRCodeScreen.__name__)
   }
 
   componentWillUnmount () {

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { View, Image, StyleSheet } from 'react-native'
 import { WebBrowser } from 'expo'
 
-import { pageHit } from '../utils/analytics'
+import { screenHit } from '../utils/analytics'
 import BackgroundImage from '../components/BackgroundImage'
 import Header from '../components/Header'
 import StyledButton from '../components/StyledButton'
@@ -19,7 +19,7 @@ class GuiaVirtualScreen extends Component {
   handleButtonPress = () => ConfirmAlert(() => WebBrowser.openBrowserAsync(Links.guiaVirtual))
 
   componentDidMount () {
-    pageHit(GuiaVirtualScreen.__name__)
+    screenHit(GuiaVirtualScreen.__name__)
   }
 
   render () {

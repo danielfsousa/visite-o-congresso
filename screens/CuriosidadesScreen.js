@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { View, StyleSheet, ScrollView } from 'react-native'
 import { WebBrowser } from 'expo'
 
-import { pageHit } from '../utils/analytics'
+import { screenHit } from '../utils/analytics'
 import { Colors, Images, Links, Text } from '../constants'
 import Header from '../components/Header'
 import Banner from '../components/Banner'
@@ -54,7 +54,7 @@ class CuriosidadesScreen extends Component {
   ]
 
   componentDidMount () {
-    pageHit(CuriosidadesScreen.__name__)
+    screenHit(CuriosidadesScreen.__name__)
   }
 
   render () {

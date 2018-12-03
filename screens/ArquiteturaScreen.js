@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
 
-import { pageHit } from '../utils/analytics'
+import { screenHit } from '../utils/analytics'
 import { Images, Colors, Fonts } from '../constants'
 import { BodyText } from '../components/StyledText'
 
@@ -12,7 +12,7 @@ class ArquiteturaScreen extends Component {
   static __name__ = 'Arquitetura do Congresso'
 
   componentDidMount () {
-    pageHit(ArquiteturaScreen.__name__)
+    screenHit(ArquiteturaScreen.__name__)
   }
 
   render () {

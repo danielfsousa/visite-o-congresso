@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
 
-import { pageHit } from '../utils/analytics'
+import { screenHit } from '../utils/analytics'
 import { BodyText } from '../components/StyledText'
 import Hyperlink from '../components/Hyperlink'
 import withParallax from './ParallaxScreenFactory'
@@ -10,7 +10,7 @@ class EventosScreen extends Component {
   static __name__ = 'Eventos'
 
   componentDidMount () {
-    pageHit(EventosScreen.__name__)
+    screenHit(EventosScreen.__name__)
   }
 
   render () {
