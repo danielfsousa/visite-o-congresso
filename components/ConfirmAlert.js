@@ -1,12 +1,17 @@
 import { Alert } from 'react-native'
 
+import { Text } from '../constants'
+import i18n from '../utils/i18n'
+
 const ConfirmAlert = onPress => {
+  const t = key => i18n.translate(Text.ConfirmAlert[key])
+
   Alert.alert(
-    'Atenção',
-    'Você está prestes a deixar o aplicativo Visite o Congresso, portanto os Termos e Condições de Uso, assim como os direitos ficam a critério do site a seguir. Deseja prosseguir?',
+    t('titulo'),
+    t('descricao'),
     [
-      { text: 'Voltar', onPress: () => { }, style: 'cancel' },
-      { text: 'Prosseguir', onPress }
+      { text: t('voltar'), onPress: () => { }, style: 'cancel' },
+      { text: t('prosseguir'), onPress }
     ],
     { cancelable: false }
   )
