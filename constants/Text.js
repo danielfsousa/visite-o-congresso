@@ -515,7 +515,7 @@ const Curiosidades = {
   historiaSenado: {
     titulo: {
       pt: 'A história do Senado',
-      en: 'The history of the Seneate'
+      en: 'The history of the Senate'
     },
     conteudo: {
     }
@@ -622,11 +622,31 @@ const GuiaVirtual = {
   }
 }
 
+const ConfirmAlert = {
+  titulo: {
+    pt: 'Atenção',
+    en: 'Warning'
+  },
+  descricao: {
+    pt: 'Você está prestes a deixar o aplicativo "Visite o Congresso", portanto os Termos e Condições de Uso, assim como os direitos ficam a critério do site a seguir. \n\nDeseja prosseguir?',
+    en: 'You are about to leave the "Visite o Congresso" application, so the Terms and Conditions of Use, as well as the rights, are at the discretion of the following site. \n\nDo you want to proceed?'
+  },
+  voltar: {
+    pt: 'Voltar',
+    en: 'Cancel'
+  },
+  prosseguir: {
+    pt: 'Sim',
+    en: 'Yes'
+  }
+}
+
 export default {
   Home,
   Tiles,
   Menu,
   FAQ,
+  ConfirmAlert,
   GuiaProfessor,
   GuiaVisitante,
   ComoChegar,
