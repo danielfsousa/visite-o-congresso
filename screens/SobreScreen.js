@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
 
+import { Text } from '../constants'
 import { screenHit } from '../utils/analytics'
 import { SubTitle, BodyText, BulletText } from '../components/StyledText'
 import Hyperlink from '../components/Hyperlink'
-
 import withParallax from './ParallaxScreenFactory'
+import i18n from '../utils/i18n'
 
 class SobreScreen extends Component {
   static __name__ = 'Sobre'
@@ -15,36 +16,38 @@ class SobreScreen extends Component {
   }
 
   render () {
+    const t = key => i18n.translate(Text.Menu.sobre.conteudo)[key]
+
     return (
       <View>
         <BodyText>
-          O aplicativo Visite o Congresso foi desenvolvido por&nbsp;
+          {t('oAppFoiDesenvolvidoPor')}&nbsp;
           <Hyperlink href='https://github.com/danielfsousa'>Daniel Sousa</Hyperlink>
-          &nbsp;e&nbsp;
+          &nbsp;{t('e')}&nbsp;
           <Hyperlink href='https://github.com/daniloleemes'>Danilo Lemes</Hyperlink>
-          &nbsp;durante o&nbsp;
+          &nbsp;{t('duranteO')}&nbsp;
           <Hyperlink href='http://www1.congressonacional.leg.br/desafio/'>
-            Desafio VisitApp
+            {t('desafioVisitApp')}
           </Hyperlink>
-          &nbsp;do Senado Federal, tendo como objetivo guiar e oferecer a mesma experiência aos visitantes presenciais e virtuais do Congresso Nacional.
+          &nbsp;{t('doSenadoFederal')}
         </BodyText>
         <SubTitle style={styles.subtitle}>
-          Conteúdo e Direitos Autorais
+          {t('conteudoEDireitosAutorais')}
         </SubTitle>
         <BodyText>
-          Todo o conteúdo mostrado no presente aplicativo é de autoria do Congresso Nacional, Senado Federal, Câmara dos Deputados e Projeto ViiBra. Sendo assim, far-se-á a explícita menção às respectivas Entidades, Órgãos e Projetos.
+          {t('conteudoEDoCongresso')}
         </BodyText>
-        <SubTitle style={styles.subtitle}>Apoio</SubTitle>
+        <SubTitle style={styles.subtitle}>{t('apoio')}</SubTitle>
         <BodyText>
-          O aplicativo foi desenvolvido com o apoio de:
+          {t('desenvolvidoComApoioDe')}
           {'\n\n'}
         </BodyText>
-        <BulletText><Hyperlink href='http://www1.congressonacional.leg.br'>Congresso Nacional</Hyperlink></BulletText>
-        <BulletText><Hyperlink href='https://www12.senado.leg.br/hpsenado'>Senado Federal</Hyperlink></BulletText>
-        <BulletText><Hyperlink href='http://www2.camara.leg.br'>Câmara dos Deputados</Hyperlink></BulletText>
-        <BulletText><Hyperlink href='http://sindilegis.org.br'>Sindilegis</Hyperlink></BulletText>
-        <BulletText><Hyperlink href='http://www.alesfe.com.br'>ALESFE</Hyperlink></BulletText>
-        <BulletText><Hyperlink href='http://ascip.org.br'>ASCIP</Hyperlink></BulletText>
+        <BulletText><Hyperlink href='http://www1.congressonacional.leg.br'>{t('congressoNacional')}</Hyperlink></BulletText>
+        <BulletText><Hyperlink href='https://www12.senado.leg.br/hpsenado'>{t('senadoFederal')}</Hyperlink></BulletText>
+        <BulletText><Hyperlink href='http://www2.camara.leg.br'>{t('camaraDosDeputados')}</Hyperlink></BulletText>
+        <BulletText><Hyperlink href='http://sindilegis.org.br'>{t('sindilegis')}</Hyperlink></BulletText>
+        <BulletText><Hyperlink href='http://www.alesfe.com.br'>{t('alesfe')}</Hyperlink></BulletText>
+        <BulletText><Hyperlink href='http://ascip.org.br'>{t('ascip')}</Hyperlink></BulletText>
       </View>
     )
   }
@@ -57,6 +60,4 @@ const styles = StyleSheet.create({
   }
 })
 
-const ScreenWithParallax = withParallax(SobreScreen, SobreScreen.__name__)
-
-export default ScreenWithParallax
+export default withParallax(SobreScreen, i18n.translate(Text.Menu.sobre))

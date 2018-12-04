@@ -43,7 +43,43 @@ const Tiles = {
 const Menu = {
   sobre: {
     pt: 'Sobre',
-    en: 'About'
+    en: 'About',
+    conteudo: {
+      pt: {
+        oAppFoiDesenvolvidoPor: 'O aplicativo Visite o Congresso foi desenvolvido por',
+        e: 'e',
+        duranteO: 'durante o',
+        desafioVisitApp: 'Desafio VisitApp',
+        doSenadoFederal: 'do Senado Federal, tendo como objetivo guiar e oferecer a mesma experiência aos visitantes presenciais e virtuais do Congresso Nacional.',
+        conteudoEDireitosAutorais: 'Conteúdo e Direitos Autorais',
+        conteudoEDoCongresso: 'Todo o conteúdo mostrado no presente aplicativo é de autoria do Congresso Nacional, Senado Federal, Câmara dos Deputados e Projeto ViiBra. Sendo assim, far-se-á a explícita menção às respectivas Entidades, Órgãos e Projetos.',
+        apoio: 'Apoio',
+        desenvolvidoComApoioDe: 'O aplicativo foi desenvolvido com o apoio de:',
+        congressoNacional: 'Congresso Nacional',
+        senadoFederal: 'Senado Federal',
+        camaraDosDeputados: 'Câmara dos Deputados',
+        sindilegis: 'Sindilegis',
+        alesfe: 'ALESFE',
+        ascip: 'ASCIP'
+      },
+      en: {
+        oAppFoiDesenvolvidoPor: 'The "Visite o Congresso" app was developed by',
+        e: 'and',
+        duranteO: "during the Federal Senate's",
+        defaioVisitApp: 'VisitApp Challenge',
+        doSenadoFederal: 'with the objective of guiding and offering the same experience to the on-site and virtual visitors of the National Congress.',
+        conteudoEDireitosAutorais: 'Content and Copyright',
+        conteudoEDoCongresso: 'All content shown in this application is authored by the National Congress, Federal Senate, Chamber of Deputies and ViiBra Project. Thus, explicit mention will be made of the respective Entities, Bodies and Projects.',
+        apoio: 'Support',
+        desenvolvidoComApoioDe: 'The application was developed with the support of:',
+        congressoNacional: 'National Congress',
+        senadoFederal: 'Federal Senate',
+        camaraDosDeputados: 'Chamber of Deputies',
+        sindilegis: 'Sindilegis',
+        alesfe: 'ALESFE',
+        ascip: 'ASCIP'
+      }
+    }
   },
   enviarSugestao: {
     pt: 'Enviar Sugestão',
@@ -67,64 +103,70 @@ const Menu = {
   }
 }
 
-const FAQ = [
-  {
-    title: 'Posso visitar o Congresso Nacional?',
-    text: 'Sim. A Câmara dos Deputados e o Senado Federal realizam em conjunto visitas guiadas aos principais espaços das duas instituições. As visitas acontecem todos os dias incluindo sábados, domingos e feriados tendo início às 9h e encerrando às 17h30 com grupos saindo a cada meia hora.  Porém, atenção! Às terças e quartas a visita é fechada. Às quintas somente grupos agendados com antecedência são atendidos. Eventualmente as visitas poderão ser suspensas por motivos de segurança.'
+const FAQ = {
+  titulo: {
+    pt: 'Perguntas Frequentes',
+    en: 'FAQ'
   },
-  {
-    title: 'Quanto custa o ingresso para a visita ao Congresso Nacional?',
-    text: 'Nada! As visitas institucionais realizadas pelos monitores do Congresso Nacional são gratuitas.'
-  },
-  {
-    title: 'Posso fotografar e filmar durante a visita?',
-    text: 'Pode. O uso de máquinas fotográficas e filmadoras não-profissionais é permitido durante a visita, a não ser nos Plenários, quando há sessão.'
-  },
-  {
-    title: 'Durante a minha visita, posso assistir a uma sessão do Plenário ou das Comissões?',
-    text: 'O percurso da visita institucional ao Congresso inclui uma passagem pelos Plenários. Entretanto, é possível vir ao Palácio exclusivamente para assistir aos trabalhos dos Plenários e das Comissões, que são abertos ao público na maior parte das vezes.'
-  },
-  {
-    title: 'Preciso usar traje social para assistir a uma reunião do Plenário ou das Comissões?',
-    text: 'O Ato Conjunto dos Presidentes da Câmara dos Deputados e do Senado Federal nº 5 de 2014 (está no Diário Oficial do Senado Federal, na página 13) define as regras de vestimenta no acesso ao Congresso. Não é permitida a entrada de visitante trajando shorts, bermudas, calças Capri ou Corsário, camisetas sem manga e chinelos em dias de trabalho parlamentar, sendo o uso dessas vestimentas liberado aos finais de semana e feriados.  Em algumas circunstâncias, como em sessões solenes, ou locais como a Tribuna de Honra do Plenário do Senado ou o Salão Verde da Câmara, é exigido dos homens o uso de terno e gravata. Em caso de dúvida, entre em contato.'
-  },
-  {
-    title: 'Posso dar minha opinião durante os debates e votações?',
-    text: 'Como em todos os Congressos democráticos, não é permitido se manifestar durante os debates e votações a fim de não comprometer o andamento dos trabalhos.'
-  },
-  {
-    title: 'Em algumas sessões, os Plenários ficam com poucos parlamentares. Onde eles estão nessa hora?',
-    text: 'As sessões não deliberativas costumam ser mais vazias pois a presença dos parlamentares não é obrigatória nessas sessões. Também vale lembrar que o trabalho parlamentar prevê o atendimento nos gabinetes a lideranças e cidadãos; a participação em seminários e audiências públicas para debater temas de interesse nacional; a participação em entrevistas e encontros nacionais e internacionais diversos; a atuação nas comissões permanentes, especiais e temporárias. Os parlamentares também costumam acompanhar lideranças sindicais e empresariais, governadores, prefeitos ou vereadores em visitas aos ministérios em busca de projetos e recursos para as suas regiões. Quando eles não se encontram nos plenários estão em outras atividades parlamentares como as listadas.'
-  },
-  {
-    title: 'Queria acompanhar o trabalho do parlamentar que elegi quando eu visitar o Congresso Nacional. É possível?',
-    text: 'Sua visita não necessariamente coincidirá com o momento em que o parlamentar estiver em Plenário. Lembre-se, o trabalho dele não se resume apenas ao Plenário. No site da Câmara dos Deputados e do Senado Federal, você poderá acessar  informações sobre a atuação do seu deputado e/ou senador, tais como sua presença no Plenário e nas Comissões; como ele votou em cada proposição; a íntegra de seus discursos; os projetos que apresentou, etc.'
-  },
-  {
-    title: 'Outro dia, vi na TV o Plenário da Câmara cheio e muitos parlamentares em pé. Por que isso acontece?',
-    text: 'O Plenário tem capacidade para 396 pessoas sentadas, número menor do que o de deputados (513). Assim, quando há um debate mais acirrado, votação nominal ou até mesmo sessões conjuntas com a presença de deputados e senadores, o recinto acaba ficando muito cheio. Mas isso não prejudica as votações: o sistema eletrônico é rápido, permitindo que os parlamentares votem e logo deem lugar aos colegas.'
-  },
-  {
-    title: 'Há restaurantes e lanchonetes no Congresso? São abertos ao público?',
-    text: 'Em dias úteis há a possibilidade de acesso na Câmara e no Senado aos restaurantes e lanchonetes que são abertos ao público em geral. Porém, para frequentá-los o visitante deverá se identificar na portaria de uma das Casas.'
-  },
-  {
-    title: 'Soube que a Câmara e o Senado promovem seminários, exposições, lançamentos de livros e outros eventos. Eles são abertos ao público?',
-    text: 'Sim, desde que o visitante se identifique em uma das portarias da respectiva instituição, e informe o evento e o local de destino.'
-  },
-  {
-    title: 'Quanto tempo dura a visita?',
-    text: 'A visita é planejada para durar aproximadamente 1 hora, mas o tempo pode ser uma pouco mais extenso ou menos extenso a depender de alguns fatores extras como quantidade de perguntas, presença de pessoas com dificuldade de locomoção e até mesmo interação dos visitantes com o percurso, parlamentares e monitores. Em dias de maior movimento, para possibilitar atendimento a todos os interessados, o tempo e percurso poderão ser reduzidos.'
-  },
-  {
-    title: 'O que verei no percurso da visita ao Congresso Nacional?',
-    text: 'Cada dia possui um roteiro diferente. Espaços como o Salão Negro, os Salões Nobres, os Plenários, os Salões Azul e Verde, o Túnel do Tempo, a Chapelaria estão entre os locais contemplados no roteiro completo. Nos feriados e finais de semana, comumente visitam-se os Gabinetes dos Presidentes. Lembre-se que alterações podem ocorrer sem aviso prévio.'
-  },
-  {
-    title: 'Posso realizar a visitação sem acompanhamento do guia?',
-    text: 'O visitante não poderá ficar sozinho no Congresso Nacional, a menos que esteja se dirigindo a algum gabinete, plenário, comissão ou setor específico do Palácio, após devida identificação e checagem por parte da segurança. O trabalho dos monitores é desenvolvido para garantir a segurança e o acesso dos cidadãos conforme as regras estabelecidas em conjunto pelas duas instituições.'
-  }
-]
+  conteudo: [
+    {
+      title: 'Posso visitar o Congresso Nacional?',
+      text: 'Sim. A Câmara dos Deputados e o Senado Federal realizam em conjunto visitas guiadas aos principais espaços das duas instituições. As visitas acontecem todos os dias incluindo sábados, domingos e feriados tendo início às 9h e encerrando às 17h30 com grupos saindo a cada meia hora.  Porém, atenção! Às terças e quartas a visita é fechada. Às quintas somente grupos agendados com antecedência são atendidos. Eventualmente as visitas poderão ser suspensas por motivos de segurança.'
+    },
+    {
+      title: 'Quanto custa o ingresso para a visita ao Congresso Nacional?',
+      text: 'Nada! As visitas institucionais realizadas pelos monitores do Congresso Nacional são gratuitas.'
+    },
+    {
+      title: 'Posso fotografar e filmar durante a visita?',
+      text: 'Pode. O uso de máquinas fotográficas e filmadoras não-profissionais é permitido durante a visita, a não ser nos Plenários, quando há sessão.'
+    },
+    {
+      title: 'Durante a minha visita, posso assistir a uma sessão do Plenário ou das Comissões?',
+      text: 'O percurso da visita institucional ao Congresso inclui uma passagem pelos Plenários. Entretanto, é possível vir ao Palácio exclusivamente para assistir aos trabalhos dos Plenários e das Comissões, que são abertos ao público na maior parte das vezes.'
+    },
+    {
+      title: 'Preciso usar traje social para assistir a uma reunião do Plenário ou das Comissões?',
+      text: 'O Ato Conjunto dos Presidentes da Câmara dos Deputados e do Senado Federal nº 5 de 2014 (está no Diário Oficial do Senado Federal, na página 13) define as regras de vestimenta no acesso ao Congresso. Não é permitida a entrada de visitante trajando shorts, bermudas, calças Capri ou Corsário, camisetas sem manga e chinelos em dias de trabalho parlamentar, sendo o uso dessas vestimentas liberado aos finais de semana e feriados.  Em algumas circunstâncias, como em sessões solenes, ou locais como a Tribuna de Honra do Plenário do Senado ou o Salão Verde da Câmara, é exigido dos homens o uso de terno e gravata. Em caso de dúvida, entre em contato.'
+    },
+    {
+      title: 'Posso dar minha opinião durante os debates e votações?',
+      text: 'Como em todos os Congressos democráticos, não é permitido se manifestar durante os debates e votações a fim de não comprometer o andamento dos trabalhos.'
+    },
+    {
+      title: 'Em algumas sessões, os Plenários ficam com poucos parlamentares. Onde eles estão nessa hora?',
+      text: 'As sessões não deliberativas costumam ser mais vazias pois a presença dos parlamentares não é obrigatória nessas sessões. Também vale lembrar que o trabalho parlamentar prevê o atendimento nos gabinetes a lideranças e cidadãos; a participação em seminários e audiências públicas para debater temas de interesse nacional; a participação em entrevistas e encontros nacionais e internacionais diversos; a atuação nas comissões permanentes, especiais e temporárias. Os parlamentares também costumam acompanhar lideranças sindicais e empresariais, governadores, prefeitos ou vereadores em visitas aos ministérios em busca de projetos e recursos para as suas regiões. Quando eles não se encontram nos plenários estão em outras atividades parlamentares como as listadas.'
+    },
+    {
+      title: 'Queria acompanhar o trabalho do parlamentar que elegi quando eu visitar o Congresso Nacional. É possível?',
+      text: 'Sua visita não necessariamente coincidirá com o momento em que o parlamentar estiver em Plenário. Lembre-se, o trabalho dele não se resume apenas ao Plenário. No site da Câmara dos Deputados e do Senado Federal, você poderá acessar  informações sobre a atuação do seu deputado e/ou senador, tais como sua presença no Plenário e nas Comissões; como ele votou em cada proposição; a íntegra de seus discursos; os projetos que apresentou, etc.'
+    },
+    {
+      title: 'Outro dia, vi na TV o Plenário da Câmara cheio e muitos parlamentares em pé. Por que isso acontece?',
+      text: 'O Plenário tem capacidade para 396 pessoas sentadas, número menor do que o de deputados (513). Assim, quando há um debate mais acirrado, votação nominal ou até mesmo sessões conjuntas com a presença de deputados e senadores, o recinto acaba ficando muito cheio. Mas isso não prejudica as votações: o sistema eletrônico é rápido, permitindo que os parlamentares votem e logo deem lugar aos colegas.'
+    },
+    {
+      title: 'Há restaurantes e lanchonetes no Congresso? São abertos ao público?',
+      text: 'Em dias úteis há a possibilidade de acesso na Câmara e no Senado aos restaurantes e lanchonetes que são abertos ao público em geral. Porém, para frequentá-los o visitante deverá se identificar na portaria de uma das Casas.'
+    },
+    {
+      title: 'Soube que a Câmara e o Senado promovem seminários, exposições, lançamentos de livros e outros eventos. Eles são abertos ao público?',
+      text: 'Sim, desde que o visitante se identifique em uma das portarias da respectiva instituição, e informe o evento e o local de destino.'
+    },
+    {
+      title: 'Quanto tempo dura a visita?',
+      text: 'A visita é planejada para durar aproximadamente 1 hora, mas o tempo pode ser uma pouco mais extenso ou menos extenso a depender de alguns fatores extras como quantidade de perguntas, presença de pessoas com dificuldade de locomoção e até mesmo interação dos visitantes com o percurso, parlamentares e monitores. Em dias de maior movimento, para possibilitar atendimento a todos os interessados, o tempo e percurso poderão ser reduzidos.'
+    },
+    {
+      title: 'O que verei no percurso da visita ao Congresso Nacional?',
+      text: 'Cada dia possui um roteiro diferente. Espaços como o Salão Negro, os Salões Nobres, os Plenários, os Salões Azul e Verde, o Túnel do Tempo, a Chapelaria estão entre os locais contemplados no roteiro completo. Nos feriados e finais de semana, comumente visitam-se os Gabinetes dos Presidentes. Lembre-se que alterações podem ocorrer sem aviso prévio.'
+    },
+    {
+      title: 'Posso realizar a visitação sem acompanhamento do guia?',
+      text: 'O visitante não poderá ficar sozinho no Congresso Nacional, a menos que esteja se dirigindo a algum gabinete, plenário, comissão ou setor específico do Palácio, após devida identificação e checagem por parte da segurança. O trabalho dos monitores é desenvolvido para garantir a segurança e o acesso dos cidadãos conforme as regras estabelecidas em conjunto pelas duas instituições.'
+    }
+  ]
+}
 
 const GuiaProfessor = [
   {
@@ -296,32 +338,166 @@ const GuiaVisitante = {
   ]
 }
 
-const ComoChegar = [
-  {
-    title: 'De ônibus',
-    text: 'As linhas 152, 152.2, 152.3, 162, 161, 108, 108.3 e 108.5  passam pela Esplanada dos Ministérios e pela Praça dos Três Poderes'
+const ComoChegar = {
+  titulo: {
+    pt: 'Como Chegar',
+    en: 'How to Arrive'
   },
-  {
-    title: 'De micro-ônibus (zebrinha)',
-    text: 'As linhas 07, 08, 11, 16, 24, 25, 31, 32 e 113 passam pela Esplanada dos Ministérios e pela Praça dos Três Poderes'
+  abrirNoMapa: {
+    pt: 'Abrir no mapa',
+    en: 'Open in map'
   },
-  {
-    title: 'De táxi',
-    text: 'Peça ao taxista para deixá-lo na Chapelaria do Congresso Nacional. Nesse local também há um ponto de táxi caso precise de um após a visita. Na Chapelaria informe que deseja ir ao Salão Negro.\nAtenção: o ponto de táxi não funciona nos finais de semana e nos feriados.'
+  endereco: {
+    pt: 'Endereço',
+    en: 'Address'
   },
-  {
-    title: 'De metrô',
-    text: 'Desça na estação da rodoviária do Plano Piloto (ponto final) e pegue um dos ônibus que passam pela Praça dos Três Poderes: 108, 108.3 e 108.5'
+  localizacao: {
+    pt: 'Localização',
+    en: 'Location'
   },
-  {
-    title: 'De carro',
-    text: 'Como são vários os caminhos possíveis para chegar à Esplanada dos Ministérios, o jeito mais fácil é avaliar as possibilidades por mapas da internet. Quem vier de carro poderá estacionar em vagas ao longo das vias de acesso ao Congresso'
+  oPredioDoCongressoNacional: {
+    pt: 'O prédio do Congresso Nacional, projeto do arquiteto Oscar Niemeyer, é um dos principais monumentos de Brasília. Ele paira sobre os demais - não há outro mais alto que ele - para simbolizar a supremacia da vontade popular.',
+    en: 'O prédio do Congresso Nacional, projeto do arquiteto Oscar Niemeyer, é um dos principais monumentos de Brasília. Ele paira sobre os demais - não há outro mais alto que ele - para simbolizar a supremacia da vontade popular.'
   },
-  {
-    title: 'A partir do aeroporto',
-    text: 'A linha executiva de ônibus 113, parte  do aeroporto de Brasília  e passa pela Praça dos Três Poderes.'
+  eDeFacilAcesso: {
+    pt: 'É de fácil acesso a partir de qualquer ponto da cidade e não há quem não o conheça e possa informar o melhor caminho para chegar. Está localizado na Praça dos Três Poderes, junto com o Palácio do Planalto, sede do Executivo, e do Supremo Tribunal Federal, órgão máximo do Judiciário.',
+    en: 'É de fácil acesso a partir de qualquer ponto da cidade e não há quem não o conheça e possa informar o melhor caminho para chegar. Está localizado na Praça dos Três Poderes, junto com o Palácio do Planalto, sede do Executivo, e do Supremo Tribunal Federal, órgão máximo do Judiciário.'
+  },
+  deOnibus: {
+    pt: 'De ônibus',
+    en: 'De ônibus'
+  },
+  onibusInfo: {
+    pt: 'As linhas 152, 152.2, 152.3, 162, 161, 108, 108.3 e 108.5  passam pela Esplanada dos Ministérios e pela Praça dos Três Poderes.  As linhas podem ser pesquisadas no site do DFtrans do Distrito Federal:',
+    en: 'As linhas 152, 152.2, 152.3, 162, 161, 108, 108.3 e 108.5  passam pela Esplanada dos Ministérios e pela Praça dos Três Poderes.  As linhas podem ser pesquisadas no site do DFtrans do Distrito Federal:'
+  },
+  deMicroOnibus: {
+    pt: 'De micro-ônibus (zebrinha)',
+    en: 'De micro-ônibus (zebrinha)'
+  },
+  microOnibusInfo: {
+    pt: 'As linhas 07, 08, 11, 16, 24, 25, 31, 32 e 113 passam pela Esplanada dos Ministérios e pela Praça dos Três Poderes. As linhas podem ser pesquisadas no site do Dftrans do Distrito Federal:',
+    en: 'As linhas 07, 08, 11, 16, 24, 25, 31, 32 e 113 passam pela Esplanada dos Ministérios e pela Praça dos Três Poderes. As linhas podem ser pesquisadas no site do Dftrans do Distrito Federal:'
+  },
+  deTaxi: {
+    pt: 'De táxi',
+    en: 'De táxi'
+  },
+  taxiInfo: {
+    pt: 'Peça ao taxista para deixá-lo na Chapelaria do Congresso Nacional. Nesse local também há um ponto de táxi caso precise de um após a visita. Na Chapelaria informe que deseja ir ao Salão Negro.\nAtenção: o ponto de táxi não funciona nos finais de semana e nos feriados.',
+    en: 'Peça ao taxista para deixá-lo na Chapelaria do Congresso Nacional. Nesse local também há um ponto de táxi caso precise de um após a visita. Na Chapelaria informe que deseja ir ao Salão Negro.\nAtenção: o ponto de táxi não funciona nos finais de semana e nos feriados.'
+  },
+  deMetro: {
+    pt: 'De metrô',
+    en: 'De metrô'
+  },
+  metroInfo: {
+    pt: 'Desça na estação da rodoviária do Plano Piloto (ponto final) e pegue um dos ônibus que passam pela Praça dos Três Poderes: 108, 108.3 e 108.5.',
+    en: 'Desça na estação da rodoviária do Plano Piloto (ponto final) e pegue um dos ônibus que passam pela Praça dos Três Poderes: 108, 108.3 e 108.5.'
+  },
+  deCarro: {
+    pt: 'De carro',
+    en: 'De carro'
+  },
+  carroInfo: {
+    pt: 'Como são vários os caminhos possíveis para chegar à Esplanada dos Ministérios, o jeito mais fácil é avaliar as possibilidades por mapas da internet. Quem vier de carro poderá estacionar em vagas ao longo das vias de acesso ao Congresso.',
+    en: 'Como são vários os caminhos possíveis para chegar à Esplanada dos Ministérios, o jeito mais fácil é avaliar as possibilidades por mapas da internet. Quem vier de carro poderá estacionar em vagas ao longo das vias de acesso ao Congresso.'
+  },
+  aPartirDoAeroporto: {
+    pt: 'A partir do aeroporto',
+    en: 'A partir do aeroporto'
+  },
+  aeroportoInfo: {
+    pt: 'A linha executiva de ônibus 113, parte do aeroporto de Brasília e passa pela Praça dos Três Poderes.',
+    en: 'A linha executiva de ônibus 113, parte do aeroporto de Brasília e passa pela Praça dos Três Poderes.'
   }
-]
+}
+
+const Agendamentos = {
+  titulo: {
+    pt: 'Agendamentos',
+    en: 'Booking'
+  },
+  comoFunciona: {
+    pt: 'O programa de visitas ao Palácio do Congresso Nacional funciona segundas, quintas, sextas, finais de semana e feriados, com entrada gratuita, das 9h às 17h30, com saídas de grupos a cada 30 minutos, a partir do Salão Negro.\n\nA visita institucional percorre os Plenários das duas Casas, os Salões Verde e Azul, além do Túnel do Tempo do Senado e o Salão Nobre da Câmara dos Deputados.\n\nA visita poderá ser cancelada por motivos de força maior e/ou questões de segurança. Nesses casos tentaremos avisar o responsável pelo agendamento com a maior antecedência possível. No entanto, devido a ocorrências de última hora, o cancelamento poderá ocorrer sem aviso prévio.',
+    en: 'Free tours of the Brazilian National Congress are offered on Mondays, Thursdays and, Fridays, as well as weekends and Brazilian public holidays. Tours are offered in Portuguese, English, Spanish, French and Brazilian Sign Language (LIBRAS). Weekday tours in languages other than Portuguese must be booked at least until 5 p.m. of the previous day. Weekend tours in English take place on 10:15 am and 4:15 p.m. Weekend tours in Spanish, French and Brazilian Sign Language (LIBRAS) are available, however they must be booked in advance via email to visite@senado.leg.br.\n\nCurrently tours on Tuesdays and Wednesdays are suspended.\n\nThe institutional tour covers the Chambers of the two Houses, the Green and Blue Halls, as well as the Time Tunnel of the Senate and the Noble Hall of the Chamber of Deputies.\n\nOn weekends and holidays, admittance to the tours is on a first-come, first-served basis with no booking required. From December 23rd to February 1st and from July 18th to July 31st booking for tours is not necessary, as Congress is not in session. Tours on these dates occur on a first-come, first-served basis.\n\nTours may be cancelled due to force majeure and/or security reasons. We will try to notify the contact person as far in advance as possible. However, due to last-minute occurrences, cancellation may occur without prior notice.'
+  },
+  quemDeveAgendar: {
+    pt: 'Quem deve agendar',
+    en: 'Who should book'
+  },
+  grupos15Pessoas: {
+    pt: 'Grupos com mais de 15 pessoas (exceto fins de semana e feriados);',
+    en: 'Groups with more than 15 people (except on weekends and holidays);'
+  },
+  gruposIdiomas: {
+    pt: 'Grupos que precisam de tour em inglês, espanhol, francês ou libras;',
+    en: 'Groups that need a tour in English, Spanish, French or Brazilian Sign Language (LIBRAS);'
+  },
+  gruposNecessidadesEspeciais: {
+    pt: 'Grupos com necessidades especiais, tais como pessoas com dificuldades de locomoção;',
+    en: 'Groups with special needs, such as people with limited mobility;'
+  },
+  asQuintas: {
+    pt: 'Às quintas, o agendamento é obrigatório para todos, independentemente da quantidade de pessoas.',
+    en: 'On Thursdays, booking is mandatory for all groups, including those with fewer than 15 people.'
+  },
+  visitasTecnicasETematicas: {
+    pt: 'Visitas Técnicas e Temáticas Especiais',
+    en: 'Themed Tours'
+  },
+  siteOficial: {
+    pt: 'site oficial do Congresso Nacional',
+    en: "Federal Senate's official website"
+  },
+  modalidades: {
+    pt: 'O Senado Federal e a Câmara dos Deputados disponibilizam diferentes modalidades de visitas técnicas integradas e temáticas especiais. Para mais informações visite o',
+    en: 'The Federal Senate and the Chamber of Deputies offer joint special technical tours to specific spaces of the Congress not included in the institutional tour. For more information visit the'
+  },
+  agendeSuaVisita: {
+    pt: 'AGENDE SUA VISITA',
+    en: 'BOOK YOUR VISIT'
+  }
+}
+
+const ViiBra = {
+  legenda: {
+    pt: 'Visitação Institucional\nIntegrada em Brasilia',
+    en: 'Integrated Institutional\nVisitation in Brasilia'
+  },
+  brasilia: {
+    pt: 'Construída em tempo recorde, Brasília é um ícone da modernidade não só para os brasileiros, mas para toda a humanidade. Com um singular e inovador traçado arquitetônico e edifícios monumentais, a cidade é um marco cívico, político e cultural do povo brasileiro, que atrai também a atenção de pessoas de todas as partes do mundo.',
+    en: 'Built in record time, Brasília is an icon of modernity not only for Brazilians but for all mankind. Boasting a singular and innovative architectural design along with monumental buildings, the city is a civic, political and cultural landmark of the Brazilian people, and attracts the attention of people worldwide.'
+  },
+  congressoNacional: {
+    pt: 'Congresso Nacional',
+    en: 'National Congress'
+  },
+  visitarBrasiliaE: {
+    pt: 'Visitar Brasília é experimentar a diversidade cultural do País. Por isso, é bem comum que pessoas vindas de outros estados brasileiros sintam-se em casa aqui. Esse sentimento fica ainda mais evidente quando as memórias trazem à superfície o esforço dos milhares de trabalhadores que materializaram o sonho de construir uma nova capital no interior do País. É como se a obra daqueles homens e mulheres pioneiros liderados pelo então presidente Juscelino Kubitschek tivesse deixado um recado de fé, esperança e capacidade de superação para as futuras gerações de brasileiros.',
+    en: 'Visiting Brasília is experiencing the cultural diversity of Brazil. That is why it is quite common for people from other Brazilian states to feel at home here. This feeling becomes even stronger when the memories bring back the efforts of thousands of workers who materialized the dream of building a new capital in the interior of the country.'
+  },
+  oProjeto: {
+    pt: 'O Projeto',
+    en: 'The Project'
+  },
+  paraAtenderOFluxo: {
+    pt: 'Para atender ao crescente fluxo de turistas interessados em visitar a capital federal, muitos dos principais órgãos públicos federais e distritais desenvolveram programas de visitação institucional às suas instalações.',
+    en: "To serve the growing flow of tourists interested in visiting the nation's capital, many of the major federal and local government agencies have developed official visitation programs to their premises."
+  },
+  palacioDoPlanalto: {
+    pt: 'Palácio do Planalto',
+    en: 'Palácio do Planalto'
+  },
+  osRoteiros: {
+    pt: 'Os roteiros rapidamente tornaram-se importantes atrações turísticas de Brasília. No entanto, por funcionarem isoladamente, perdiam a oportunidade de potencializar a experiência dos turistas e de assim oferecer um passeio mais rico e completo. A partir dessa constatação, representantes das instituições públicas que promovem programas de visitação sentiram necessidade de integrar as ações, a fim de aperfeiçoar os projetos até então isolados.\n\nAssim surgiu o grupo de Visitação Institucional Integrada em Brasília (Viibra), inspirado nas palavras do presidente Juscelino Kubitschek, gravadas no mármore do Museu da Cidade na Praça dos Três Poderes e na parede do hall do Palácio da Alvorada: "Deste Planalto Central, desta solidão em que breve se transformará em cérebro das mais altas decisões nacionais, lanço os olhos mais uma vez sobre o amanhã do meu país e antevejo esta alvorada, com uma fé inquebrantável e uma confiança sem limites no seu grande destino".\n\n',
+    en: 'The itineraries of such programs have quickly become major touristic attractions in Brasília. However, because they operated separately, the programs missed the opportunity of enhancing the experience of tourists and providing a richer and complete tour. After this realization, representatives of the public institutions that promote visitation programs felt the need to integrate actions to optimize projects hitherto conducted in isolation.\n\nThat is how the group of Integrated Visits to Public Buildings in Brasília (Viibra) came into existence, inspired in the words of president Juscelino Kubitschek, etched into the marble of the City Museum located at the Three Powers Square, as well as on the wall of the Alvorada Palace hall."From this Central Plateau, from this solitude that will soon become the mind where the most important national decisions will be made, I look once more to the future of my country and foresee the sunrise with unbreakable faith and unlimited trust in its great destiny."\n\n'
+  },
+  paraMaisInformacoes: {
+    pt: 'Para mais informações visite o site oficial do ViiBra:',
+    en: "For more information visit the ViiBra's official website:"
+  }
+}
 
 const Curiosidades = {
   titulo: {
@@ -412,20 +588,6 @@ const ComoFuncionaCamara = [
   }
 ]
 
-const Creditos = {
-  pt_BR: [
-    {
-      title: 'Do Conteúdo e Direitos Autorais',
-      link: 'http://www1.congressonacional.leg.br/desafio/docs/Regulamento_DESAFIO_VisitApp.pdf',
-      text: 'Todo o conteúdo mostrado no presente aplicativo é de autoria do Congresso Nacional, Senado Federal, Câmara dos Deputados e Projeto ViiBra. Sendo assim, far-se-á a explícita menção às respectivas Entidades, Órgãos e Projetos.'
-    },
-    {
-      title: 'Apoio',
-      text: 'O aplicativo "Visite o Congresso" foi desenvolvido com o apoio de:\n• Congresso Nacional\n• Senado Federal\n• Câmara dos Deputados\n• Singilegis\n• ALESFE\n• ASCIP'
-    }
-  ]
-}
-
 const ConteudoInterativo = {
   titulo: {
     pt: 'Conteúdo Interativo',
@@ -468,9 +630,10 @@ export default {
   GuiaProfessor,
   GuiaVisitante,
   ComoChegar,
+  ViiBra,
+  Agendamentos,
   Curiosidades,
   ConteudoInterativo,
   GuiaVirtual,
-  ComoFuncionaCamara,
-  Creditos
+  ComoFuncionaCamara
 }

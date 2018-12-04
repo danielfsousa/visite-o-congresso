@@ -103,8 +103,8 @@ class HomeScreen extends Component {
       icon: 'md-help',
       onTilePress: () =>
         this.props.navigation.navigate('GenericFAQ', {
-          title: 'Perguntas Frequentes',
-          data: Text.FAQ
+          title: i18n.translate(Text.FAQ.titulo),
+          data: Text.FAQ.conteudo
         })
     },
     {

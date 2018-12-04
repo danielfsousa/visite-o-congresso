@@ -18,7 +18,7 @@ class QRCodeScreen extends Component {
   }
 
   handleBarCodeRead = ({ data }) => {
-    const content = ConteudoQRCode[data]
+    const content = i18n.translate(ConteudoQRCode[data])
     if (content) {
       this.props.navigation.navigate('InterativoDetail', { content })
     }

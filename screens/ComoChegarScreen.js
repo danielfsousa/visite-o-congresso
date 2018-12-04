@@ -2,13 +2,14 @@ import React, { Component } from 'react'
 import { View, StyleSheet, Linking, Platform } from 'react-native'
 
 import { screenHit } from '../utils/analytics'
-import { Images, Links } from '../constants'
+import { Images, Links, Text } from '../constants'
 import { BodyText, SubTitle } from '../components/StyledText'
 import StyledButton from '../components/StyledButton'
 
 import StyledImage from '../components/StyledImage'
 import HyperLink from '../components/Hyperlink'
 import withParallax from './ParallaxScreenFactory'
+import i18n from '../utils/i18n'
 
 class ComoChegarScreen extends Component {
   static __name__ = 'Como Chegar'
@@ -28,6 +29,8 @@ class ComoChegarScreen extends Component {
   }
 
   render () {
+    const t = key => i18n.translate(Text.ComoChegar[key])
+
     return (
       <View>
         <StyledImage
@@ -38,11 +41,12 @@ class ComoChegarScreen extends Component {
         >
           <StyledButton
             onPress={this.handleMapPress}
-            style={[styles.button]}>
-              Abrir no mapa
+            style={[styles.button]}
+          >
+            {t('abrirNoMapa')}
           </StyledButton>
         </StyledImage>
-        <SubTitle style={[styles.subtitle, styles.first]}>Endereço</SubTitle>
+        <SubTitle style={[styles.subtitle, styles.first]}>{t('endereco')}</SubTitle>
         <BodyText>
           Praça dos Três Poderes, Zona Cívico-Administrativa
           {'\n'}
@@ -50,9 +54,9 @@ class ComoChegarScreen extends Component {
           {'\n'}
           CEP - 70165-900
         </BodyText>
-        <SubTitle style={styles.subtitle}>Localização</SubTitle>
+        <SubTitle style={styles.subtitle}>{t('localizacao')}</SubTitle>
         <BodyText>
-          O prédio do Congresso Nacional, projeto do arquiteto Oscar Niemeyer, é um dos principais monumentos de Brasília. Ele paira sobre os demais - não há outro mais alto que ele - para simbolizar a supremacia da vontade popular.
+          {t('oPredioDoCongressoNacional')}
         </BodyText>
         <StyledImage
           float='left'
@@ -60,41 +64,39 @@ class ComoChegarScreen extends Component {
           style={styles.image}
         />
         <BodyText>
-          É de fácil acesso a partir de qualquer ponto da cidade e não há quem não o conheça e possa informar o melhor caminho para chegar. Está localizado na Praça dos Três Poderes, junto com o Palácio do Planalto, sede do Executivo, e do Supremo Tribunal Federal, órgão máximo do Judiciário.
+          {t('eDeFacilAcesso')}
         </BodyText>
-        <SubTitle style={styles.subtitle}>De ônibus</SubTitle>
+        <SubTitle style={styles.subtitle}>{t('deOnibus')}</SubTitle>
         <BodyText>
-          As linhas 152, 152.2, 152.3, 162, 161, 108, 108.3 e 108.5  passam pela Esplanada dos Ministérios e pela Praça dos Três Poderes.  As linhas podem ser pesquisadas no site do DFtrans do Distrito Federal:&nbsp;
+          {t('onibusInfo')}&nbsp;
           <HyperLink href={Links.dfTrans}>
             www.horarios.dftrans.df.gov.br
           </HyperLink>
           .
         </BodyText>
-        <SubTitle style={styles.subtitle}>De micro-ônibus (zebrinha)</SubTitle>
+        <SubTitle style={styles.subtitle}>{t('deMicroOnibus')}</SubTitle>
         <BodyText>
-          As linhas 07, 08, 11, 16, 24, 25, 31, 32 e 113 passam pela Esplanada dos Ministérios e pela Praça dos Três Poderes. As linhas podem ser pesquisadas no site do Dftrans do Distrito Federal:&nbsp;
+          {t('microOnibusInfo')}&nbsp;
           <HyperLink href={Links.dfTrans}>
             www.horarios.dftrans.df.gov.br
           </HyperLink>
           .
         </BodyText>
-        <SubTitle style={styles.subtitle}>De táxi</SubTitle>
+        <SubTitle style={styles.subtitle}>{t('deTaxi')}</SubTitle>
         <BodyText>
-          Peça ao taxista para deixá-lo na Chapelaria do Congresso Nacional. Nesse local também há um ponto de táxi caso precise de um após a visita. Na Chapelaria informe que deseja ir ao Salão Negro.
-          {'\n'}
-          Atenção: o ponto de táxi não funciona nos finais de semana e nos feriados.
+          {t('taxiInfo')}
         </BodyText>
-        <SubTitle style={styles.subtitle}>De metrô</SubTitle>
+        <SubTitle style={styles.subtitle}>{t('deMetro')}</SubTitle>
         <BodyText>
-          Desça na estação da rodoviária do Plano Piloto (ponto final) e pegue um dos ônibus que passam pela Praça dos Três Poderes: 108, 108.3 e 108.5.
+          {t('metroInfo')}
         </BodyText>
-        <SubTitle style={styles.subtitle}>De carro</SubTitle>
+        <SubTitle style={styles.subtitle}>{t('deCarro')}</SubTitle>
         <BodyText>
-          Como são vários os caminhos possíveis para chegar à Esplanada dos Ministérios, o jeito mais fácil é avaliar as possibilidades por mapas da internet. Quem vier de carro poderá estacionar em vagas ao longo das vias de acesso ao Congresso.
+          {t('carroInfo')}
         </BodyText>
-        <SubTitle style={styles.subtitle}>A partir do aeroporto</SubTitle>
+        <SubTitle style={styles.subtitle}>{t('aPartirDoAeroporto')}</SubTitle>
         <BodyText>
-          A linha executiva de ônibus 113, parte do aeroporto de Brasília e passa pela Praça dos Três Poderes.
+          {t('aeroportoInfo')}
         </BodyText>
       </View>
     )
@@ -133,7 +135,7 @@ const styles = StyleSheet.create({
 
 const ScreenWithParallax = withParallax(
   ComoChegarScreen,
-  ComoChegarScreen.__name__
+  () => i18n.translate(Text.ComoChegar.titulo)
 )
 
 export default ScreenWithParallax

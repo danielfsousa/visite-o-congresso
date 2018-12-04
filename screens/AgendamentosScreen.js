@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import { View, StyleSheet, Linking } from 'react-native'
 
 import { screenHit } from '../utils/analytics'
-import { Links } from '../constants'
+import { Links, Text } from '../constants'
 import { BodyText, SubTitle, BulletText } from '../components/StyledText'
 
 import StyledButton from '../components/StyledButton'
 import HyperLink from '../components/Hyperlink'
 import withParallax from './ParallaxScreenFactory'
+import i18n from '../utils/i18n'
 
 class AgendamentosScreen extends Component {
   static __name__ = 'Agendamentos'
@@ -17,45 +18,42 @@ class AgendamentosScreen extends Component {
   }
 
   render () {
+    const t = key => i18n.translate(Text.Agendamentos[key])
+
     return (
       <View>
         <BodyText>
-          O programa de visitas ao Palácio do Congresso Nacional funciona segundas, quintas, sextas, finais de semana e feriados, com entrada gratuita, das 9h às 17h30, com saídas de grupos a cada 30 minutos, a partir do Salão Negro.
-          {'\n\n'}
-          A visita institucional percorre os Plenários das duas Casas, os Salões Verde e Azul, além do Túnel do Tempo do Senado e o Salão Nobre da Câmara dos Deputados.
-          {'\n\n'}
-          A visita poderá ser cancelada por motivos de força maior e/ou questões de segurança. Nesses casos tentaremos avisar o responsável pelo agendamento com a maior antecedência possível. No entanto, devido a ocorrências de última hora, o cancelamento poderá ocorrer sem aviso prévio.
+          {t('comoFunciona')}
         </BodyText>
-        <SubTitle style={styles.subtitle}>Quem deve agendar</SubTitle>
+        <SubTitle style={styles.subtitle}>{t('quemDeveAgendar')}</SubTitle>
         <BulletText>
-          Grupos com mais de 15 pessoas (exceto fins de semana e feriados);
+          {t('grupos15Pessoas')}
         </BulletText>
         <BulletText>
-          Grupos que precisam de tour em inglês, espanhol, francês ou libras;
+          {t('gruposIdiomas')}
         </BulletText>
         <BulletText>
-          Grupos com necessidades especiais, tais como pessoas com dificuldades de locomoção;
+          {t('gruposNecessidadesEspeciais')}
         </BulletText>
         <BulletText>
-          Às quintas, o agendamento é obrigatório para todos, independentemente da quantidade de pessoas.
+          {t('asQuintas')}
         </BulletText>
         <SubTitle style={styles.subtitle}>
-          Visitas Técnicas e Temáticas Especiais
+          {t('visitasTecnicasETematicas')}
         </SubTitle>
         <BodyText>
-          O Senado Federal e a Câmara dos Deputados disponibilizam diferentes modalidades de visitas técnicas integradas e temáticas especiais.
-          Para mais informações visite o&nbsp;
+          {t('modalidades')}&nbsp;
           <HyperLink href={Links.visitasTecnicas}>
-            site oficial do Congresso Nacional
+            {t('siteOficial')}
           </HyperLink>
           .
         </BodyText>
         <StyledButton
           type='large'
-          onPress={() => Linking.openURL(`mailto:agendamento@visiteocongresso.app`)}
+          onPress={() => Linking.openURL(Links.agendamento)}
           style={styles.button}
         >
-          AGENDE SUA VISITA
+          {t('agendeSuaVisita')}
         </StyledButton>
       </View>
     )
@@ -75,7 +73,7 @@ const styles = StyleSheet.create({
 
 const ScreenWithParallax = withParallax(
   AgendamentosScreen,
-  AgendamentosScreen.__name__
+  () => i18n.translate(Text.Agendamentos.titulo)
 )
 
 export default ScreenWithParallax
